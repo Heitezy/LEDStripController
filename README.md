@@ -79,6 +79,7 @@ Real-time FFT analysis drives the LED color from audio:
 
 ### Settings
 - **Ambilight smooth** — exponential blending for gradual color transitions during Music Sync and Screen Sync (reduces jarring cuts)
+- **Quick Settings Tile** — toggle power for the last-connected LED strip directly from the Android notification shade
 
 ---
 
@@ -293,6 +294,8 @@ Exponential smoothing (α = 0.07 for smooth mode, 0.25 for snappy) is applied to
 app/src/main/java/heitezy/ledstripcontroller/
 ├── MainActivity.kt                   # Permission flow, BT enable, TV detection, MediaProjection, auto-reconnect
 ├── MediaProjectionService.kt         # Foreground service (required before getMediaProjection())
+├── MicCaptureService.kt              # Foreground service for microphone-mode Music Sync
+├── LedTileService.kt                 # Quick Settings Tile service
 ├── ble/
 │   ├── BleManager.kt                 # BLE scan, GATT connect, command sender, device lookup
 │   └── ELKBledomProtocol.kt          # Byte-frame builders + LedPattern enum
@@ -322,6 +325,8 @@ app/src/main/java/heitezy/ledstripcontroller/
 | `RECORD_AUDIO` | Microphone input for Music Sync |
 | `FOREGROUND_SERVICE` | Keeps the capture service alive in the background |
 | `FOREGROUND_SERVICE_MEDIA_PROJECTION` | Required for MediaProjection foreground service (Android 14+) |
+| `FOREGROUND_SERVICE_MICROPHONE` | Required for Microphone foreground service (Android 14+) |
+| `POST_NOTIFICATIONS` | Allows showing the persistent sync notifications (Android 13+) |
 
 ---
 
