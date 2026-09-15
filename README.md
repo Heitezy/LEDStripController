@@ -3,8 +3,8 @@
 > A fully native Android app for controlling ELK-BLEDOM and BJ_LED Bluetooth LE LED strips — built with Kotlin and Jetpack Compose.
 
 ![Min SDK](https://img.shields.io/badge/Android-8.0%2B-brightgreen)
-![Kotlin](https://img.shields.io/badge/Kotlin-2.1.0-7F52FF)
-![Compose BOM](https://img.shields.io/badge/Compose%20BOM-2024.12.01-4285F4)
+![Kotlin](https://img.shields.io/badge/Kotlin-2.4.20-7F52FF)
+![Compose BOM](https://img.shields.io/badge/Compose%20BOM-2026.09.00-4285F4)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
 ---
@@ -37,6 +37,7 @@ All patterns are animated entirely on the phone — no unreliable firmware effec
 | Fade All | Smooth crossfade through 7 rainbow colors |
 | Crossfade Red | Pulses red in and out |
 | Crossfade Green Blue | Crossfades between green and blue |
+| Crossfade Blue Orange | Crossfades between blue and orange |
 | Crossfade Blue | Pulses blue in and out |
 | Crossfade White | Pulses white in and out |
 | Flash RGB | Flashes Red / Green / Blue with black gaps |
@@ -120,7 +121,7 @@ Download **command-line tools only** from the [Android Studio download page](htt
 Extract to `C:\Android\cmdline-tools\latest\`, then accept licenses and install the required components:
 ```bash
 sdkmanager --licenses
-sdkmanager "platform-tools" "platforms;android-35" "build-tools;35.0.0"
+sdkmanager "platform-tools" "platforms;android-37" "build-tools;37.0.0"
 ```
 
 Add these environment variables:
@@ -141,13 +142,13 @@ sdk.dir=C\:\\Android
 
 If you don't have Gradle installed, download the wrapper JAR directly:
 ```
-https://raw.githubusercontent.com/gradle/gradle/v8.9.0/gradle/wrapper/gradle-wrapper.jar
+https://raw.githubusercontent.com/gradle/gradle/v9.7.1/gradle/wrapper/gradle-wrapper.jar
 ```
 Place it at `gradle/wrapper/gradle-wrapper.jar`.
 
 Or, if Gradle is available locally:
 ```bash
-gradle wrapper --gradle-version=8.9
+gradle wrapper --gradle-version=9.7.1
 ```
 
 ### Step 5 — Build
@@ -298,7 +299,8 @@ app/src/main/java/heitezy/ledstripcontroller/
 ├── LedTileService.kt                 # Quick Settings Tile service
 ├── ble/
 │   ├── BleManager.kt                 # BLE scan, GATT connect, command sender, device lookup
-│   └── ELKBledomProtocol.kt          # Byte-frame builders + LedPattern enum
+│   ├── ELKBledomProtocol.kt          # Byte-frame builders + LedPattern enum
+│   └── LedRepository.kt              # Singleton repository to share BLE state and power status
 ├── audio/
 │   └── AudioAnalyzer.kt              # AudioRecord → Hann → FFT → band energy → Flow
 ├── screen/
@@ -343,10 +345,10 @@ app/src/main/java/heitezy/ledstripcontroller/
 
 | Tool | Version |
 |---|---|
-| Kotlin | 2.1.0 |
-| Android Gradle Plugin | 8.7.3 |
-| Gradle | 8.9 |
-| Compose BOM | 2024.12.01 |
+| Kotlin | 2.4.20 |
+| Android Gradle Plugin | 9.3.2 |
+| Gradle | 9.7.1 |
+| Compose BOM | 2026.09.00 |
 | Min SDK | 26 (Android 8.0) |
-| Target SDK | 35 (Android 15) |
+| Target SDK | 36 (Android 16) |
 | JDK | 21 |

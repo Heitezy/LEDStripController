@@ -225,7 +225,7 @@ object ScreenAnalyzer {
 
         awaitClose {
             mediaProjection.unregisterCallback(callback)
-            display.release()
+            display?.release()
             reader.close()
             handlerThread.quit()
         }
