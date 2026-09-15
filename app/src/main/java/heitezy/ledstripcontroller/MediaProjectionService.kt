@@ -1,4 +1,4 @@
-package com.example.elkbledom
+package heitezy.ledstripcontroller
 
 import android.app.NotificationChannel
 import android.app.NotificationManager

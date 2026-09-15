@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.elkbledom"
+    namespace = "heitezy.ledstripcontroller"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.elkbledom"
+        applicationId = "heitezy.ledstripcontroller"
         minSdk = 26
         targetSdk = 35
         versionCode = 1

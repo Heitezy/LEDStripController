@@ -1,4 +1,4 @@
-package com.example.elkbledom
+package heitezy.ledstripcontroller
 
 import android.Manifest
 import android.app.UiModeManager
@@ -39,11 +39,11 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import com.example.elkbledom.ui.AudioMode
-import com.example.elkbledom.ui.MainScreen
-import com.example.elkbledom.ui.MainViewModel
-import com.example.elkbledom.ui.TvScreen
-import com.example.elkbledom.ui.theme.ELKBledomTheme
+import heitezy.ledstripcontroller.ui.AudioMode
+import heitezy.ledstripcontroller.ui.MainScreen
+import heitezy.ledstripcontroller.ui.MainViewModel
+import heitezy.ledstripcontroller.ui.TvScreen
+import heitezy.ledstripcontroller.ui.theme.LedStripController
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
@@ -100,7 +100,7 @@ class MainActivity : ComponentActivity() {
                 MediaProjectionService.Reason.SCREEN else MediaProjectionService.Reason.PHONE_AUDIO
             val intent = MediaProjectionService.intent(this, reason)
             startForegroundService(intent)
-            bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE)
+            bindService(intent, serviceConnection, BIND_AUTO_CREATE)
         } else {
             // User dismissed the system dialog
             viewModel.onMediaProjection(null, cancelled = true)
@@ -174,7 +174,7 @@ class MainActivity : ComponentActivity() {
         }
 
         setContent {
-            ELKBledomTheme {
+            LedStripController {
                 Surface(color = MaterialTheme.colorScheme.background) {
                     when {
                         !permissionsGranted -> PermissionGate(onRequest = ::requestPermissions)

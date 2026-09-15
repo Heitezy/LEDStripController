@@ -1,4 +1,4 @@
-package com.example.elkbledom.ui.theme
+package heitezy.ledstripcontroller.ui.theme
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
@@ -23,7 +23,7 @@ private val DarkColors = darkColorScheme(
 )
 
 @Composable
-fun ELKBledomTheme(content: @Composable () -> Unit) {
+fun LedStripController(content: @Composable () -> Unit) {
     MaterialTheme(
         colorScheme = DarkColors,
         content = content,

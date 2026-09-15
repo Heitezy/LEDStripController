@@ -1,4 +1,4 @@
-package com.example.elkbledom.ble
+package heitezy.ledstripcontroller.ble
 
 import android.annotation.SuppressLint
 import android.bluetooth.BluetoothDevice
@@ -18,6 +18,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import java.util.Locale
+import kotlin.time.Duration.Companion.milliseconds
 
 enum class ConnectionState { DISCONNECTED, SCANNING, CONNECTING, CONNECTED, ERROR }
 
@@ -109,11 +110,8 @@ class BleManager(private val context: Context) {
         var drain = gattEvents.tryReceive()
         while (drain.isSuccess) drain = gattEvents.tryReceive()
 
-        bluetoothGatt = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+        bluetoothGatt =
             device.connectGatt(context, false, gattCallback, BluetoothDevice.TRANSPORT_LE)
-        } else {
-            device.connectGatt(context, false, gattCallback)
-        }
 
         for (event in gattEvents) {
             when (event) {
@@ -121,7 +119,7 @@ class BleManager(private val context: Context) {
                     if (event.newState == BluetoothProfile.STATE_CONNECTED &&
                         event.status == BluetoothGatt.GATT_SUCCESS
                     ) {
-                        kotlinx.coroutines.delay(600)
+                        kotlinx.coroutines.delay(600.milliseconds)
                         bluetoothGatt?.discoverServices()
                     } else if (event.newState == BluetoothProfile.STATE_DISCONNECTED) {
                         writeCharacteristic = null

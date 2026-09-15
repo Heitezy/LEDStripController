@@ -1,4 +1,4 @@
-package com.example.elkbledom.ble
+package heitezy.ledstripcontroller.ble
 
 import android.bluetooth.BluetoothDevice
 import android.content.Context
@@ -9,6 +9,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import androidx.core.content.edit
 
 /**
  * Singleton repository to share BLE state and power status between the Activity and Quick Tile.
@@ -17,7 +18,7 @@ class LedRepository private constructor(context: Context) {
     val bleManager = BleManager(context)
     private val scope = CoroutineScope(Dispatchers.Main + Job())
     
-    private val prefs = context.getSharedPreferences("elkbledom_prefs", Context.MODE_PRIVATE)
+    private val prefs = context.getSharedPreferences("ledstripcontroller_prefs", Context.MODE_PRIVATE)
     
     private val _isPoweredOn = MutableStateFlow(prefs.getBoolean("is_powered_on", true))
     val isPoweredOn: StateFlow<Boolean> = _isPoweredOn.asStateFlow()
@@ -28,7 +29,7 @@ class LedRepository private constructor(context: Context) {
     }
 
     fun connectTo(device: BluetoothDevice) {
-        prefs.edit().putString("last_device_address", device.address).apply()
+        prefs.edit { putString("last_device_address", device.address) }
         scope.launch {
             bleManager.connect(device)
         }
@@ -40,7 +41,7 @@ class LedRepository private constructor(context: Context) {
 
     fun setPower(on: Boolean) {
         _isPoweredOn.value = on
-        prefs.edit().putBoolean("is_powered_on", on).apply()
+        prefs.edit { putBoolean("is_powered_on", on) }
         
         scope.launch {
             ensureConnected()

@@ -1,4 +1,4 @@
-package com.example.elkbledom
+package heitezy.ledstripcontroller
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -19,8 +19,8 @@ import androidx.core.app.NotificationCompat
  * foreground service while mic-based Music Sync is active does two things:
  *
  *  1. Keeps the app process alive/high-priority while minimized, so the
- *     coroutine reading from [com.example.elkbledom.audio.AudioAnalyzer]
- *     keeps running and keeps writing colours to the LED strip over BLE.
+ *     coroutine reading from [heitezy.ledstripcontroller.audio.AudioAnalyzer]
+ *     keeps running and keeps writing colors to the LED strip over BLE.
  *  2. Keeps microphone access granted while the app has no visible UI.
  *
  * This is intentionally separate from [MediaProjectionService], which is

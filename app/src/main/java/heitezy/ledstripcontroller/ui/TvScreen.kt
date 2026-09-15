@@ -1,4 +1,4 @@
-package com.example.elkbledom.ui
+package heitezy.ledstripcontroller.ui
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.background
@@ -25,11 +25,12 @@ import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.BluetoothSearching
+import androidx.compose.material.icons.automirrored.filled.ScreenShare
 import androidx.compose.material.icons.filled.AutoAwesome
 import androidx.compose.material.icons.filled.Bluetooth
 import androidx.compose.material.icons.filled.BluetoothConnected
 import androidx.compose.material.icons.filled.BluetoothDisabled
-import androidx.compose.material.icons.filled.BluetoothSearching
 import androidx.compose.material.icons.filled.BrightnessHigh
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Lightbulb
@@ -38,7 +39,6 @@ import androidx.compose.material.icons.filled.Mic
 import androidx.compose.material.icons.filled.MusicNote
 import androidx.compose.material.icons.filled.Palette
 import androidx.compose.material.icons.filled.PhoneAndroid
-import androidx.compose.material.icons.filled.ScreenShare
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
@@ -78,21 +78,23 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.elkbledom.R
-import com.example.elkbledom.ble.ConnectionState
-import com.example.elkbledom.ble.LedPattern
-import com.example.elkbledom.ble.ScannedDevice
+import heitezy.ledstripcontroller.R
+import heitezy.ledstripcontroller.ble.ConnectionState
+import heitezy.ledstripcontroller.ble.LedPattern
+import heitezy.ledstripcontroller.ble.ScannedDevice
 import kotlinx.coroutines.delay
+import kotlin.text.format
+import kotlin.time.Duration.Companion.milliseconds
 
 // ── Section enum ──────────────────────────────────────────────────────────────
 
 private enum class TvSection(val labelRes: Int, val icon: ImageVector) {
     BLUETOOTH(R.string.label_bluetooth,   Icons.Default.Bluetooth),
     BRIGHTNESS(R.string.label_brightness_tv, Icons.Default.BrightnessHigh),
-    COLOR(R.string.label_colour,          Icons.Default.Palette),
+    COLOR(R.string.label_color,          Icons.Default.Palette),
     PATTERNS(R.string.label_patterns,     Icons.Default.AutoAwesome),
     MUSIC_SYNC(R.string.label_music_sync, Icons.Default.MusicNote),
-    SCREEN_SYNC(R.string.label_screen_tv, Icons.Default.ScreenShare),
+    SCREEN_SYNC(R.string.label_screen_tv, Icons.AutoMirrored.Filled.ScreenShare),
     SETTINGS(R.string.label_settings,     Icons.Default.Settings),
 }
 
@@ -112,7 +114,7 @@ fun TvScreen(vm: MainViewModel, onRequestMediaProjection: () -> Unit = {}) {
     // When the section changes, wait 50 ms for recomposition to finish, then grab focus.
     val contentFocus = remember { FocusRequester() }
     LaunchedEffect(section) {
-        delay(50)
+        delay(50.milliseconds)
         try { contentFocus.requestFocus() } catch (_: Exception) { }
     }
 
@@ -357,7 +359,7 @@ private fun TvBluetoothSection(ui: UiState, vm: MainViewModel, firstFocus: Focus
                         .height(52.dp)
                         .focusRequester(firstFocus),
                 ) {
-                    Icon(Icons.Default.BluetoothSearching, null)
+                    Icon(Icons.AutoMirrored.Filled.BluetoothSearching, null)
                     Spacer(Modifier.width(8.dp))
                     Text(stringResource(R.string.btn_scan), fontSize = 17.sp)
                 }
@@ -467,7 +469,7 @@ private fun TvDeviceCard(dev: ScannedDevice, modifier: Modifier = Modifier, onCl
     ) {
         Row(Modifier.padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
             Icon(
-                Icons.Default.BluetoothSearching, null,
+                Icons.AutoMirrored.Filled.BluetoothSearching, null,
                 tint = MaterialTheme.colorScheme.primary,
                 modifier = Modifier.size(28.dp),
             )
@@ -522,7 +524,7 @@ private fun TvBrightnessSection(ui: UiState, vm: MainViewModel, firstFocus: Focu
     }
 }
 
-// ── COLOUR section ────────────────────────────────────────────────────────────
+// ── COLOR section ────────────────────────────────────────────────────────────
 // H/S/V each have −10 / −1 / +1 / +10 step buttons.
 
 @Composable
@@ -531,7 +533,7 @@ private fun TvColorSection(ui: UiState, vm: MainViewModel, firstFocus: FocusRequ
     val (r, g, b) = hsvToRgb(ui.hue, ui.saturation, ui.colorValue)
 
     Column(verticalArrangement = Arrangement.spacedBy(20.dp)) {
-        TvSectionTitle(stringResource(R.string.label_colour), Icons.Default.Palette)
+        TvSectionTitle(stringResource(R.string.label_color), Icons.Default.Palette)
 
         Row(horizontalArrangement = Arrangement.spacedBy(40.dp), verticalAlignment = Alignment.Top) {
             Box(
@@ -777,7 +779,7 @@ private fun TvMusicSyncSection(ui: UiState, vm: MainViewModel, firstFocus: Focus
                 }
 
                 Text(
-                    stringResource(R.string.label_band_colours),
+                    stringResource(R.string.label_band_colors),
                     style = MaterialTheme.typography.titleSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
@@ -869,7 +871,9 @@ private fun TvScreenSyncSection(ui: UiState, vm: MainViewModel, firstFocus: Focu
     if (ui.connectionState != ConnectionState.CONNECTED) { NotConnectedHint(); return }
 
     Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
-        TvSectionTitle(stringResource(R.string.label_screen_sync), Icons.Default.ScreenShare)
+        TvSectionTitle(stringResource(R.string.label_screen_sync),
+            Icons.AutoMirrored.Filled.ScreenShare
+        )
 
         if (!ui.isPlaybackSupported) {
             Text(stringResource(R.string.msg_android_10_required), color = MaterialTheme.colorScheme.onSurfaceVariant)
@@ -893,7 +897,7 @@ private fun TvScreenSyncSection(ui: UiState, vm: MainViewModel, firstFocus: Focu
                         .border(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.3f), RoundedCornerShape(12.dp)),
                 )
                 Column {
-                    Text(stringResource(R.string.label_dominant_colour), style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    Text(stringResource(R.string.label_dominant_color), style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.onSurfaceVariant)
                     Spacer(Modifier.height(4.dp))
                     Text(
                         "#%02X%02X%02X".format(ui.screenR, ui.screenG, ui.screenB),

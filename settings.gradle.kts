@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ELK-BLEDOM"
+rootProject.name = "LEDStripController"
 include(":app")

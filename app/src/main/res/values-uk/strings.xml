@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">ELK-BLEDOM</string>
+    <string name="app_name">LED Strip Controller</string>
 
     <!-- Permissions -->
-    <string name="perm_rationale">ELK-BLEDOM потребує дозволів на Bluetooth та Мікрофон для пошуку вашої LED-стрічки та увімкнення синхронізації з музикою.</string>
+    <string name="perm_rationale">LED Strip Controller потребує дозволів на Bluetooth та Мікрофон для пошуку вашої LED-стрічки та увімкнення синхронізації з музикою.</string>
     <string name="btn_grant_permissions">Надати дозволи</string>
     <string name="bt_disabled_msg">Bluetooth вимкнено. Будь ласка, увімкніть його, щоб підключитися до вашої LED-стрічки.</string>
     <string name="btn_enable_bluetooth">Увімкнути Bluetooth</string>
@@ -27,7 +27,7 @@
     <string name="btn_disconnect">Відключити</string>
     <string name="msg_connection_failed">Помилка підключення. Спробуйте ще раз.</string>
     <string name="msg_ready_to_illuminate">Готові до освітлення?</string>
-    <string name="label_colour">Колір</string>
+    <string name="label_color">Колір</string>
     <string name="label_brightness_tv">Яскравість</string>
     <string name="label_brightness">Яскравість: %1$d%%</string>
     <string name="label_music_sync">Синхронізація з музикою</string>
@@ -37,14 +37,14 @@
     <string name="msg_android_10_required">Потрібен Android 10+</string>
     <string name="desc_phone_audio">Захоплює те, що відтворюється через ваші динаміки або навушники.\nПримітка: додатки з захистом DRM (Spotify, Netflix) блокують захоплення.</string>
     <string name="desc_microphone">Мікрофон уловлює звук у кімнаті — працює з будь-яким джерелом.</string>
-    <string name="desc_band_colours">Кольори смуг  ·  торкніться зразка, щоб призначити  ·  торкніться ✕, щоб вимкнути</string>
+    <string name="desc_band_colors">Кольори смуг  ·  торкніться зразка, щоб призначити  ·  торкніться ✕, щоб вимкнути</string>
     <string name="label_bass">Бас</string>
     <string name="label_mids">Середні</string>
     <string name="label_highs">Високі</string>
     <string name="label_screen_sync">Синхронізація екрана</string>
     <string name="label_screen_tv">Екран</string>
     <string name="desc_screen_sync">Відображає домінуючий колір на вашому екрані на світлодіодах у реальному часі — з вагою насиченості при 20 кадр/с. Яскравий, кольоровий контент працює найкраще.</string>
-    <string name="label_dominant_colour">Домінуючий колір</string>
+    <string name="label_dominant_color">Домінуючий колір</string>
     <string name="label_beat">Ритм</string>
     <string name="label_ambilight_smooth">Плавний Ambilight</string>
     <string name="desc_ambilight_smooth">Поступово змішує зміни кольору — легше для очей під час режимів синхронізації.</string>
@@ -67,7 +67,7 @@
     <string name="label_delay_range_ms">10 – 5000 мс</string>
     <string name="label_pattern">Патерн</string>
     <string name="label_enabled">Увімкнено</string>
-    <string name="label_band_colours">Кольори смуг</string>
+    <string name="label_band_colors">Кольори смуг</string>
 
     <!-- Patterns -->
     <string name="pattern_solid">Статичний</string>
@@ -87,9 +87,9 @@
     <!-- Accessibility & Misc -->
     <string name="cd_toggle_power">Перемкнути живлення</string>
     <string name="led_tile_label">Живлення LED</string>
-    <string name="cd_open_colour_picker">Відкрити палітру кольорів</string>
-    <string name="msg_pick_colour">Виберіть колір</string>
-    <!-- Sync Colours -->
+    <string name="cd_open_color_picker">Відкрити палітру кольорів</string>
+    <string name="msg_pick_color">Виберіть колір</string>
+    <!-- Sync Colors -->
     <string name="color_off">Вимк.</string>
     <string name="color_red">Червоний</string>
     <string name="color_orange">Помаранчевий</string>

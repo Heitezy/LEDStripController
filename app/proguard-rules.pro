@@ -1,1 +1,1 @@
--keep class com.example.elkbledom.** { *; }
+-keep class heitezy.ledstripcontroller.** { *; }

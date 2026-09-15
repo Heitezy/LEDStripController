@@ -1,4 +1,4 @@
-package com.example.elkbledom.screen
+package heitezy.ledstripcontroller.screen
 
 import android.content.Context
 import android.graphics.Color
@@ -22,21 +22,21 @@ object ScreenAnalyzer {
     private const val FRAME_INTERVAL_MS = 50L   // 20 FPS cap
     private const val SAMPLE_STRIDE = 4
 
-    // Dominant-hue histogram. Narrow bins (15° each) keep in-bin colours close
+    // Dominant-hue histogram. Narrow bins (15° each) keep in-bin colors close
     // enough that averaging them together doesn't muddy the result the way
     // averaging the whole frame's raw RGB does (e.g. red + cyan pixels
-    // averaging to grey even though neither colour is actually on screen much).
+    // averaging to gray even though neither color is actually on screen much).
     private const val HUE_BINS = 24
-    private const val MIN_SATURATION = 0.15f        // below this, a pixel is "grey" for hue purposes
+    private const val MIN_SATURATION = 0.15f        // below this, a pixel is "gray" for hue purposes
     private const val SATURATION_BOOST = 1.25f      // a diffuse strip reads less saturated than an emissive screen
     private const val BRIGHTNESS_BLEND = 0.5f       // how strongly overall scene brightness pulls the result's value
-    private const val MIN_COLOUR_SHARE = 0.02       // saturated-weight fraction needed to trust a hue over "grey"
+    private const val MIN_COLOR_SHARE = 0.02       // saturated-weight fraction needed to trust a hue over "gray"
 
     // --- sRGB <-> linear-light helpers -------------------------------------------------
     // Screen pixels are gamma-encoded (sRGB). Summing/averaging those encoded byte
     // values directly (as the previous implementation did) is not how light actually
-    // combines — it skews results toward mid-grey and desaturates the outcome.
-    // Converting to linear light before combining, then back to sRGB afterwards,
+    // combines — it skews results toward mid-gray and desaturates the outcome.
+    // Converting to linear light before combining, then back to sRGB afterward,
     // gives a perceptually correct blend.
     private val SRGB_TO_LINEAR = FloatArray(256) { i ->
         val c = i / 255f
@@ -78,7 +78,7 @@ object ScreenAnalyzer {
             lastFrameMs = now
 
             val image = r.acquireLatestImage() ?: return@setOnImageAvailableListener
-            try {
+            image.use { image ->
                 val plane = image.planes[0]
                 val buffer = plane.buffer
                 val rowStride = plane.rowStride
@@ -119,7 +119,7 @@ object ScreenAnalyzer {
                         val linB = SRGB_TO_LINEAR[bv]
 
                         // Overall scene brightness: bright pixels dominate perception
-                        // regardless of how colourful they are, so weight by v^2.
+                        // regardless of how colorful they are, so weight by v^2.
                         val brightnessWeight = (v * v).toDouble() + 0.01
                         overallValueSum += v * brightnessWeight
                         overallValueWeight += brightnessWeight
@@ -143,8 +143,8 @@ object ScreenAnalyzer {
                 }
 
                 if (overallWeight > 0) {
-                    // Smooth the histogram across neighbouring bins (circular) so a
-                    // colour that straddles a bin edge isn't lost to noise.
+                    // Smooth the histogram across neighboring bins (circular) so a
+                    // color that straddles a bin edge isn't lost to noise.
                     var bestBin = -1
                     var bestScore = 0.0
                     for (i in 0 until HUE_BINS) {
@@ -160,12 +160,12 @@ object ScreenAnalyzer {
                     val saturatedWeightTotal = binWeight.sum()
                     val overallAvgValue = overallValueSum / overallValueWeight
 
-                    val (fr, fg, fb) = if (bestBin == -1 || saturatedWeightTotal < overallWeight * MIN_COLOUR_SHARE) {
-                        // The frame is essentially grey/washed out (a text-heavy or
+                    val (fr, fg, fb) = if (bestBin == -1 || saturatedWeightTotal < overallWeight * MIN_COLOR_SHARE) {
+                        // The frame is essentially gray/washed out (a text-heavy or
                         // white UI, a black loading screen, etc.) — no single hue
                         // dominates enough to trust. Fall back to a neutral tone at
                         // the scene's actual brightness instead of amplifying
-                        // whatever faint colour cast happened to sample highest.
+                        // whatever faint color cast happened to sample highest.
                         Triple(
                             linearToSrgb((overallLinR / overallWeight).toFloat()),
                             linearToSrgb((overallLinG / overallWeight).toFloat()),
@@ -187,7 +187,7 @@ object ScreenAnalyzer {
                         // scene's overall brightness (so a dim scene stays dim even if the
                         // winning hue came from a small bright accent), and boost
                         // saturation slightly since a diffuse LED strip reads less vivid
-                        // than the same colour on an emissive screen.
+                        // than the same color on an emissive screen.
                         Color.RGBToHSV(dr, dg, db, hsv)
                         hsv[1] = (hsv[1] * SATURATION_BOOST).coerceIn(0f, 1f)
                         hsv[2] = (hsv[2] * (1 - BRIGHTNESS_BLEND) + overallAvgValue.toFloat() * BRIGHTNESS_BLEND)
@@ -202,8 +202,6 @@ object ScreenAnalyzer {
                         b = fb.coerceIn(0, 255),
                     ))
                 }
-            } finally {
-                image.close()
             }
         }, handler)
 

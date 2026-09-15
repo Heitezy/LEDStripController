@@ -1,4 +1,4 @@
-package com.example.elkbledom.ui
+package heitezy.ledstripcontroller.ui
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.animateFloatAsState
@@ -18,16 +18,16 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.BluetoothSearching
+import androidx.compose.material.icons.automirrored.filled.ScreenShare
 import androidx.compose.material.icons.filled.Bluetooth
 import androidx.compose.material.icons.filled.BluetoothConnected
 import androidx.compose.material.icons.filled.BluetoothDisabled
-import androidx.compose.material.icons.filled.BluetoothSearching
 import androidx.compose.material.icons.filled.Lightbulb
 import androidx.compose.material.icons.filled.LightbulbCircle
 import androidx.compose.material.icons.filled.Mic
@@ -36,7 +36,6 @@ import androidx.compose.material.icons.filled.PhoneAndroid
 import androidx.compose.material.icons.filled.ChevronRight
 import androidx.compose.material.icons.filled.Palette
 import androidx.compose.material.icons.filled.Power
-import androidx.compose.material.icons.filled.ScreenShare
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.Checkbox
@@ -75,12 +74,11 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
-import com.example.elkbledom.R
+import heitezy.ledstripcontroller.R
 import androidx.compose.ui.unit.dp
-import com.example.elkbledom.ble.ConnectionState
-import com.example.elkbledom.ble.LedPattern
-import com.example.elkbledom.ui.components.ColorPicker
-import com.example.elkbledom.ui.components.PatternSelector
+import heitezy.ledstripcontroller.ble.ConnectionState
+import heitezy.ledstripcontroller.ui.components.ColorPicker
+import heitezy.ledstripcontroller.ui.components.PatternSelector
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -103,7 +101,7 @@ fun MainScreen(
                 title = {
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Icon(
-                            painter = androidx.compose.ui.res.painterResource(id = com.example.elkbledom.R.drawable.ic_launcher_foreground),
+                            painter = androidx.compose.ui.res.painterResource(id = R.drawable.ic_launcher_foreground),
                             contentDescription = null,
                             modifier = Modifier.size(32.dp),
                             tint = Color.Unspecified
@@ -174,7 +172,7 @@ fun MainScreen(
         }
     }
 
-    // ── Colour picker bottom sheet ────────────────────────────────────────────
+    // ── Color picker bottom sheet ────────────────────────────────────────────
 
     if (showColorSheet) {
         val (r, g, b) = hsvToRgb(ui.hue, ui.saturation, ui.colorValue)
@@ -191,7 +189,7 @@ fun MainScreen(
                 verticalArrangement = Arrangement.spacedBy(16.dp),
             ) {
                 Text(
-                    stringResource(R.string.msg_pick_colour),
+                    stringResource(R.string.msg_pick_color),
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold,
                 )
@@ -261,7 +259,7 @@ private fun ConnectionCard(ui: UiState, vm: MainViewModel) {
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Icon(
-                        painter = androidx.compose.ui.res.painterResource(id = com.example.elkbledom.R.drawable.ic_launcher_foreground),
+                        painter = androidx.compose.ui.res.painterResource(id = R.drawable.ic_launcher_foreground),
                         contentDescription = null,
                         modifier = Modifier.size(100.dp),
                         tint = Color.Unspecified
@@ -275,7 +273,7 @@ private fun ConnectionCard(ui: UiState, vm: MainViewModel) {
                 }
                 
                 Button(onClick = { vm.startScan() }, modifier = Modifier.fillMaxWidth()) {
-                    Icon(Icons.Default.BluetoothSearching, contentDescription = null)
+                    Icon(Icons.AutoMirrored.Filled.BluetoothSearching, contentDescription = null)
                     Spacer(Modifier.width(8.dp))
                     Text(stringResource(R.string.btn_scan))
                 }
@@ -358,7 +356,7 @@ private fun DeviceRow(name: String, address: String, rssi: Int, onClick: () -> U
     Divider(color = MaterialTheme.colorScheme.outline.copy(alpha = 0.3f))
 }
 
-// ── Colour preview card (opens bottom-sheet picker on tap) ────────────────────
+// ── Color preview card (opens bottom-sheet picker on tap) ────────────────────
 
 @Composable
 private fun ColorPreviewCard(
@@ -382,7 +380,7 @@ private fun ColorPreviewCard(
         ) {
             Icon(Icons.Default.Palette, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
             Text(
-                stringResource(R.string.label_colour),
+                stringResource(R.string.label_color),
                 style = MaterialTheme.typography.titleMedium,
                 modifier = Modifier.weight(1f),
             )
@@ -406,7 +404,7 @@ private fun ColorPreviewCard(
             )
             Icon(
                 Icons.Default.ChevronRight,
-                contentDescription = stringResource(R.string.cd_open_colour_picker),
+                contentDescription = stringResource(R.string.cd_open_color_picker),
                 tint = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.size(18.dp),
             )
@@ -495,9 +493,9 @@ private fun MusicSyncCard(ui: UiState, vm: MainViewModel) {
 
                 Spacer(Modifier.height(12.dp))
 
-                // ── Per-band colour pickers ───────────────────────────────
+                // ── Per-band color pickers ───────────────────────────────
                 Text(
-                    stringResource(R.string.desc_band_colours),
+                    stringResource(R.string.desc_band_colors),
                     style = MaterialTheme.typography.labelMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
@@ -534,7 +532,7 @@ private fun MusicSyncCard(ui: UiState, vm: MainViewModel) {
 private fun ScreenSyncCard(ui: UiState, vm: MainViewModel) {
     SectionCard {
         Row(verticalAlignment = Alignment.CenterVertically) {
-            Icon(Icons.Default.ScreenShare, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
+            Icon(Icons.AutoMirrored.Filled.ScreenShare, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
             Spacer(Modifier.width(8.dp))
             Text(stringResource(R.string.label_screen_sync), style = MaterialTheme.typography.titleMedium, modifier = Modifier.weight(1f))
             Switch(
@@ -577,7 +575,7 @@ private fun ScreenSyncCard(ui: UiState, vm: MainViewModel) {
                     Spacer(Modifier.width(12.dp))
                     Column {
                         Text(
-                            stringResource(R.string.label_dominant_colour),
+                            stringResource(R.string.label_dominant_color),
                             style = MaterialTheme.typography.labelMedium,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
@@ -654,7 +652,7 @@ internal fun FreqBar(label: String, level: Float, barColor: Color, active: Boole
     }
 }
 
-// ── Band colour picker row ────────────────────────────────────────────────────
+// ── Band color picker row ────────────────────────────────────────────────────
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -797,7 +795,7 @@ private fun AmbilightCard(isEnabled: Boolean, onToggle: (Boolean) -> Unit) {
 private fun ConnectionIcon(state: ConnectionState) {
     val icon = when (state) {
         ConnectionState.CONNECTED -> Icons.Default.BluetoothConnected
-        ConnectionState.SCANNING, ConnectionState.CONNECTING -> Icons.Default.BluetoothSearching
+        ConnectionState.SCANNING, ConnectionState.CONNECTING -> Icons.AutoMirrored.Filled.BluetoothSearching
         else -> Icons.Default.BluetoothDisabled
     }
     val tint = when (state) {

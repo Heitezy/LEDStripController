@@ -1,4 +1,4 @@
-package com.example.elkbledom.ui
+package heitezy.ledstripcontroller.ui
 
 import android.app.Application
 import android.bluetooth.BluetoothDevice
@@ -8,17 +8,17 @@ import android.os.Build
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.elkbledom.MicCaptureService
-import com.example.elkbledom.R
-import com.example.elkbledom.audio.AudioAnalyzer
-import com.example.elkbledom.audio.FrequencyData
-import com.example.elkbledom.ble.ConnectionState
-import com.example.elkbledom.ble.ELKBledomProtocol
-import com.example.elkbledom.ble.LedPattern
-import com.example.elkbledom.ble.LedRepository
-import com.example.elkbledom.ble.ProtocolVariant
-import com.example.elkbledom.ble.ScannedDevice
-import com.example.elkbledom.screen.ScreenAnalyzer
+import heitezy.ledstripcontroller.MicCaptureService
+import heitezy.ledstripcontroller.R
+import heitezy.ledstripcontroller.audio.AudioAnalyzer
+import heitezy.ledstripcontroller.audio.FrequencyData
+import heitezy.ledstripcontroller.ble.ConnectionState
+import heitezy.ledstripcontroller.ble.ELKBledomProtocol
+import heitezy.ledstripcontroller.ble.LedPattern
+import heitezy.ledstripcontroller.ble.LedRepository
+import heitezy.ledstripcontroller.ble.ProtocolVariant
+import heitezy.ledstripcontroller.ble.ScannedDevice
+import heitezy.ledstripcontroller.screen.ScreenAnalyzer
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -29,6 +29,7 @@ import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import kotlin.time.Duration.Companion.milliseconds
 
 enum class AudioMode { MIC, PLAYBACK }
 
@@ -235,7 +236,7 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
             val (r, g, b) = colors[idx % colors.size]
             val variant = bleManager.protocolVariant.value
             send(ELKBledomProtocol.setColor(r, g, b, variant))
-            delay(holdMs)
+            delay(holdMs.milliseconds)
             idx++
         }
     }
@@ -257,7 +258,7 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
                     (b1 + t * (b2 - b1)).toInt(),
                     variant
                 ))
-                delay(fadeStepMs)
+                delay(fadeStepMs.milliseconds)
             }
             fromIdx = toIdx
         }
@@ -271,13 +272,13 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
                 val t = step.toFloat() / steps
                 val variant = bleManager.protocolVariant.value
                 send(ELKBledomProtocol.setColor((r * t).toInt(), (g * t).toInt(), (b * t).toInt(), variant))
-                delay(fadeStepMs)
+                delay(fadeStepMs.milliseconds)
             }
             for (step in steps downTo 0) {
                 val t = step.toFloat() / steps
                 val variant = bleManager.protocolVariant.value
                 send(ELKBledomProtocol.setColor((r * t).toInt(), (g * t).toInt(), (b * t).toInt(), variant))
-                delay(fadeStepMs)
+                delay(fadeStepMs.milliseconds)
             }
         }
     }
@@ -287,9 +288,9 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
         while (true) {
             val variant = bleManager.protocolVariant.value
             send(ELKBledomProtocol.setColor(255, 255, 255, variant))
-            delay(holdMs)
+            delay(holdMs.milliseconds)
             send(ELKBledomProtocol.setColor(0, 0, 0, variant))
-            delay(holdMs)
+            delay(holdMs.milliseconds)
         }
     }
 

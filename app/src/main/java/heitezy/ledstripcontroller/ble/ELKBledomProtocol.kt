@@ -1,8 +1,8 @@
-package com.example.elkbledom.ble
+package heitezy.ledstripcontroller.ble
 
 import java.util.UUID
 
-import com.example.elkbledom.R
+import heitezy.ledstripcontroller.R
 
 enum class ProtocolVariant { ELK_BLEDOM, BJ_LED }
 
@@ -64,18 +64,18 @@ object ELKBledomProtocol {
     }
 }
 
-enum class LedPattern(val displayName: String, val displayNameRes: Int) {
-    SOLID        ("Solid", R.string.pattern_solid),
-    JUMP_RGB     ("Jump RGB", R.string.pattern_jump_rgb),
-    JUMP_ALL     ("Jump All", R.string.pattern_jump_all),
-    FADE_RGB     ("Fade RGB", R.string.pattern_fade_rgb),
-    FADE_ALL     ("Fade All", R.string.pattern_fade_all),
-    CROSSFADE_R  ("Crossfade Red", R.string.pattern_crossfade_red),
-    CROSSFADE_GB  ("Crossfade Green Blue", R.string.pattern_crossfade_green_blue),
-    CROSSFADE_BO  ("Crossfade Blue Orange", R.string.pattern_crossfade_blue_orange),
-    CROSSFADE_B  ("Crossfade Blue", R.string.pattern_crossfade_blue),
-    CROSSFADE_W  ("Crossfade White", R.string.pattern_crossfade_white),
-    FLASH_RGB    ("Flash RGB", R.string.pattern_flash_rgb),
-    FLASH_ALL    ("Flash All", R.string.pattern_flash_all),
-    STROBE_W     ("Strobe White", R.string.pattern_strobe_white),
+enum class LedPattern(val displayNameRes: Int) {
+    SOLID        (R.string.pattern_solid),
+    JUMP_RGB     (R.string.pattern_jump_rgb),
+    JUMP_ALL     (R.string.pattern_jump_all),
+    FADE_RGB     (R.string.pattern_fade_rgb),
+    FADE_ALL     (R.string.pattern_fade_all),
+    CROSSFADE_R  (R.string.pattern_crossfade_red),
+    CROSSFADE_GB  (R.string.pattern_crossfade_green_blue),
+    CROSSFADE_BO  (R.string.pattern_crossfade_blue_orange),
+    CROSSFADE_B  (R.string.pattern_crossfade_blue),
+    CROSSFADE_W  (R.string.pattern_crossfade_white),
+    FLASH_RGB    (R.string.pattern_flash_rgb),
+    FLASH_ALL    (R.string.pattern_flash_all),
+    STROBE_W     (R.string.pattern_strobe_white),
 }

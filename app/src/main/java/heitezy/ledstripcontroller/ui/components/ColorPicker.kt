@@ -1,4 +1,4 @@
-package com.example.elkbledom.ui.components
+package heitezy.ledstripcontroller.ui.components
 
 import android.graphics.Bitmap
 import androidx.compose.foundation.Canvas
@@ -12,11 +12,9 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -42,8 +40,8 @@ import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.res.stringResource
-import com.example.elkbledom.R
-import com.example.elkbledom.ui.hsvToRgb
+import heitezy.ledstripcontroller.R
+import heitezy.ledstripcontroller.ui.hsvToRgb
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlin.math.PI
@@ -64,7 +62,7 @@ fun ColorPicker(
     modifier: Modifier = Modifier,
 ) {
     Column(modifier = modifier) {
-        Text(stringResource(R.string.label_colour), style = MaterialTheme.typography.titleMedium)
+        Text(stringResource(R.string.label_color), style = MaterialTheme.typography.titleMedium)
         Spacer(Modifier.height(12.dp))
 
         ColorWheel(
@@ -112,7 +110,7 @@ fun ColorPicker(
 
         Spacer(Modifier.height(12.dp))
 
-        // Preset quick-select colours
+        // Preset quick-select colors
         val presets = listOf(
             0f to 1f,   // Red
             30f to 1f,  // Orange

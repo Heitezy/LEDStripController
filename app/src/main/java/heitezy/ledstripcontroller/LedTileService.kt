@@ -1,9 +1,9 @@
-package com.example.elkbledom
+package heitezy.ledstripcontroller
 
 import android.graphics.drawable.Icon
 import android.service.quicksettings.Tile
 import android.service.quicksettings.TileService
-import com.example.elkbledom.ble.LedRepository
+import heitezy.ledstripcontroller.ble.LedRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job

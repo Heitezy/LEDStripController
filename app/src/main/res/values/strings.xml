@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">ELK-BLEDOM</string>
+    <string name="app_name">LED Strip Controller</string>
 
     <!-- Permissions -->
-    <string name="perm_rationale">ELK-BLEDOM needs Bluetooth and Microphone permissions to scan for your LED strip and enable music sync.</string>
+    <string name="perm_rationale">LED Strip Controller needs Bluetooth and Microphone permissions to scan for your LED strip and enable music sync.</string>
     <string name="btn_grant_permissions">Grant Permissions</string>
     <string name="bt_disabled_msg">Bluetooth is disabled. Please enable it to connect to your LED strip.</string>
     <string name="btn_enable_bluetooth">Enable Bluetooth</string>
@@ -27,7 +27,7 @@
     <string name="btn_disconnect">Disconnect</string>
     <string name="msg_connection_failed">Connection failed. Try again.</string>
     <string name="msg_ready_to_illuminate">Ready to illuminate?</string>
-    <string name="label_colour">Colour</string>
+    <string name="label_color">Color</string>
     <string name="label_brightness_tv">Brightness</string>
     <string name="label_brightness">Brightness: %1$d%%</string>
     <string name="label_music_sync">Music Sync</string>
@@ -37,17 +37,17 @@
     <string name="msg_android_10_required">Requires Android 10+</string>
     <string name="desc_phone_audio">Captures what plays through your speakers or headphones.\nNote: DRM-protected apps (Spotify, Netflix) block capture.</string>
     <string name="desc_microphone">Microphone picks up sound from the room — works with any source.</string>
-    <string name="desc_band_colours">Band Colours  ·  tap a swatch to assign  ·  tap ✕ to mute</string>
+    <string name="desc_band_colors">Band Colors  ·  tap a swatch to assign  ·  tap ✕ to mute</string>
     <string name="label_bass">Bass</string>
     <string name="label_mids">Mids</string>
     <string name="label_highs">Highs</string>
     <string name="label_screen_sync">Screen Sync</string>
     <string name="label_screen_tv">Screen</string>
-    <string name="desc_screen_sync">Mirrors the dominant colour on your screen to the LEDs in real time — saturation-weighted at 20 fps. Bright, colourful content works best.</string>
-    <string name="label_dominant_colour">Dominant colour</string>
+    <string name="desc_screen_sync">Mirrors the dominant color on your screen to the LEDs in real time — saturation-weighted at 20 fps. Bright, colourful content works best.</string>
+    <string name="label_dominant_color">Dominant color</string>
     <string name="label_beat">Beat</string>
     <string name="label_ambilight_smooth">Ambilight smooth</string>
-    <string name="desc_ambilight_smooth">Blends colour changes gradually — easier on the eyes during sync modes.</string>
+    <string name="desc_ambilight_smooth">Blends color changes gradually — easier on the eyes during sync modes.</string>
 
     <!-- TV Specific UI -->
     <string name="label_bluetooth">Bluetooth</string>
@@ -67,7 +67,7 @@
     <string name="label_delay_range_ms">10 – 5000 ms</string>
     <string name="label_pattern">Pattern</string>
     <string name="label_enabled">Enabled</string>
-    <string name="label_band_colours">Band Colours</string>
+    <string name="label_band_colors">Band Colors</string>
 
     <!-- Patterns -->
     <string name="pattern_solid">Solid</string>
@@ -87,9 +87,9 @@
     <!-- Accessibility & Misc -->
     <string name="cd_toggle_power">Toggle power</string>
     <string name="led_tile_label">LED Power</string>
-    <string name="cd_open_colour_picker">Open colour picker</string>
-    <string name="msg_pick_colour">Pick a colour</string>
-    <!-- Sync Colours -->
+    <string name="cd_open_color_picker">Open color picker</string>
+    <string name="msg_pick_color">Pick a color</string>
+    <!-- Sync Colors -->
     <string name="color_off">Off</string>
     <string name="color_red">Red</string>
     <string name="color_orange">Orange</string>

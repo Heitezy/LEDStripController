@@ -1,4 +1,4 @@
-# ELK-BLEDOM & BJ_LED Controller
+# LED Strip Controller
 
 > A fully native Android app for controlling ELK-BLEDOM and BJ_LED Bluetooth LE LED strips — built with Kotlin and Jetpack Compose.
 
@@ -11,7 +11,7 @@
 
 ## What it does
 
-Connect your phone to an ELK-BLEDOM or BJ_LED LED strip over Bluetooth and control every aspect of the light — colour, brightness, animated patterns, real-time music sync, and a live screen mirror (Ambilight) mode. Works on both phones and Android TV boxes.
+Connect your phone to an ELK-BLEDOM or BJ_LED LED strip over Bluetooth and control every aspect of the light — color, brightness, animated patterns, real-time music sync, and a live screen mirror (Ambilight) mode. Works on both phones and Android TV boxes.
 
 The app remembers your last connected device, so it reconnects automatically when you return — even if Android killed it in the background.
 
@@ -19,9 +19,9 @@ The app remembers your last connected device, so it reconnects automatically whe
 
 ## Features
 
-### Colour & Brightness
-- **Colour picker** — HSV wheel in a bottom sheet so it never interferes with page scrolling; includes a live colour preview bar and hex code readout
-- **Preset swatches** — one-tap colour presets
+### Color & Brightness
+- **Color picker** — HSV wheel in a bottom sheet so it never interferes with page scrolling; includes a live colour preview bar and hex code readout
+- **Preset swatches** — one-tap color presets
 - **Brightness control** — independent 1–100 % slider sent directly to the device firmware
 
 ### Animated Patterns
@@ -30,28 +30,28 @@ All patterns are animated entirely on the phone — no unreliable firmware effec
 
 | Pattern | Description |
 |---|---|
-| Solid | Static colour (uses the colour picker) |
+| Solid | Static color (uses the color picker) |
 | Jump RGB | Instantly hops between Red → Green → Blue |
-| Jump All | Instantly hops through 7 rainbow colours |
+| Jump All | Instantly hops through 7 rainbow colors |
 | Fade RGB | Smooth crossfade between Red, Green, Blue |
-| Fade All | Smooth crossfade through 7 rainbow colours |
+| Fade All | Smooth crossfade through 7 rainbow colors |
 | Crossfade Red | Pulses red in and out |
 | Crossfade Green Blue | Crossfades between green and blue |
 | Crossfade Blue | Pulses blue in and out |
 | Crossfade White | Pulses white in and out |
 | Flash RGB | Flashes Red / Green / Blue with black gaps |
-| Flash All | Flashes all 7 rainbow colours with black gaps |
+| Flash All | Flashes all 7 rainbow colors with black gaps |
 | Strobe White | Rapid white strobe |
 
 **Speed** is set by typing a delay in milliseconds directly into the input field (10 – 5000 ms). Lower = faster. The value takes effect on the next animation frame — no restart needed.
 
 ### Music Sync
 
-Real-time FFT analysis drives the LED colour from audio:
+Real-time FFT analysis drives the LED color from audio:
 
 - **Microphone mode** — listens to the room; works with any audio source, including headphones
 - **Phone Audio mode** *(Android 10+)* — captures internal app playback directly without a microphone; a one-time system consent prompt is shown on first use
-- **Per-band colour** — assign any of 11 colours (or Off) independently to Bass, Mids, and Highs
+- **Per-band color** — assign any of 11 colors (or Off) independently to Bass, Mids, and Highs
 - **Additive mixing** — all active bands blend simultaneously on the strip in real time
 - **Beat detection** — energy-threshold algorithm highlights kick drums and transients
 
@@ -61,15 +61,15 @@ Real-time FFT analysis drives the LED colour from audio:
 *(Android 10+ only)*
 
 - Captures your screen via MediaProjection at 20 fps
-- Calculates the dominant colour across the frame
+- Calculates the dominant color across the frame
 - Mirrors it to the LED strip with configurable smoothing
 
 ### Android TV
 
 - Dedicated two-panel layout designed for D-pad navigation
 - Sidebar navigation with focus-glow highlighting
-- Brightness and colour adjusted with step buttons (no sliders) — fully controllable with just a remote
-- Full feature parity: colour (H/S/V), brightness, patterns, music sync, screen sync, and settings
+- Brightness and color adjusted with step buttons (no sliders) — fully controllable with just a remote
+- Full feature parity: color (H/S/V), brightness, patterns, music sync, screen sync, and settings
 - Appears in the Android TV launcher with a custom banner
 
 ### Connection Resilience
@@ -78,7 +78,7 @@ Real-time FFT analysis drives the LED colour from audio:
 - **Explicit disconnect clears the saved address** — the app will not auto-reconnect after you manually disconnect
 
 ### Settings
-- **Ambilight smooth** — exponential blending for gradual colour transitions during Music Sync and Screen Sync (reduces jarring cuts)
+- **Ambilight smooth** — exponential blending for gradual color transitions during Music Sync and Screen Sync (reduces jarring cuts)
 
 ---
 
@@ -183,34 +183,34 @@ adb install app/build/outputs/apk/debug/app-debug.apk
 
 The app saves your device. Next time you open it, it reconnects automatically — no need to scan again.
 
-### Setting a colour
+### Setting a color
 
-- Tap the **Colour** row to open the colour picker sheet
+- Tap the **Color** row to open the color picker sheet
 - Drag the wheel to choose hue and saturation; drag the bar below for brightness
-- Tap a preset swatch for an instant colour
+- Tap a preset swatch for an instant color
 
 ### Choosing a pattern
 
 1. Open the **Pattern** dropdown and select an effect
 2. Type a delay in the **Delay (ms)** field that appears — this controls the speed of the animation
-3. Select **Solid** to stop the animation and return to static colour
+3. Select **Solid** to stop the animation and return to static color
 
 ### Music Sync
 
 1. Toggle **Music Sync** on
 2. Select your audio source — **Microphone** or **Phone Audio**
-3. Tap the colour swatches in the **Band Colours** row to assign a colour to each band:
+3. Tap the color swatches in the **Band Colors** row to assign a color to each band:
    - **Bass** (60–250 Hz)
    - **Mids** (250–4000 Hz)
    - **Highs** (4000–16 000 Hz)
    - Tap **Off** to silence a band
-4. Enable **Ambilight smooth** in Settings for gradual colour blending
+4. Enable **Ambilight smooth** in Settings for gradual color blending
 
 ### Screen Sync
 
 1. Toggle **Screen Sync** on
 2. Accept the system screen-capture consent prompt
-3. The dominant screen colour is mirrored to the strip at up to 20 fps
+3. The dominant screen color is mirrored to the strip at up to 20 fps
 4. Enable **Ambilight smooth** for a softer, more cinematic look
 
 ---
@@ -225,7 +225,7 @@ All ELK-BLEDOM commands are 9-byte frames sent with `WRITE_TYPE_NO_RESPONSE` for
 |---|---|
 | Power on | `7E 04 04 F0 00 01 FF 00 EF` |
 | Power off | `7E 04 04 00 00 00 FF 00 EF` |
-| Set colour (R, G, B) | `7E 07 05 03 RR GG BB 10 EF` |
+| Set color (R, G, B) | `7E 07 05 03 RR GG BB 10 EF` |
 | Set brightness (0–100) | `7E 04 01 BR 00 00 00 00 EF` |
 
 The app auto-detects which ELK-BLEDOM UUID pair the strip uses: primary (`FFF0` / `FFF3`) or alternate (`FFE5` / `FFE9`).
@@ -238,7 +238,7 @@ BJ_LED commands use a different header and structure, communicating over the `00
 |---|---|
 | Power on | `69 96 02 01 01` |
 | Power off | `69 96 02 01 00` |
-| Set colour (R, G, B) | `69 96 05 02 RR GG BB` |
+| Set color (R, G, B) | `69 96 05 02 RR GG BB` |
 
 *Note: BJ_LED strips do not have a dedicated brightness command. The app handles brightness seamlessly by scaling the RGB values before transmitting them to the device.*
 
@@ -260,9 +260,9 @@ The last connected device's MAC address is written to `SharedPreferences` on eve
 | Normalisation | Per-band rolling peak with 0.5 % / frame decay |
 | Beat detection | Bass energy vs. 4-second rolling average; fires at > 1.4× |
 
-### Colour mixing
+### Color mixing
 
-Each band's energy (0–1) scales its assigned colour; all three are summed and clamped:
+Each band's energy (0–1) scales its assigned color; all three are summed and clamped:
 
 ```
 R = clamp(bass × bassR  +  mid × midR  +  high × highR,  0, 255)
@@ -276,21 +276,21 @@ Every non-Solid pattern runs as a coroutine loop in the ViewModel, sending `setC
 
 ### Screen capture
 
-`ScreenAnalyzer` creates a `VirtualDisplay` at 160 px wide via MediaProjection and reads `RGBA_8888` frames through an `ImageReader` at a 20 FPS cap (sampling every 4th pixel). To avoid inaccurate colours and muddy results from simple RGB averaging:
+`ScreenAnalyzer` creates a `VirtualDisplay` at 160 px wide via MediaProjection and reads `RGBA_8888` frames through an `ImageReader` at a 20 FPS cap (sampling every 4th pixel). To avoid inaccurate colors and muddy results from simple RGB averaging:
 
-1. **Linear-Light Conversion:** Encoded sRGB pixels are converted to linear light using a precomputed lookup table before any blending occurs, preventing the mid-grey shift and desaturation typical of raw byte averaging.
+1. **Linear-Light Conversion:** Encoded sRGB pixels are converted to linear light using a precomputed lookup table before any blending occurs, preventing the mid-gray shift and desaturation typical of raw byte averaging.
 2. **Dominant-Hue Histogram:** Saturated pixels are grouped into 24 narrow hue bins (15° each). The histogram is circularly smoothed across neighbouring bins to prevent noise at bin edges.
-3. **HSV Re-grading:** If a dominant hue satisfies the minimum colour share threshold (2%), it is selected and re-graded. Its saturation is boosted by 1.25× (compensating for diffuse LED strips versus emissive screens), and its value is blended 50% with the overall scene brightness to ensure dark scenes stay dim.
+3. **HSV Re-grading:** If a dominant hue satisfies the minimum color share threshold (2%), it is selected and re-graded. Its saturation is boosted by 1.25× (compensating for diffuse LED strips versus emissive screens), and its value is blended 50% with the overall scene brightness to ensure dark scenes stay dim.
 4. **Neutral Fallback:** If no single hue dominates (e.g., text-heavy white UIs or black loading screens), it falls back gracefully to a neutral tone matched to the scene's actual overall linear-light brightness.
 
-Exponential smoothing (α = 0.07 for smooth mode, 0.25 for snappy) is applied to the final colours to blend consecutive frames.
+Exponential smoothing (α = 0.07 for smooth mode, 0.25 for snappy) is applied to the final colors to blend consecutive frames.
 
 ---
 
 ## Project structure
 
 ```
-app/src/main/java/com/example/elkbledom/
+app/src/main/java/heitezy/ledstripcontroller/
 ├── MainActivity.kt                   # Permission flow, BT enable, TV detection, MediaProjection, auto-reconnect
 ├── MediaProjectionService.kt         # Foreground service (required before getMediaProjection())
 ├── ble/
@@ -299,16 +299,16 @@ app/src/main/java/com/example/elkbledom/
 ├── audio/
 │   └── AudioAnalyzer.kt              # AudioRecord → Hann → FFT → band energy → Flow
 ├── screen/
-│   └── ScreenAnalyzer.kt             # MediaProjection → VirtualDisplay → dominant colour → Flow
+│   └── ScreenAnalyzer.kt             # MediaProjection → VirtualDisplay → dominant color → Flow
 └── ui/
     ├── MainViewModel.kt              # UiState, pattern coroutines, sync logic, persistent reconnect
-    ├── MainScreen.kt                 # Phone UI (scrollable, bottom sheet colour picker)
+    ├── MainScreen.kt                 # Phone UI (scrollable, bottom sheet color picker)
     ├── TvScreen.kt                   # TV UI (two-panel D-pad layout, step-button controls)
     ├── components/
-    │   ├── ColorPicker.kt            # HSV colour wheel (Canvas) + sliders
+    │   ├── ColorPicker.kt            # HSV color wheel (Canvas) + sliders
     │   └── PatternSelector.kt        # Pattern dropdown + ms delay text input
     └── theme/
-        └── Theme.kt                  # Dark Material 3 colour scheme
+        └── Theme.kt                  # Dark Material 3 color scheme
 ```
 
 ---

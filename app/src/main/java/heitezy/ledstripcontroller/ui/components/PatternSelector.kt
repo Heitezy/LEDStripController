@@ -1,4 +1,4 @@
-package com.example.elkbledom.ui.components
+package heitezy.ledstripcontroller.ui.components
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.layout.Column
@@ -28,7 +28,7 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.res.stringResource
-import com.example.elkbledom.ble.LedPattern
+import heitezy.ledstripcontroller.ble.LedPattern
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -56,7 +56,7 @@ fun PatternSelector(
     }
 
     Column(modifier = modifier) {
-        Text(stringResource(com.example.elkbledom.R.string.label_pattern), style = MaterialTheme.typography.titleMedium)
+        Text(stringResource(heitezy.ledstripcontroller.R.string.label_pattern), style = MaterialTheme.typography.titleMedium)
         Spacer(Modifier.height(8.dp))
 
         ExposedDropdownMenuBox(
@@ -105,8 +105,8 @@ fun PatternSelector(
                 OutlinedTextField(
                     value = speedText,
                     onValueChange = { speedText = it.filter { c -> c.isDigit() } },
-                    label = { Text(stringResource(com.example.elkbledom.R.string.label_delay_ms)) },
-                    supportingText = { Text(stringResource(com.example.elkbledom.R.string.label_delay_range_ms)) },
+                    label = { Text(stringResource(heitezy.ledstripcontroller.R.string.label_delay_ms)) },
+                    supportingText = { Text(stringResource(heitezy.ledstripcontroller.R.string.label_delay_range_ms)) },
                     singleLine = true,
                     keyboardOptions = KeyboardOptions(
                         keyboardType = KeyboardType.Number,
