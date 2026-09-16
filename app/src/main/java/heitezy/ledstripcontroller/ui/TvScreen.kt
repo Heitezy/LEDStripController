@@ -1,5 +1,6 @@
 package heitezy.ledstripcontroller.ui
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -18,6 +19,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -40,6 +42,11 @@ import androidx.compose.material.icons.filled.MusicNote
 import androidx.compose.material.icons.filled.Palette
 import androidx.compose.material.icons.filled.PhoneAndroid
 import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.automirrored.filled.LibraryBooks
+import androidx.compose.material.icons.filled.Code
+import androidx.compose.material.icons.filled.Gavel
+import androidx.compose.material.icons.filled.People
+import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -96,6 +103,7 @@ private enum class TvSection(val labelRes: Int, val icon: ImageVector) {
     MUSIC_SYNC(R.string.label_music_sync, Icons.Default.MusicNote),
     SCREEN_SYNC(R.string.label_screen_tv, Icons.AutoMirrored.Filled.ScreenShare),
     SETTINGS(R.string.label_settings,     Icons.Default.Settings),
+    ABOUT(R.string.label_about,           Icons.Outlined.Info),
 }
 
 // Helper to get string from labelRes
@@ -208,6 +216,7 @@ fun TvScreen(vm: MainViewModel, onRequestMediaProjection: () -> Unit = {}) {
                 TvSection.MUSIC_SYNC  -> TvMusicSyncSection(ui, vm, contentFocus)
                 TvSection.SCREEN_SYNC -> TvScreenSyncSection(ui, vm, contentFocus)
                 TvSection.SETTINGS    -> TvSettingsSection(ui, vm)
+                TvSection.ABOUT       -> TvAboutSection(contentFocus)
             }
         }
     }
@@ -975,5 +984,144 @@ private fun TvCheckboxRow(
             Text(label, style = MaterialTheme.typography.bodyLarge, fontWeight = FontWeight.Medium)
             Text(description, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
+    }
+}
+
+// ── About section ─────────────────────────────────────────────────────────────
+
+@Composable
+private fun TvAboutSection(contentFocus: FocusRequester) {
+    var showLibraries by remember { mutableStateOf(false) }
+    val openUrl = rememberUrlOpener()
+
+    BackHandler(enabled = showLibraries) { showLibraries = false }
+
+    Column(
+        modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()),
+        verticalArrangement = Arrangement.spacedBy(14.dp),
+    ) {
+        if (showLibraries) {
+            TvSectionTitle(stringResource(R.string.about_libraries), Icons.AutoMirrored.Filled.LibraryBooks)
+            Text(
+                stringResource(R.string.about_libraries_desc),
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+            AppLibraries.forEachIndexed { index, lib ->
+                TvAboutRow(
+                    title = lib.name,
+                    subtitle = lib.license,
+                    focusRequester = if (index == 0) contentFocus else null,
+                    onClick = {},
+                )
+            }
+        } else {
+            TvSectionTitle(stringResource(R.string.label_about), Icons.Outlined.Info)
+
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Icon(
+                    painter = painterResource(R.drawable.ic_launcher_foreground),
+                    contentDescription = null,
+                    modifier = Modifier.size(64.dp),
+                    tint = Color.Unspecified,
+                )
+                Spacer(Modifier.width(16.dp))
+                Column {
+                    Text(
+                        stringResource(R.string.app_name),
+                        style = MaterialTheme.typography.headlineSmall,
+                        fontWeight = FontWeight.Bold,
+                    )
+                    Text(
+                        stringResource(R.string.about_version, appVersionLabel()),
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
+            }
+
+            TvAboutGroupLabel(stringResource(R.string.about_source), Icons.Default.Code)
+            TvAboutRow(
+                title = stringResource(R.string.about_repository),
+                subtitle = AboutLinks.REPO,
+                focusRequester = contentFocus,
+                onClick = { openUrl(AboutLinks.REPO) },
+            )
+
+            TvAboutGroupLabel(stringResource(R.string.about_license), Icons.Default.Gavel)
+            TvAboutRow(
+                title = stringResource(R.string.about_license_mit),
+                subtitle = AboutLinks.LICENSE,
+                onClick = { openUrl(AboutLinks.LICENSE) },
+            )
+
+            TvAboutGroupLabel(stringResource(R.string.about_contributors), Icons.Default.People)
+            TvAboutRow(
+                title = stringResource(R.string.about_contributors_all),
+                subtitle = AboutLinks.CONTRIBUTORS,
+                onClick = { openUrl(AboutLinks.CONTRIBUTORS) },
+            )
+
+            TvAboutGroupLabel(stringResource(R.string.about_libraries), Icons.AutoMirrored.Filled.LibraryBooks)
+            TvAboutRow(
+                title = stringResource(R.string.about_libraries),
+                subtitle = stringResource(R.string.about_libraries_count, AppLibraries.size),
+                onClick = { showLibraries = true },
+            )
+        }
+
+        Spacer(Modifier.height(24.dp))
+    }
+}
+
+@Composable
+private fun TvAboutGroupLabel(text: String, icon: ImageVector) {
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier.padding(top = 10.dp),
+    ) {
+        Icon(icon, null, tint = MaterialTheme.colorScheme.primary, modifier = Modifier.size(20.dp))
+        Spacer(Modifier.width(8.dp))
+        Text(
+            text,
+            style = MaterialTheme.typography.titleMedium,
+            fontWeight = FontWeight.SemiBold,
+            color = MaterialTheme.colorScheme.primary,
+        )
+    }
+}
+
+@Composable
+private fun TvAboutRow(
+    title: String,
+    subtitle: String,
+    focusRequester: FocusRequester? = null,
+    onClick: () -> Unit,
+) {
+    var focused by remember { mutableStateOf(false) }
+    val shape = RoundedCornerShape(10.dp)
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .widthIn(max = 760.dp)
+            .onFocusChanged { focused = it.isFocused }
+            .clip(shape)
+            .clickable(onClick = onClick)
+            .background(if (focused) MaterialTheme.colorScheme.surfaceVariant else Color.Transparent, shape)
+            .then(if (focused) Modifier.border(2.dp, MaterialTheme.colorScheme.primary, shape) else Modifier)
+            .then(if (focusRequester != null) Modifier.focusRequester(focusRequester) else Modifier)
+            .padding(horizontal = 14.dp, vertical = 10.dp),
+    ) {
+        Text(
+            title,
+            style = MaterialTheme.typography.titleMedium,
+            fontWeight = FontWeight.Medium,
+            color = if (focused) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface,
+        )
+        Text(
+            subtitle,
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
     }
 }

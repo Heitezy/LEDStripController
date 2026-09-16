@@ -101,4 +101,25 @@
     <string name="color_magenta">Пурпуровий</string>
     <string name="color_pink">Рожевий</string>
     <string name="color_white">Білий</string>
+
+    <!-- About -->
+    <string name="label_about">Про застосунок</string>
+    <string name="cd_open_about">Про цей застосунок</string>
+    <string name="cd_back">Назад</string>
+    <string name="about_version">Версія %1$s</string>
+    <string name="about_tagline">Повністю нативний Android-застосунок для керування LED-стрічками ELK-BLEDOM та BJ_LED через Bluetooth LE.</string>
+    <string name="about_source">Вихідний код</string>
+    <string name="about_source_desc">Цей застосунок має відкритий код. Перегляньте код, повідомте про проблему або надішліть pull request.</string>
+    <string name="about_repository">Репозиторій</string>
+    <string name="about_license">Ліцензія</string>
+    <string name="about_license_mit">Ліцензія MIT</string>
+    <string name="about_license_body">Випущено за ліцензією MIT. Ви можете вільно використовувати, змінювати та поширювати цей застосунок за умови збереження повідомлення про авторські права.</string>
+    <string name="about_license_read">Читати повний текст ліцензії</string>
+    <string name="about_contributors">Учасники</string>
+    <string name="about_contributors_desc">Створено всіма, хто долучився до проєкту на GitHub.</string>
+    <string name="about_contributors_all">Переглянути всіх учасників</string>
+    <string name="about_contributors_all_desc">Відкриває графік учасників на GitHub</string>
+    <string name="about_libraries">Бібліотеки з відкритим кодом</string>
+    <string name="about_libraries_count">Ліцензії використаних бібліотек: %1$d</string>
+    <string name="about_libraries_desc">Цей застосунок побудовано на таких бібліотеках з відкритим кодом.</string>
 </resources>

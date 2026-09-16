@@ -28,6 +28,8 @@ android {
     }
     buildFeatures {
         compose = true
+        // Generates BuildConfig.VERSION_NAME / VERSION_CODE for the About page
+        buildConfig = true
     }
 }
 

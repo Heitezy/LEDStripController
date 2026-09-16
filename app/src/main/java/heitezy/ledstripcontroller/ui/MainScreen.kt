@@ -36,6 +36,7 @@ import androidx.compose.material.icons.filled.PhoneAndroid
 import androidx.compose.material.icons.filled.ChevronRight
 import androidx.compose.material.icons.filled.Palette
 import androidx.compose.material.icons.filled.Power
+import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.Checkbox
@@ -89,7 +90,14 @@ fun MainScreen(
 ) {
     val ui by vm.ui.collectAsState()
     var showColorSheet by remember { mutableStateOf(false) }
+    var showAbout by remember { mutableStateOf(false) }
     val colorSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+
+    // About lives on its own screen so it never competes with the controls.
+    if (showAbout) {
+        AboutScreen(onBack = { showAbout = false })
+        return
+    }
 
     // Forward ViewModel's projection requests to the Activity
     LaunchedEffect(vm) {
@@ -122,6 +130,13 @@ fun MainScreen(
                                 else MaterialTheme.colorScheme.onSurfaceVariant,
                             )
                         }
+                    }
+                    IconButton(onClick = { showAbout = true }) {
+                        Icon(
+                            Icons.Outlined.Info,
+                            contentDescription = stringResource(R.string.cd_open_about),
+                            tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
