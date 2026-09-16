@@ -72,6 +72,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import heitezy.ledstripcontroller.R
@@ -101,10 +102,10 @@ fun MainScreen(
                 title = {
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Icon(
-                            painter = androidx.compose.ui.res.painterResource(id = R.drawable.ic_launcher_foreground),
+                            painter = painterResource(R.drawable.ic_launcher_foreground),
                             contentDescription = null,
                             modifier = Modifier.size(32.dp),
-                            tint = Color.Unspecified
+                            tint = MaterialTheme.colorScheme.primary
                         )
                         Spacer(Modifier.width(8.dp))
                         Text(stringResource(R.string.app_name), fontWeight = FontWeight.Bold)
@@ -259,10 +260,10 @@ private fun ConnectionCard(ui: UiState, vm: MainViewModel) {
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Icon(
-                        painter = androidx.compose.ui.res.painterResource(id = R.drawable.ic_launcher_foreground),
+                        painter = painterResource(R.drawable.ic_launcher_foreground),
                         contentDescription = null,
                         modifier = Modifier.size(100.dp),
-                        tint = Color.Unspecified
+                        tint = MaterialTheme.colorScheme.primary
                     )
                     Spacer(Modifier.height(16.dp))
                     Text(

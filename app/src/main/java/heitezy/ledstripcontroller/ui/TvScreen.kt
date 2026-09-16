@@ -144,7 +144,7 @@ fun TvScreen(vm: MainViewModel, onRequestMediaProjection: () -> Unit = {}) {
                     painter = painterResource(R.drawable.ic_launcher_foreground),
                     contentDescription = null,
                     modifier = Modifier.size(28.dp),
-                    tint = Color.Unspecified,
+                    tint = MaterialTheme.colorScheme.primary,
                 )
                 Spacer(Modifier.width(8.dp))
                 Text(
