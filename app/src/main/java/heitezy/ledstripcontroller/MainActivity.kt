@@ -152,10 +152,14 @@ class MainActivity : ComponentActivity() {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.ui
                     .map { s ->
-                        when {
-                            s.isScreenSync -> MediaProjectionService.Reason.SCREEN
-                            s.isMusicSync && s.audioMode == AudioMode.PLAYBACK -> MediaProjectionService.Reason.PHONE_AUDIO
-                            else -> null
+                        if (!s.hasProjection) {
+                            null
+                        } else {
+                            when {
+                                s.isScreenSync -> MediaProjectionService.Reason.SCREEN
+                                s.isMusicSync && s.audioMode == AudioMode.PLAYBACK -> MediaProjectionService.Reason.PHONE_AUDIO
+                                else -> null
+                            }
                         }
                     }
                     .distinctUntilChanged()
@@ -165,10 +169,20 @@ class MainActivity : ComponentActivity() {
                             // actually running — covers switching Phone-Audio Music Sync
                             // <-> Screen Sync while the projection is already granted,
                             // when the service itself is never restarted.
-                            startForegroundService(MediaProjectionService.intent(this@MainActivity, reason))
+                            try {
+                                startForegroundService(MediaProjectionService.intent(this@MainActivity, reason))
+                            } catch (e: Exception) {
+                                e.printStackTrace()
+                            }
                         } else {
-                            stopService(Intent(this@MainActivity, MediaProjectionService::class.java))
-                            viewModel.releaseProjection()
+                            try {
+                                stopService(Intent(this@MainActivity, MediaProjectionService::class.java))
+                            } catch (e: Exception) {
+                                e.printStackTrace()
+                            }
+                            if (viewModel.ui.value.hasProjection) {
+                                viewModel.releaseProjection()
+                            }
                         }
                     }
             }

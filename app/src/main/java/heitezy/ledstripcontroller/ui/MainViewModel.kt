@@ -68,6 +68,7 @@ data class UiState(
     val screenR: Int = 0,
     val screenG: Int = 0,
     val screenB: Int = 0,
+    val hasProjection: Boolean = false,
     val isAmbilightSmooth: Boolean = false,
 )
 
@@ -380,6 +381,8 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
     fun onMediaProjection(mp: MediaProjection?, cancelled: Boolean = false) {
         mediaProjection?.stop()
         mediaProjection = mp
+        val hasProj = mp != null
+        _ui.update { it.copy(hasProjection = hasProj) }
         when {
             mp == null && cancelled -> _ui.update { it.copy(audioMode = AudioMode.MIC, isScreenSync = false) }
             mp != null && _ui.value.isMusicSync -> restartMusicSync()
@@ -389,7 +392,7 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
 
     fun releaseProjection() {
         stopScreenSync()
-        _ui.update { it.copy(isScreenSync = false) }
+        _ui.update { it.copy(isScreenSync = false, hasProjection = false) }
         mediaProjection?.stop()
         mediaProjection = null
     }
