@@ -1,0 +1,125 @@
+<resources>
+    <string name="app_name">LED Strip Controller</string>
+
+    <!-- Permissions -->
+    <string name="perm_rationale">LED Strip Controller, LED şeridinizi taramak ve müzik senkronizasyonunu etkinleştirmek için Bluetooth ve Mikrofon izinlerine ihtiyaç duyar.</string>
+    <string name="btn_grant_permissions">İzinleri Ver</string>
+    <string name="bt_disabled_msg">Bluetooth kapalı. LED şeridinize bağlanmak için lütfen Bluetooth\'u etkinleştirin.</string>
+    <string name="btn_enable_bluetooth">Bluetooth\'u Etkinleştir</string>
+
+    <!-- Notifications & Services -->
+    <string name="channel_media_capture_name">Medya Yakalama</string>
+    <string name="channel_media_capture_desc">LED senkronizasyonu için telefon sesini veya ekran içeriğini yakalarken etkindir</string>
+    <string name="notif_screen_capture">Ekran Senkronizasyonu için ekran içeriği yakalanıyor</string>
+    <string name="notif_phone_audio_capture">Müzik Senkronizasyonu için telefon sesi yakalanıyor</string>
+    <string name="channel_music_sync_mic_name">Müzik Senkronizasyonu (Mikrofon)</string>
+    <string name="channel_music_sync_mic_desc">Müzik Senkronizasyonu mikrofonu dinlerken etkindir</string>
+    <string name="notif_mic_listening">Müzik Senkronizasyonu mikrofonu dinliyor</string>
+
+    <!-- General UI -->
+    <string name="btn_scan">Cihazları tara</string>
+    <string name="btn_stop">Durdur</string>
+    <string name="status_scanning">Taranıyor…</string>
+    <string name="status_looking_ble">BLE cihazları aranıyor…</string>
+    <string name="status_connecting">Bağlanıyor…</string>
+    <string name="status_connected">Bağlandı</string>
+    <string name="status_disconnected">Bağlantı Kesildi</string>
+    <string name="btn_disconnect">Bağlantıyı Kes</string>
+    <string name="msg_connection_failed">Bağlantı başarısız. Tekrar deneyin.</string>
+    <string name="msg_ready_to_illuminate">Aydınlatmaya hazır mısınız?</string>
+    <string name="label_color">Renk</string>
+    <string name="label_brightness_tv">Parlaklık</string>
+    <string name="label_brightness">Parlaklık: %1$d%%</string>
+    <string name="label_music_sync">Müzik Senkronizasyonu</string>
+    <string name="label_microphone">Mikrofon</string>
+    <string name="label_phone_audio">Telefon Sesi</string>
+    <string name="label_tv_audio">TV Sesi</string>
+    <string name="msg_android_10_required">Android 10+ gerektirir</string>
+    <string name="desc_phone_audio">Hoparlörünüzden veya kulaklığınızdan çalınan sesi yakalar.\nNot: DRM korumalı uygulamalar (Spotify, Netflix) ses yakalamayı engeller.</string>
+    <string name="desc_microphone">Mikrofon odadaki sesi alır — her kaynakla çalışır.</string>
+    <string name="desc_band_colors">Frekans Renkleri  ·  atamak için renge dokunun  ·  sessize almak için ✕ simgesine dokunun</string>
+    <string name="label_bass">Bas</string>
+    <string name="label_mids">Midler</string>
+    <string name="label_highs">Tizler</string>
+    <string name="label_screen_sync">Ekran Senkronizasyonu</string>
+    <string name="label_screen_tv">Ekran</string>
+    <string name="desc_screen_sync">Ekranınızdaki baskın rengi gerçek zamanlı olarak LED\'lere yansıtır — 20 fps hızında doygunluk ağırlıklı. Parlak ve renkli içeriklerde en iyi sonucu verir.</string>
+    <string name="label_dominant_color">Baskın renk</string>
+    <string name="label_beat">Ritim</string>
+    <string name="label_ambilight_smooth">Yumuşak Ambilight</string>
+    <string name="desc_ambilight_smooth">Renk değişikliklerini kademeli olarak harmanlar — senkronizasyon modlarında gözü daha az yorar.</string>
+
+    <!-- TV Specific UI -->
+    <string name="label_bluetooth">Bluetooth</string>
+    <string name="label_patterns">Desenler</string>
+    <string name="label_settings">Ayarlar</string>
+    <string name="msg_connect_first">Önce bir cihaza bağlanın</string>
+    <string name="msg_go_to_bt_section">Taramak ve eşleştirmek için Bluetooth bölümüne gidin.</string>
+    <string name="btn_turn_on">Aç</string>
+    <string name="btn_turn_off">Kapat</string>
+    <string name="desc_nav_buttons">D-pad Sol / Sağ tuşlarıyla butonlar arasında gezinin, uygulamak için OK tuşuna basın</string>
+    <string name="label_hue">Renk Tonu</string>
+    <string name="label_saturation">Doygunluk</string>
+    <string name="desc_nav_rows">D-pad Yukarı / Aşağı tuşlarıyla satırlar, Sol / Sağ tuşlarıyla butonlar arasında gezinin, uygulamak için OK tuşuna basın</string>
+    <string name="label_animation_speed">Animasyon Hızı</string>
+    <string name="label_delay_ms">Gecikme (ms)</string>
+    <string name="label_delay_range">10 – 5000</string>
+    <string name="label_delay_range_ms">10 – 5000 ms</string>
+    <string name="label_pattern">Desen</string>
+    <string name="label_enabled">Etkin</string>
+    <string name="label_band_colors">Frekans Renkleri</string>
+
+    <!-- Patterns -->
+    <string name="pattern_solid">Sabit</string>
+    <string name="pattern_jump_rgb">RGB Atlama</string>
+    <string name="pattern_jump_all">Tümünü Atlama</string>
+    <string name="pattern_fade_rgb">RGB Solma</string>
+    <string name="pattern_fade_all">Tümünü Solma</string>
+    <string name="pattern_crossfade_red">Kırmızı Yumuşak Geçiş</string>
+    <string name="pattern_crossfade_green_blue">Yeşil Mavi Yumuşak Geçiş</string>
+    <string name="pattern_crossfade_blue_orange">Mavi Turuncu Yumuşak Geçiş</string>
+    <string name="pattern_crossfade_blue">Mavi Yumuşak Geçiş</string>
+    <string name="pattern_crossfade_white">Beyaz Yumuşak Geçiş</string>
+    <string name="pattern_flash_rgb">RGB Flaş</string>
+    <string name="pattern_flash_all">Tümünü Flaş</string>
+    <string name="pattern_strobe_white">Beyaz Stroboskop</string>
+
+    <!-- Accessibility & Misc -->
+    <string name="cd_toggle_power">Gücü aç/kapat</string>
+    <string name="led_tile_label">LED Gücü</string>
+    <string name="cd_open_color_picker">Renk seçiciyi aç</string>
+    <string name="msg_pick_color">Bir renk seçin</string>
+    <!-- Sync Colors -->
+    <string name="color_off">Kapalı</string>
+    <string name="color_red">Kırmızı</string>
+    <string name="color_orange">Turuncu</string>
+    <string name="color_yellow">Sarı</string>
+    <string name="color_green">Yeşil</string>
+    <string name="color_cyan">Açık Mavi</string>
+    <string name="color_blue">Mavi</string>
+    <string name="color_violet">Menekşe</string>
+    <string name="color_magenta">Eflatun</string>
+    <string name="color_pink">Pembe</string>
+    <string name="color_white">Beyaz</string>
+
+    <!-- About -->
+    <string name="label_about">Hakkında</string>
+    <string name="cd_open_about">Bu uygulama hakkında</string>
+    <string name="cd_back">Geri</string>
+    <string name="about_version">Sürüm %1$s</string>
+    <string name="about_tagline">ELK-BLEDOM ve BJ_LED Bluetooth LE LED şeritlerini kontrol etmek için tamamen yerel bir Android uygulaması.</string>
+    <string name="about_source">Kaynak kodu</string>
+    <string name="about_source_desc">Bu uygulama açık kaynaklıdır. Kodu inceleyin, sorun bildirin veya pull request gönderin.</string>
+    <string name="about_repository">Depo</string>
+    <string name="about_license">Lisans</string>
+    <string name="about_license_mit">MIT Lisansı</string>
+    <string name="about_license_body">MIT Lisansı altında yayınlanmıştır. Telif hakkı bildirimi korunduğu sürece bu uygulamayı serbestçe kullanabilir, değiştirebilir ve yeniden dağıtabilirsiniz.</string>
+    <string name="about_license_read">Tam lisans metnini oku</string>
+    <string name="about_contributors">Katkıda Bulunanlar</string>
+    <string name="about_contributors_desc">GitHub\'da projeye katkıda bulunan herkes tarafından geliştirildi.</string>
+    <string name="about_contributors_all">Tüm katkıda bulunanları görüntüle</string>
+    <string name="about_contributors_all_desc">GitHub\'daki katkıda bulunanlar grafiğini açar</string>
+    <string name="about_libraries">Açık kaynaklı kütüphaneler</string>
+    <string name="about_libraries_count">Kullanılan %1$d kütüphanenin lisansları</string>
+    <string name="about_libraries_desc">Bu uygulama aşağıdaki açık kaynaklı kütüphaneler üzerine inşa edilmiştir.</string>
+</resources>
