@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LED Strip Controller</string>
+
+    <!-- Permissions -->
+    <string name="perm_rationale">LED Strip Controller 需要藍牙與麥克風權限，以搜尋您的 LED 燈條並啟用音樂同步。</string>
+    <string name="btn_grant_permissions">授予權限</string>
+    <string name="bt_disabled_msg">藍牙已關閉。請開啟藍牙以連接您的 LED 燈條。</string>
+    <string name="btn_enable_bluetooth">開啟藍牙</string>
+
+    <!-- Notifications & Services -->
+    <string name="channel_media_capture_name">媒體擷取</string>
+    <string name="channel_media_capture_desc">擷取手機音訊或螢幕內容以進行 LED 同步時為啟用狀態</string>
+    <string name="notif_screen_capture">正在擷取螢幕內容以進行螢幕同步</string>
+    <string name="notif_phone_audio_capture">正在擷取手機音訊以進行音樂同步</string>
+    <string name="channel_music_sync_mic_name">音樂同步（麥克風）</string>
+    <string name="channel_music_sync_mic_desc">音樂同步正在透過麥克風收音時為啟用狀態</string>
+    <string name="notif_mic_listening">音樂同步正在透過麥克風收音</string>
+
+    <!-- General UI -->
+    <string name="btn_scan">掃描裝置</string>
+    <string name="btn_stop">停止</string>
+    <string name="status_scanning">正在掃描…</string>
+    <string name="status_looking_ble">正在尋找 BLE 裝置…</string>
+    <string name="status_connecting">正在連接…</string>
+    <string name="status_connected">已連接</string>
+    <string name="status_disconnected">已斷開連接</string>
+    <string name="btn_disconnect">斷開連接</string>
+    <string name="msg_connection_failed">連接失敗，請重試。</string>
+    <string name="msg_ready_to_illuminate">準備好點亮燈光了嗎？</string>
+    <string name="label_color">顏色</string>
+    <string name="label_brightness_tv">亮度</string>
+    <string name="label_brightness">亮度：%1$d%%</string>
+    <string name="label_music_sync">音樂同步</string>
+    <string name="label_microphone">麥克風</string>
+    <string name="label_phone_audio">手機音訊</string>
+    <string name="label_tv_audio">電視音訊</string>
+    <string name="msg_android_10_required">需要 Android 10 或更高版本</string>
+    <string name="desc_phone_audio">擷取透過喇叭或耳機播放的聲音。\n注意：受 DRM 保護的應用程式（如 Spotify、Netflix）無法擷取。</string>
+    <string name="desc_microphone">麥克風會接收房間內的聲音 — 適用於任何聲源。</string>
+    <string name="desc_band_colors">頻段顏色  ·  點擊色塊以指定  ·  點擊 ✕ 以靜音</string>
+    <string name="label_bass">低音</string>
+    <string name="label_mids">中音</string>
+    <string name="label_highs">高音</string>
+    <string name="label_screen_sync">螢幕同步</string>
+    <string name="label_screen_tv">螢幕</string>
+    <string name="desc_screen_sync">即時將螢幕上的主導顏色同步至 LED — 以 20 fps 的加權飽和度運算。明亮且豐富多彩的內容效果最佳。</string>
+    <string name="label_dominant_color">主導顏色</string>
+    <string name="label_beat">節拍</string>
+    <string name="label_ambilight_smooth">平滑流光</string>
+    <string name="desc_ambilight_smooth">平滑過渡顏色變化 — 在同步模式下讓視覺更舒適。</string>
+
+    <!-- TV Specific UI -->
+    <string name="label_bluetooth">藍牙</string>
+    <string name="label_patterns">燈效模式</string>
+    <string name="label_settings">設定</string>
+    <string name="msg_connect_first">請先連接至裝置</string>
+    <string name="msg_go_to_bt_section">請前往藍牙區段進行掃描與配對。</string>
+    <string name="btn_turn_on">開啟</string>
+    <string name="btn_turn_off">關閉</string>
+    <string name="desc_nav_buttons">使用方向鍵「左 / 右」切換按鈕，按下 OK 鍵套用</string>
+    <string name="label_hue">色調</string>
+    <string name="label_saturation">飽和度</string>
+    <string name="desc_nav_rows">使用方向鍵「上 / 下」切換列，按「左 / 右」切換按鈕，按下 OK 鍵套用</string>
+    <string name="label_animation_speed">動畫速度</string>
+    <string name="label_delay_ms">延遲（毫秒）</string>
+    <string name="label_delay_range">10 – 5000</string>
+    <string name="label_delay_range_ms">10 – 5000 毫秒</string>
+    <string name="label_pattern">燈效模式</string>
+    <string name="label_enabled">已啟用</string>
+    <string name="label_band_colors">頻段顏色</string>
+
+    <!-- Patterns -->
+    <string name="pattern_solid">單色常亮</string>
+    <string name="pattern_jump_rgb">RGB 跳變</string>
+    <string name="pattern_jump_all">全彩跳變</string>
+    <string name="pattern_fade_rgb">RGB 漸變</string>
+    <string name="pattern_fade_all">全彩漸變</string>
+    <string name="pattern_crossfade_red">紅色交錯漸變</string>
+    <string name="pattern_crossfade_green_blue">綠藍交錯漸變</string>
+    <string name="pattern_crossfade_blue_orange">藍橘交錯漸變</string>
+    <string name="pattern_crossfade_blue">藍色交錯漸變</string>
+    <string name="pattern_crossfade_white">白色交錯漸變</string>
+    <string name="pattern_flash_rgb">RGB 閃爍</string>
+    <string name="pattern_flash_all">全彩閃爍</string>
+    <string name="pattern_strobe_white">白光頻閃</string>
+
+    <!-- Accessibility & Misc -->
+    <string name="cd_toggle_power">切換電源</string>
+    <string name="led_tile_label">LED 電源</string>
+    <string name="cd_open_color_picker">開啟檢色器</string>
+    <string name="msg_pick_color">選擇顏色</string>
+    <!-- Sync Colors -->
+    <string name="color_off">關閉</string>
+    <string name="color_red">紅色</string>
+    <string name="color_orange">橘色</string>
+    <string name="color_yellow">黃色</string>
+    <string name="color_green">綠色</string>
+    <string name="color_cyan">青色</string>
+    <string name="color_blue">藍色</string>
+    <string name="color_violet">紫色</string>
+    <string name="color_magenta">洋紅色</string>
+    <string name="color_pink">粉紅色</string>
+    <string name="color_white">白色</string>
+
+    <!-- About -->
+    <string name="label_about">關於</string>
+    <string name="cd_open_about">關於此應用程式</string>
+    <string name="cd_back">返回</string>
+    <string name="about_version">版本 %1$s</string>
+    <string name="about_tagline">用於控制 ELK-BLEDOM 與 BJ_LED 低功耗藍牙 (BLE) LED 燈條的原生 Android 應用程式。</string>
+    <string name="about_source">原始碼</string>
+    <string name="about_source_desc">本應用程式為開源專案。歡迎查看程式碼、提出 Issue 或提交 Pull Request。</string>
+    <string name="about_repository">儲存庫</string>
+    <string name="about_license">授權條款</string>
+    <string name="about_license_mit">MIT 授權條款</string>
+    <string name="about_license_body">根據 MIT 授權條款發布。只要保留著作權聲明，您可以自由使用、修改與重新分發本應用程式。</string>
+    <string name="about_license_read">閱讀完整授權條款內容</string>
+    <string name="about_contributors">貢獻者</string>
+    <string name="about_contributors_desc">由所有在 GitHub 上對此專案做出貢獻的人士共同打造。</string>
+    <string name="about_contributors_all">檢視所有貢獻者</string>
+    <string name="about_contributors_all_desc">在 GitHub 上開啟貢獻者圖表</string>
+    <string name="about_libraries">開源函式庫</string>
+    <string name="about_libraries_count">已使用的 %1$d 個函式庫授權條款</string>
+    <string name="about_libraries_desc">本應用程式基於以下開源函式庫建置。</string>
+</resources>
