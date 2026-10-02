@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LED Strip Controller</string>
+
+    <!-- Permissions -->
+    <string name="perm_rationale">LED Strip Controller 需要蓝牙和麦克风权限，以扫描您的 LED 灯条并启用音乐同步。</string>
+    <string name="btn_grant_permissions">授予权限</string>
+    <string name="bt_disabled_msg">蓝牙已禁用。请开启蓝牙以连接您的 LED 灯条。</string>
+    <string name="btn_enable_bluetooth">开启蓝牙</string>
+
+    <!-- Notifications & Services -->
+    <string name="channel_media_capture_name">媒体捕获</string>
+    <string name="channel_media_capture_desc">捕获手机音频或屏幕内容以进行 LED 同步时处于激活状态</string>
+    <string name="notif_screen_capture">正在捕获屏幕内容以进行屏幕同步</string>
+    <string name="notif_phone_audio_capture">正在捕获手机音频以进行音乐同步</string>
+    <string name="channel_music_sync_mic_name">音乐同步（麦克风）</string>
+    <string name="channel_music_sync_mic_desc">音乐同步正在通过麦克风收音时处于激活状态</string>
+    <string name="notif_mic_listening">音乐同步正在通过麦克风收音</string>
+
+    <!-- General UI -->
+    <string name="btn_scan">扫描设备</string>
+    <string name="btn_stop">停止</string>
+    <string name="status_scanning">正在扫描…</string>
+    <string name="status_looking_ble">正在寻找 BLE 设备…</string>
+    <string name="status_connecting">正在连接…</string>
+    <string name="status_connected">已连接</string>
+    <string name="status_disconnected">已断开连接</string>
+    <string name="btn_disconnect">断开连接</string>
+    <string name="msg_connection_failed">连接失败，请重试。</string>
+    <string name="msg_ready_to_illuminate">准备好点亮灯光了吗？</string>
+    <string name="label_color">颜色</string>
+    <string name="label_brightness_tv">亮度</string>
+    <string name="label_brightness">亮度：%1$d%%</string>
+    <string name="label_music_sync">音乐同步</string>
+    <string name="label_microphone">麦克风</string>
+    <string name="label_phone_audio">手机音频</string>
+    <string name="label_tv_audio">电视音频</string>
+    <string name="msg_android_10_required">需要 Android 10 或更高版本</string>
+    <string name="desc_phone_audio">捕获通过扬声器或耳机播放的声音。\n注意：受 DRM 保护的应用（如 Spotify、Netflix）无法捕获。</string>
+    <string name="desc_microphone">麦克风会拾取房间内的声音 — 适用于任何声源。</string>
+    <string name="desc_band_colors">频段颜色  ·  点击色块以指定  ·  点击 ✕ 以静音</string>
+    <string name="label_bass">低音</string>
+    <string name="label_mids">中音</string>
+    <string name="label_highs">高音</string>
+    <string name="label_screen_sync">屏幕同步</string>
+    <string name="label_screen_tv">屏幕</string>
+    <string name="desc_screen_sync">实时将屏幕上的主导颜色同步至 LED — 以 20 fps 进行饱和度加权计算。明亮且色彩丰富的内容效果最佳。</string>
+    <string name="label_dominant_color">主色</string>
+    <string name="label_beat">节拍</string>
+    <string name="label_ambilight_smooth">平滑流光</string>
+    <string name="desc_ambilight_smooth">平滑过渡颜色变化 — 在同步模式下让视觉更舒适。</string>
+
+    <!-- TV Specific UI -->
+    <string name="label_bluetooth">蓝牙</string>
+    <string name="label_patterns">灯效模式</string>
+    <string name="label_settings">设置</string>
+    <string name="msg_connect_first">请先连接到设备</string>
+    <string name="msg_go_to_bt_section">请前往蓝牙板块进行扫描与配对。</string>
+    <string name="btn_turn_on">开启</string>
+    <string name="btn_turn_off">关闭</string>
+    <string name="desc_nav_buttons">使用方向键“左 / 右”切换按钮，按 OK 键应用</string>
+    <string name="label_hue">色调</string>
+    <string name="label_saturation">饱和度</string>
+    <string name="desc_nav_rows">使用方向键“上 / 下”切换行，“左 / 右”切换按钮，按 OK 键应用</string>
+    <string name="label_animation_speed">动画速度</string>
+    <string name="label_delay_ms">延迟（毫秒）</string>
+    <string name="label_delay_range">10 – 5000</string>
+    <string name="label_delay_range_ms">10 – 5000 毫秒</string>
+    <string name="label_pattern">灯效模式</string>
+    <string name="label_enabled">已启用</string>
+    <string name="label_band_colors">频段颜色</string>
+
+    <!-- Patterns -->
+    <string name="pattern_solid">单色常亮</string>
+    <string name="pattern_jump_rgb">RGB 跳变</string>
+    <string name="pattern_jump_all">全彩跳变</string>
+    <string name="pattern_fade_rgb">RGB 渐变</string>
+    <string name="pattern_fade_all">全彩渐变</string>
+    <string name="pattern_crossfade_red">红色交替渐变</string>
+    <string name="pattern_crossfade_green_blue">绿蓝交替渐变</string>
+    <string name="pattern_crossfade_blue_orange">蓝橙交替渐变</string>
+    <string name="pattern_crossfade_blue">蓝色交替渐变</string>
+    <string name="pattern_crossfade_white">白色交替渐变</string>
+    <string name="pattern_flash_rgb">RGB 闪烁</string>
+    <string name="pattern_flash_all">全彩闪烁</string>
+    <string name="pattern_strobe_white">白光频闪</string>
+
+    <!-- Accessibility & Misc -->
+    <string name="cd_toggle_power">切换电源</string>
+    <string name="led_tile_label">LED 电源</string>
+    <string name="cd_open_color_picker">打开颜色选择器</string>
+    <string name="msg_pick_color">选择颜色</string>
+    <!-- Sync Colors -->
+    <string name="color_off">关闭</string>
+    <string name="color_red">红色</string>
+    <string name="color_orange">橙色</string>
+    <string name="color_yellow">黄色</string>
+    <string name="color_green">绿色</string>
+    <string name="color_cyan">青色</string>
+    <string name="color_blue">蓝色</string>
+    <string name="color_violet">紫色</string>
+    <string name="color_magenta">洋红色</string>
+    <string name="color_pink">粉红色</string>
+    <string name="color_white">白色</string>
+
+    <!-- About -->
+    <string name="label_about">关于</string>
+    <string name="cd_open_about">关于此应用</string>
+    <string name="cd_back">返回</string>
+    <string name="about_version">版本 %1$s</string>
+    <string name="about_tagline">用于控制 ELK-BLEDOM 与 BJ_LED 低功耗蓝牙 (BLE) LED 灯条的原生 Android 应用。</string>
+    <string name="about_source">源代码</string>
+    <string name="about_source_desc">本应用为开源项目。欢迎查看代码、提交 Issue 或发送 Pull Request。</string>
+    <string name="about_repository">代码仓库</string>
+    <string name="about_license">开源许可证</string>
+    <string name="about_license_mit">MIT 许可证</string>
+    <string name="about_license_body">根据 MIT 许可证发布。只要保留版权声明，您可以自由使用、修改和分发本应用。</string>
+    <string name="about_license_read">阅读完整许可证文本</string>
+    <string name="about_contributors">贡献者</string>
+    <string name="about_contributors_desc">由所有在 GitHub 上为此项目做出贡献的人共同打造。</string>
+    <string name="about_contributors_all">查看所有贡献者</string>
+    <string name="about_contributors_all_desc">在 GitHub 上打开贡献者图表</string>
+    <string name="about_libraries">开源第三方库</string>
+    <string name="about_libraries_count">已使用的 %1$d 个库许可证</string>
+    <string name="about_libraries_desc">本应用基于以下开源库构建。</string>
+</resources>
