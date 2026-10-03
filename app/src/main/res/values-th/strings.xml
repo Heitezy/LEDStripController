@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LED Strip Controller</string>
+
+    <!-- Permissions -->
+    <string name="perm_rationale">LED Strip Controller ต้องการสิทธิ์การใช้งานบลูทูธและไมโครโฟนเพื่อค้นหาไฟเส้น LED และเปิดใช้งานการซิงค์เพลง</string>
+    <string name="btn_grant_permissions">อนุญาตสิทธิ์</string>
+    <string name="bt_disabled_msg">ปิดใช้งานบลูทูธอยู่ กรุณาเปิดบลูทูธเพื่อเชื่อมต่อกับไฟเส้น LED ของคุณ</string>
+    <string name="btn_enable_bluetooth">เปิดใช้งานบลูทูธ</string>
+
+    <!-- Notifications & Services -->
+    <string name="channel_media_capture_name">การจับภาพมีเดีย</string>
+    <string name="channel_media_capture_desc">ทำงานขณะจับภาพเสียงโทรศัพท์หรือเนื้อหาบนหน้าจอเพื่อซิงค์ไฟ LED</string>
+    <string name="notif_screen_capture">กำลังจับภาพหน้าจอสำหรับการซิงค์หน้าจอ</string>
+    <string name="notif_phone_audio_capture">กำลังจับภาพเสียงโทรศัพท์สำหรับการซิงค์เพลง</string>
+    <string name="channel_music_sync_mic_name">ซิงค์เพลง (ไมโครโฟน)</string>
+    <string name="channel_music_sync_mic_desc">ทำงานขณะซิงค์เพลงกำลังฟังเสียงผ่านไมโครโฟน</string>
+    <string name="notif_mic_listening">การซิงค์เพลงกำลังฟังเสียงผ่านไมโครโฟน</string>
+
+    <!-- General UI -->
+    <string name="btn_scan">ค้นหาอุปกรณ์</string>
+    <string name="btn_stop">หยุด</string>
+    <string name="status_scanning">กำลังค้นหา…</string>
+    <string name="status_looking_ble">กำลังค้นหาอุปกรณ์ BLE…</string>
+    <string name="status_connecting">กำลังเชื่อมต่อ…</string>
+    <string name="status_connected">เชื่อมต่อแล้ว</string>
+    <string name="status_disconnected">ตัดการเชื่อมต่อแล้ว</string>
+    <string name="btn_disconnect">ตัดการเชื่อมต่อ</string>
+    <string name="msg_connection_failed">การเชื่อมต่อล้มเหลว โปรดลองอีกครั้ง</string>
+    <string name="msg_ready_to_illuminate">พร้อมเปิดไฟหรือยัง?</string>
+    <string name="label_color">สี</string>
+    <string name="label_brightness_tv">ความสว่าง</string>
+    <string name="label_brightness">ความสว่าง: %1$d%%</string>
+    <string name="label_music_sync">ซิงค์เพลง</string>
+    <string name="label_microphone">ไมโครโฟน</string>
+    <string name="label_phone_audio">เสียงโทรศัพท์</string>
+    <string name="label_tv_audio">เสียงทีวี</string>
+    <string name="msg_android_10_required">ต้องใช้ Android 10 ขึ้นไป</string>
+    <string name="desc_phone_audio">จับภาพเสียงที่เล่นผ่านลำโพงหรือหูฟังของคุณ\nหมายเหตุ: แอปที่มีการคุ้มครอง DRM (Spotify, Netflix) จะบล็อกการจับภาพเสียง</string>
+    <string name="desc_microphone">ไมโครโฟนรับเสียงจากภายในห้อง — รองรับกับทุกแหล่งเสียง</string>
+    <string name="desc_band_colors">สีของย่านความถี่  ·  แตะสีเพื่อกำหนด  ·  แตะ ✕ เพื่อปิดเสียง</string>
+    <string name="label_bass">เสียงเบส</string>
+    <string name="label_mids">เสียงกลาง</string>
+    <string name="label_highs">เสียงแหลม</string>
+    <string name="label_screen_sync">ซิงค์หน้าจอ</string>
+    <string name="label_screen_tv">หน้าจอ</string>
+    <string name="desc_screen_sync">สะท้อนสีหลักบนหน้าจอของคุณไปยังไฟ LED แบบเรียลไทม์ — ถ่วงน้ำหนักความอิ่มสีที่ 20 fps เนื้อหาที่สว่างและมีสีสันจะให้ผลลัพธ์ที่ดีที่สุด</string>
+    <string name="label_dominant_color">สีหลัก</string>
+    <string name="label_beat">จังหวะ</string>
+    <string name="label_ambilight_smooth">แสงไฟนุ่มนวล</string>
+    <string name="desc_ambilight_smooth">ผสมผสานการเปลี่ยนแปลงของสีอย่างค่อยเป็นค่อยไป — ถนอมสายตาขณะอยู่ในโหมดซิงค์</string>
+
+    <!-- TV Specific UI -->
+    <string name="label_bluetooth">บลูทูธ</string>
+    <string name="label_patterns">รูปแบบแสงไฟ</string>
+    <string name="label_settings">การตั้งค่า</string>
+    <string name="msg_connect_first">โปรดเชื่อมต่อกับอุปกรณ์ก่อน</string>
+    <string name="msg_go_to_bt_section">ไปยังส่วนบลูทูธเพื่อค้นหาและจับคู่อุปกรณ์</string>
+    <string name="btn_turn_on">เปิด</string>
+    <string name="btn_turn_off">ปิด</string>
+    <string name="desc_nav_buttons">เลื่อนระหว่างปุ่มด้วยปุ่มทิศทาง ซ้าย / ขวา กด OK เพื่อตกลง</string>
+    <string name="label_hue">เฉดสี</string>
+    <string name="label_saturation">ความอิ่มสี</string>
+    <string name="desc_nav_rows">เลื่อนแถวด้วยปุ่มทิศทาง ขึ้น / ลง เลื่อนปุ่มด้วย ซ้าย / ขวา กด OK เพื่อตกลง</string>
+    <string name="label_animation_speed">ความเร็วแอนิเมชัน</string>
+    <string name="label_delay_ms">การหน่วงเวลา (มิลลิวินาที)</string>
+    <string name="label_delay_range">10 – 5000</string>
+    <string name="label_delay_range_ms">10 – 5000 มิลลิวินาที</string>
+    <string name="label_pattern">รูปแบบ</string>
+    <string name="label_enabled">เปิดใช้งาน</string>
+    <string name="label_band_colors">สีของย่านความถี่</string>
+
+    <!-- Patterns -->
+    <string name="pattern_solid">สีนิ่ง</string>
+    <string name="pattern_jump_rgb">RGB สลับทันที</string>
+    <string name="pattern_jump_all">สลับทุกสีทันที</string>
+    <string name="pattern_fade_rgb">RGB ค่อยๆ เปลี่ยน</string>
+    <string name="pattern_fade_all">ทุกสีค่อยๆ เปลี่ยน</string>
+    <string name="pattern_crossfade_red">สีแดงเปลี่ยนสลับนุ่มนวล</string>
+    <string name="pattern_crossfade_green_blue">สีเขียวฟ้าเปลี่ยนสลับนุ่มนวล</string>
+    <string name="pattern_crossfade_blue_orange">สีฟ้าส้มเปลี่ยนสลับนุ่มนวล</string>
+    <string name="pattern_crossfade_blue">สีฟ้าเปลี่ยนสลับนุ่มนวล</string>
+    <string name="pattern_crossfade_white">สีขาวเปลี่ยนสลับนุ่มนวล</string>
+    <string name="pattern_flash_rgb">RGB กระพริบ</string>
+    <string name="pattern_flash_all">กระพริบทุกสี</string>
+    <string name="pattern_strobe_white">แสงขาวแฟลช</string>
+
+    <!-- Accessibility & Misc -->
+    <string name="cd_toggle_power">สลับสวิตช์ไฟ</string>
+    <string name="led_tile_label">ไฟ LED</string>
+    <string name="cd_open_color_picker">เปิดตัวเลือกสี</string>
+    <string name="msg_pick_color">เลือกสี</string>
+    <!-- Sync Colors -->
+    <string name="color_off">ปิด</string>
+    <string name="color_red">สีแดง</string>
+    <string name="color_orange">สีส้ม</string>
+    <string name="color_yellow">สีเหลือง</string>
+    <string name="color_green">สีเขียว</string>
+    <string name="color_cyan">สีฟ้า</string>
+    <string name="color_blue">สีน้ำเงิน</string>
+    <string name="color_violet">สีม่วง</string>
+    <string name="color_magenta">สีบานเย็น</string>
+    <string name="color_pink">สีชมพู</string>
+    <string name="color_white">สีขาว</string>
+
+    <!-- About -->
+    <string name="label_about">เกี่ยวกับ</string>
+    <string name="cd_open_about">เกี่ยวกับแอปนี้</string>
+    <string name="cd_back">ย้อนกลับ</string>
+    <string name="about_version">เวอร์ชัน %1$s</string>
+    <string name="about_tagline">แอป Android แบบเนทีฟสำหรับควบคุมไฟเส้น LED แบบ Bluetooth LE รุ่น ELK-BLEDOM และ BJ_LED</string>
+    <string name="about_source">ซอร์สโค้ด</string>
+    <string name="about_source_desc">แอปนี้เป็นโอเพ่นซอร์ส สามารถอ่านโค้ด แจ้งปัญหา หรือส่ง pull request ได้</string>
+    <string name="about_repository">คลังโค้ด</string>
+    <string name="about_license">ใบอนุญาต</string>
+    <string name="about_license_mit">ใบอนุญาต MIT</string>
+    <string name="about_license_body">เผยแพร่ภายใต้ใบอนุญาต MIT คุณสามารถใช้งาน แก้ไข และแจกจ่ายแอปนี้ได้อย่างเสรี โดยต้องคงประกาศลิขสิทธิ์ไว้</string>
+    <string name="about_license_read">อ่านข้อความใบอนุญาตฉบับเต็ม</string>
+    <string name="about_contributors">ผู้มีส่วนร่วม</string>
+    <string name="about_contributors_desc">สร้างโดยทุกคนที่มีส่วนร่วมในโปรเจกต์บน GitHub</string>
+    <string name="about_contributors_all">ดูผู้มีส่วนร่วมทั้งหมด</string>
+    <string name="about_contributors_all_desc">เปิดกราฟผู้มีส่วนร่วมบน GitHub</string>
+    <string name="about_libraries">ไลบรารีโอเพ่นซอร์ส</string>
+    <string name="about_libraries_count">ใบอนุญาตสำหรับ %1$d ไลบรารีที่ใช้</string>
+    <string name="about_libraries_desc">แอปนี้สร้างขึ้นโดยใช้ไลบรารีโอเพ่นซอร์สดังต่อไปนี้</string>
+</resources>
