@@ -1,0 +1,125 @@
+<resources>
+    <string name="app_name">LED Strip Controller</string>
+
+    <!-- Permissions -->
+    <string name="perm_rationale">LED Strip ControllerがLEDテープライトを検索し、ミュージック同期を有効にするには、Bluetoothとマイクの権限が必要です。</string>
+    <string name="btn_grant_permissions">権限を許可</string>
+    <string name="bt_disabled_msg">Bluetoothが無効になっています。LEDテープライトに接続するには有効にしてください。</string>
+    <string name="btn_enable_bluetooth">Bluetoothを有効にする</string>
+
+    <!-- Notifications & Services -->
+    <string name="channel_media_capture_name">メディアキャプチャ</string>
+    <string name="channel_media_capture_desc">LED同期のためにスマートフォンの音声または画面コンテンツをキャプチャしている間にアクティブ</string>
+    <string name="notif_screen_capture">画面同期のために画面コンテンツをキャプチャ中</string>
+    <string name="notif_phone_audio_capture">ミュージック同期のためにスマートフォンの音声をキャプチャ中</string>
+    <string name="channel_music_sync_mic_name">ミュージック同期（マイク）</string>
+    <string name="channel_music_sync_mic_desc">ミュージック同期がマイクで音声を認識している間にアクティブ</string>
+    <string name="notif_mic_listening">ミュージック同期がマイクで音声を認識中</string>
+
+    <!-- General UI -->
+    <string name="btn_scan">デバイスを検索</string>
+    <string name="btn_stop">停止</string>
+    <string name="status_scanning">検索中…</string>
+    <string name="status_looking_ble">BLEデバイスを検索中…</string>
+    <string name="status_connecting">接続中…</string>
+    <string name="status_connected">接続済み</string>
+    <string name="status_disconnected">切断済み</string>
+    <string name="btn_disconnect">切断</string>
+    <string name="msg_connection_failed">接続に失敗しました。再試行してください。</string>
+    <string name="msg_ready_to_illuminate">ライトを点灯する準備はできましたか？</string>
+    <string name="label_color">カラー</string>
+    <string name="label_brightness_tv">明るさ</string>
+    <string name="label_brightness">明るさ: %1$d%%</string>
+    <string name="label_music_sync">ミュージック同期</string>
+    <string name="label_microphone">マイク</string>
+    <string name="label_phone_audio">スマホ音声</string>
+    <string name="label_tv_audio">TV音声</string>
+    <string name="msg_android_10_required">Android 10以上が必要</string>
+    <string name="desc_phone_audio">スピーカーやヘッドホンで再生される音声をキャプチャします。\n注: DRM保護されたアプリ（Spotify、Netflixなど）はキャプチャできません。</string>
+    <string name="desc_microphone">マイクが部屋の音を拾います — あらゆる音源に対応します。</string>
+    <string name="desc_band_colors">帯域カラー  ·  スウォッチをタップして指定  ·  ✕をタップして消音</string>
+    <string name="label_bass">低音</string>
+    <string name="label_mids">中音</string>
+    <string name="label_highs">高音</string>
+    <string name="label_screen_sync">画面同期</string>
+    <string name="label_screen_tv">画面</string>
+    <string name="desc_screen_sync">画面の主要色をリアルタイムでLEDに反映します（20 fps、彩度加重）。明るくカラフルなコンテンツに最適です。</string>
+    <string name="label_dominant_color">主要色</string>
+    <string name="label_beat">ビート</string>
+    <string name="label_ambilight_smooth">滑らかなアンビライト</string>
+    <string name="desc_ambilight_smooth">色の変化を滑らかに移行させます — 同期モード時の目に優しい表示です。</string>
+
+    <!-- TV Specific UI -->
+    <string name="label_bluetooth">Bluetooth</string>
+    <string name="label_patterns">パターン</string>
+    <string name="label_settings">設定</string>
+    <string name="msg_connect_first">最初にデバイスに接続してください</string>
+    <string name="msg_go_to_bt_section">Bluetoothセクションに移動して検索・ペアリングを行ってください。</string>
+    <string name="btn_turn_on">オンにする</string>
+    <string name="btn_turn_off">オフにする</string>
+    <string name="desc_nav_buttons">方向キーの左/右でボタンを移動し、OKを押して適用</string>
+    <string name="label_hue">色相</string>
+    <string name="label_saturation">彩度</string>
+    <string name="desc_nav_rows">方向キーの上/下で行移動、左/右でボタン移動、OKを押して適用</string>
+    <string name="label_animation_speed">アニメーション速度</string>
+    <string name="label_delay_ms">遅延 (ms)</string>
+    <string name="label_delay_range">10 – 5000</string>
+    <string name="label_delay_range_ms">10 – 5000 ms</string>
+    <string name="label_pattern">パターン</string>
+    <string name="label_enabled">有効</string>
+    <string name="label_band_colors">帯域カラー</string>
+
+    <!-- Patterns -->
+    <string name="pattern_solid">単色</string>
+    <string name="pattern_jump_rgb">ジャンプ RGB</string>
+    <string name="pattern_jump_all">ジャンプ 全色</string>
+    <string name="pattern_fade_rgb">フェード RGB</string>
+    <string name="pattern_fade_all">フェード 全色</string>
+    <string name="pattern_crossfade_red">クロスフェード 赤</string>
+    <string name="pattern_crossfade_green_blue">クロスフェード 緑・青</string>
+    <string name="pattern_crossfade_blue_orange">クロスフェード 青・オレンジ</string>
+    <string name="pattern_crossfade_blue">クロスフェード 青</string>
+    <string name="pattern_crossfade_white">クロスフェード 白</string>
+    <string name="pattern_flash_rgb">フラッシュ RGB</string>
+    <string name="pattern_flash_all">フラッシュ 全色</string>
+    <string name="pattern_strobe_white">ストロボ 白</string>
+
+    <!-- Accessibility & Misc -->
+    <string name="cd_toggle_power">電源切り替え</string>
+    <string name="led_tile_label">LED電源</string>
+    <string name="cd_open_color_picker">カラーピッカーを開く</string>
+    <string name="msg_pick_color">カラーを選択</string>
+    <!-- Sync Colors -->
+    <string name="color_off">オフ</string>
+    <string name="color_red">赤</string>
+    <string name="color_orange">オレンジ</string>
+    <string name="color_yellow">黄</string>
+    <string name="color_green">緑</string>
+    <string name="color_cyan">シアン</string>
+    <string name="color_blue">青</string>
+    <string name="color_violet">バイオレット</string>
+    <string name="color_magenta">マゼンタ</string>
+    <string name="color_pink">ピンク</string>
+    <string name="color_white">白</string>
+
+    <!-- About -->
+    <string name="label_about">アプリについて</string>
+    <string name="cd_open_about">このアプリについて</string>
+    <string name="cd_back">戻る</string>
+    <string name="about_version">バージョン %1$s</string>
+    <string name="about_tagline">ELK-BLEDOMおよびBJ_LEDのBluetooth LE LEDテープライトを制御するフルネイティブのAndroidアプリ。</string>
+    <string name="about_source">ソースコード</string>
+    <string name="about_source_desc">このアプリはオープンソースです。コードの閲覧、問題の報告、プルリクエストの送信が可能です。</string>
+    <string name="about_repository">リポジトリ</string>
+    <string name="about_license">ライセンス</string>
+    <string name="about_license_mit">MITライセンス</string>
+    <string name="about_license_body">MITライセンスのもとで公開されています。著作権表示を保持する限り、自由に利用、改変、再配布できます。</string>
+    <string name="about_license_read">ライセンス全文を読む</string>
+    <string name="about_contributors">貢献者</string>
+    <string name="about_contributors_desc">GitHubでプロジェクトに貢献してくれた皆様によって開発されています。</string>
+    <string name="about_contributors_all">すべての貢献者を表示</string>
+    <string name="about_contributors_all_desc">GitHubの貢献者グラフを開きます</string>
+    <string name="about_libraries">オープンソースライブラリ</string>
+    <string name="about_libraries_count">使用されている%1$d個のライブラリのライセンス</string>
+    <string name="about_libraries_desc">このアプリは以下のオープンソースライブラリを使用しています。</string>
+</resources>
