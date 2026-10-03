@@ -1,0 +1,125 @@
+<resources>
+    <string name="app_name">LED Strip Controller</string>
+
+    <!-- Permissions -->
+    <string name="perm_rationale">LED Strip Controller heeft toestemming nodig voor bluetooth en de microfoon om naar je LED-strip te zoeken en muzieksynchronisatie in te schakelen.</string>
+    <string name="btn_grant_permissions">Machtigingen verlenen</string>
+    <string name="bt_disabled_msg">Bluetooth is uitgeschakeld. Schakel bluetooth in om te verbinden met je LED-strip.</string>
+    <string name="btn_enable_bluetooth">Bluetooth inschakelen</string>
+
+    <!-- Notifications & Services -->
+    <string name="channel_media_capture_name">Media-opname</string>
+    <string name="channel_media_capture_desc">Actief tijdens het opnemen van telefoonaudio of scherminhoud voor LED-synchronisatie</string>
+    <string name="notif_screen_capture">Scherminhoud opnemen voor Schermsync</string>
+    <string name="notif_phone_audio_capture">Telefoonaudio opnemen voor Muzieksync</string>
+    <string name="channel_music_sync_mic_name">Muzieksync (Microfoon)</string>
+    <string name="channel_music_sync_mic_desc">Actief wanneer Muzieksync luistert via de microfoon</string>
+    <string name="notif_mic_listening">Muzieksync luistert via de microfoon</string>
+
+    <!-- General UI -->
+    <string name="btn_scan">Zoeken naar apparaten</string>
+    <string name="btn_stop">Stoppen</string>
+    <string name="status_scanning">Zoeken…</string>
+    <string name="status_looking_ble">Zoeken naar BLE-apparaten…</string>
+    <string name="status_connecting">Verbinden…</string>
+    <string name="status_connected">Verbonden</string>
+    <string name="status_disconnected">Verbinding verbroken</string>
+    <string name="btn_disconnect">Verbinding verbreken</string>
+    <string name="msg_connection_failed">Verbinding mislukt. Probeer het opnieuw.</string>
+    <string name="msg_ready_to_illuminate">Klaar om te verlichten?</string>
+    <string name="label_color">Kleur</string>
+    <string name="label_brightness_tv">Helderheid</string>
+    <string name="label_brightness">Helderheid: %1$d%%</string>
+    <string name="label_music_sync">Muzieksync</string>
+    <string name="label_microphone">Microfoon</string>
+    <string name="label_phone_audio">Telefoonaudio</string>
+    <string name="label_tv_audio">TV-audio</string>
+    <string name="msg_android_10_required">Vereist Android 10+</string>
+    <string name="desc_phone_audio">Legt vast wat er wordt afgespeeld via je luidsprekers of koptelefoon.\nOpmerking: Met DRM beschermde apps (Spotify, Netflix) blokkeren opname.</string>
+    <string name="desc_microphone">Microfoon vangt geluid uit de ruimte op — werkt met elke bron.</string>
+    <string name="desc_band_colors">Bandkleuren  ·  tik op een kleur om toe te wijzen  ·  tik op ✕ om te dempen</string>
+    <string name="label_bass">Bas</string>
+    <string name="label_mids">Middentonen</string>
+    <string name="label_highs">Hoge tonen</string>
+    <string name="label_screen_sync">Schermsync</string>
+    <string name="label_screen_tv">Scherm</string>
+    <string name="desc_screen_sync">Spiegelt de dominante kleur van je scherm in realtime naar de LED\'s — verzadiging-gewogen op 20 fps. Heldere, kleurrijke inhoud werkt het beste.</string>
+    <string name="label_dominant_color">Dominante kleur</string>
+    <string name="label_beat">Beat</string>
+    <string name="label_ambilight_smooth">Vloeiende Ambilight</string>
+    <string name="desc_ambilight_smooth">Mengt kleurveranderingen geleidelijk — rustiger voor de ogen tijdens synchronisatiemodi.</string>
+
+    <!-- TV Specific UI -->
+    <string name="label_bluetooth">Bluetooth</string>
+    <string name="label_patterns">Patronen</string>
+    <string name="label_settings">Instellingen</string>
+    <string name="msg_connect_first">Verbind eerst met een apparaat</string>
+    <string name="msg_go_to_bt_section">Ga naar het Bluetooth-gedeelte om te zoeken en te koppelen.</string>
+    <string name="btn_turn_on">Inschakelen</string>
+    <string name="btn_turn_off">Uitschakelen</string>
+    <string name="desc_nav_buttons">Navigeer tussen knoppen met D-pad Links / Rechts, druk op OK om toe te passen</string>
+    <string name="label_hue">Kleurtoon</string>
+    <string name="label_saturation">Verzadiging</string>
+    <string name="desc_nav_rows">Navigeer door rijen met D-pad Omhoog / Omlaag, knoppen met Links / Rechts, druk op OK om toe te passen</string>
+    <string name="label_animation_speed">Animatiesnelheid</string>
+    <string name="label_delay_ms">Vertraging (ms)</string>
+    <string name="label_delay_range">10 – 5000</string>
+    <string name="label_delay_range_ms">10 – 5000 ms</string>
+    <string name="label_pattern">Patroon</string>
+    <string name="label_enabled">Ingeschakeld</string>
+    <string name="label_band_colors">Bandkleuren</string>
+
+    <!-- Patterns -->
+    <string name="pattern_solid">Effen</string>
+    <string name="pattern_jump_rgb">Sprong RGB</string>
+    <string name="pattern_jump_all">Sprong alles</string>
+    <string name="pattern_fade_rgb">Vervagen RGB</string>
+    <string name="pattern_fade_all">Vervagen alles</string>
+    <string name="pattern_crossfade_red">Overvloeien rood</string>
+    <string name="pattern_crossfade_green_blue">Overvloeien groen blauw</string>
+    <string name="pattern_crossfade_blue_orange">Overvloeien blauw oranje</string>
+    <string name="pattern_crossfade_blue">Overvloeien blauw</string>
+    <string name="pattern_crossfade_white">Overvloeien wit</string>
+    <string name="pattern_flash_rgb">Flits RGB</string>
+    <string name="pattern_flash_all">Flits alles</string>
+    <string name="pattern_strobe_white">Stroboscoop wit</string>
+
+    <!-- Accessibility & Misc -->
+    <string name="cd_toggle_power">Aan/uit-schakelen</string>
+    <string name="led_tile_label">LED-voeding</string>
+    <string name="cd_open_color_picker">Kleurkiezer openen</string>
+    <string name="msg_pick_color">Kies een kleur</string>
+    <!-- Sync Colors -->
+    <string name="color_off">Uit</string>
+    <string name="color_red">Rood</string>
+    <string name="color_orange">Oranje</string>
+    <string name="color_yellow">Geel</string>
+    <string name="color_green">Groen</string>
+    <string name="color_cyan">Cyaan</string>
+    <string name="color_blue">Blauw</string>
+    <string name="color_violet">Violet</string>
+    <string name="color_magenta">Magenta</string>
+    <string name="color_pink">Roze</string>
+    <string name="color_white">Wit</string>
+
+    <!-- About -->
+    <string name="label_about">Over</string>
+    <string name="cd_open_about">Over deze app</string>
+    <string name="cd_back">Terug</string>
+    <string name="about_version">Versie %1$s</string>
+    <string name="about_tagline">Een volledig native Android-app voor het bedienen van ELK-BLEDOM en BJ_LED Bluetooth LE LED-strips.</string>
+    <string name="about_source">Broncode</string>
+    <string name="about_source_desc">Deze app is open source. Lees de code, dien een probleem in of stuur een pull request.</string>
+    <string name="about_repository">Repository</string>
+    <string name="about_license">Licentie</string>
+    <string name="about_license_mit">MIT-licentie</string>
+    <string name="about_license_body">Uitgegeven onder de MIT-licentie. Je bent vrij om deze app te gebruiken, te wijzigen en opnieuw te verspreiden, mits de auteursrechtvermelding behouden blijft.</string>
+    <string name="about_license_read">Lees de volledige licentietekst</string>
+    <string name="about_contributors">Bijdragers</string>
+    <string name="about_contributors_desc">Gebouwd door iedereen die aan het project heeft bijgedragen op GitHub.</string>
+    <string name="about_contributors_all">Bekijk alle bijdragers</string>
+    <string name="about_contributors_all_desc">Opent de bijdragersgrafiek op GitHub</string>
+    <string name="about_libraries">Open-sourcebibliotheken</string>
+    <string name="about_libraries_count">Licenties voor de %1$d gebruikte bibliotheken</string>
+    <string name="about_libraries_desc">Deze app is gebouwd met de volgende open-sourcebibliotheken.</string>
+</resources>
