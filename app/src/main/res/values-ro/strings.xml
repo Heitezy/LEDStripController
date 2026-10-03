@@ -1,0 +1,125 @@
+<resources>
+    <string name="app_name">LED Strip Controller</string>
+
+    <!-- Permissions -->
+    <string name="perm_rationale">LED Strip Controller are nevoie de permisiuni pentru Bluetooth și Microfon pentru a căuta banda LED și a activa sincronizarea muzicală.</string>
+    <string name="btn_grant_permissions">Acordă permisiunile</string>
+    <string name="bt_disabled_msg">Bluetooth este dezactivat. Activează-l pentru a te conecta la banda LED.</string>
+    <string name="btn_enable_bluetooth">Activează Bluetooth</string>
+
+    <!-- Notifications & Services -->
+    <string name="channel_media_capture_name">Captură media</string>
+    <string name="channel_media_capture_desc">Activ în timp ce se captează sunetul telefonului sau conținutul ecranului pentru sincronizarea LED</string>
+    <string name="notif_screen_capture">Se captează conținutul ecranului pentru Sincronizare Ecran</string>
+    <string name="notif_phone_audio_capture">Se captează sunetul telefonului pentru Sincronizare Muzică</string>
+    <string name="channel_music_sync_mic_name">Sincronizare Muzică (Microfon)</string>
+    <string name="channel_music_sync_mic_desc">Activ în timp ce Sincronizare Muzică ascultă la microfon</string>
+    <string name="notif_mic_listening">Sincronizare Muzică ascultă la microfon</string>
+
+    <!-- General UI -->
+    <string name="btn_scan">Caută dispozitive</string>
+    <string name="btn_stop">Oprește</string>
+    <string name="status_scanning">Se caută…</string>
+    <string name="status_looking_ble">Se caută dispozitive BLE…</string>
+    <string name="status_connecting">Se conectează…</string>
+    <string name="status_connected">Conectat</string>
+    <string name="status_disconnected">Deconectat</string>
+    <string name="btn_disconnect">Deconectează</string>
+    <string name="msg_connection_failed">Conectarea a eșuat. Încearcă din nou.</string>
+    <string name="msg_ready_to_illuminate">Ești gata să luminezi?</string>
+    <string name="label_color">Culoare</string>
+    <string name="label_brightness_tv">Luminozitate</string>
+    <string name="label_brightness">Luminozitate: %1$d%%</string>
+    <string name="label_music_sync">Sincronizare Muzică</string>
+    <string name="label_microphone">Microfon</string>
+    <string name="label_phone_audio">Sunet telefon</string>
+    <string name="label_tv_audio">Sunet TV</string>
+    <string name="msg_android_10_required">Necesită Android 10+</string>
+    <string name="desc_phone_audio">Captează sunetul redat în difuzoare sau căști.\nNotă: Aplicațiile protejate prin DRM (Spotify, Netflix) blochează captura.</string>
+    <string name="desc_microphone">Microfonul captează sunetul din cameră — funcționează cu orice sursă.</string>
+    <string name="desc_band_colors">Culori frecvențe  ·  atinge o culoare pentru atribuire  ·  atinge ✕ pentru a dezactiva</string>
+    <string name="label_bass">Bași</string>
+    <string name="label_mids">Medii</string>
+    <string name="label_highs">Înalte</string>
+    <string name="label_screen_sync">Sincronizare Ecran</string>
+    <string name="label_screen_tv">Ecran</string>
+    <string name="desc_screen_sync">Redă culoarea dominantă de pe ecran pe LED-uri în timp real — ponderată în funcție de saturație la 20 fps. Conținutul luminos și colorat funcționează cel mai bine.</string>
+    <string name="label_dominant_color">Culoare dominantă</string>
+    <string name="label_beat">Ritm</string>
+    <string name="label_ambilight_smooth">Ambilight lin</string>
+    <string name="desc_ambilight_smooth">Tranziții line între culori — mai confortabil pentru ochi în modurile de sincronizare.</string>
+
+    <!-- TV Specific UI -->
+    <string name="label_bluetooth">Bluetooth</string>
+    <string name="label_patterns">Modele</string>
+    <string name="label_settings">Setări</string>
+    <string name="msg_connect_first">Conectează-te mai întâi la un dispozitiv</string>
+    <string name="msg_go_to_bt_section">Mergi la secțiunea Bluetooth pentru a căuta și asocia.</string>
+    <string name="btn_turn_on">Pornește</string>
+    <string name="btn_turn_off">Oprește</string>
+    <string name="desc_nav_buttons">Navighează între butoane cu D-pad Stânga / Dreapta, apasă OK pentru a aplica</string>
+    <string name="label_hue">Nuanță</string>
+    <string name="label_saturation">Saturație</string>
+    <string name="desc_nav_rows">Navighează pe rânduri cu D-pad Sus / Jos, butoanele cu Stânga / Dreapta, apasă OK pentru a aplica</string>
+    <string name="label_animation_speed">Viteză animație</string>
+    <string name="label_delay_ms">Întârziere (ms)</string>
+    <string name="label_delay_range">10 – 5000</string>
+    <string name="label_delay_range_ms">10 – 5000 ms</string>
+    <string name="label_pattern">Model</string>
+    <string name="label_enabled">Activat</string>
+    <string name="label_band_colors">Culori frecvențe</string>
+
+    <!-- Patterns -->
+    <string name="pattern_solid">Culoare fixă</string>
+    <string name="pattern_jump_rgb">Salt RGB</string>
+    <string name="pattern_jump_all">Salt toate culorile</string>
+    <string name="pattern_fade_rgb">Estompare RGB</string>
+    <string name="pattern_fade_all">Estompare toate culorile</string>
+    <string name="pattern_crossfade_red">Tranziție Roșu</string>
+    <string name="pattern_crossfade_green_blue">Tranziție Verde Albastru</string>
+    <string name="pattern_crossfade_blue_orange">Tranziție Albastru Portocaliu</string>
+    <string name="pattern_crossfade_blue">Tranziție Albastru</string>
+    <string name="pattern_crossfade_white">Tranziție Alb</string>
+    <string name="pattern_flash_rgb">Flash RGB</string>
+    <string name="pattern_flash_all">Flash toate culorile</string>
+    <string name="pattern_strobe_white">Stroboscop Alb</string>
+
+    <!-- Accessibility & Misc -->
+    <string name="cd_toggle_power">Comutare alimentare</string>
+    <string name="led_tile_label">Alimentare LED</string>
+    <string name="cd_open_color_picker">Deschide selectorul de culori</string>
+    <string name="msg_pick_color">Alege o culoare</string>
+    <!-- Sync Colors -->
+    <string name="color_off">Oprit</string>
+    <string name="color_red">Roșu</string>
+    <string name="color_orange">Portocaliu</string>
+    <string name="color_yellow">Galben</string>
+    <string name="color_green">Verde</string>
+    <string name="color_cyan">Cian</string>
+    <string name="color_blue">Albastru</string>
+    <string name="color_violet">Violet</string>
+    <string name="color_magenta">Magenta</string>
+    <string name="color_pink">Roz</string>
+    <string name="color_white">Alb</string>
+
+    <!-- About -->
+    <string name="label_about">Despre</string>
+    <string name="cd_open_about">Despre această aplicație</string>
+    <string name="cd_back">Înapoi</string>
+    <string name="about_version">Versiunea %1$s</string>
+    <string name="about_tagline">O aplicație Android complet nativă pentru controlul benzilor LED Bluetooth LE ELK-BLEDOM și BJ_LED.</string>
+    <string name="about_source">Cod sursă</string>
+    <string name="about_source_desc">Această aplicație este open source. Citește codul, raportează o problemă sau trimite un pull request.</string>
+    <string name="about_repository">Repozitoriu</string>
+    <string name="about_license">Licență</string>
+    <string name="about_license_mit">Licența MIT</string>
+    <string name="about_license_body">Lansat sub Licența MIT. Ești liber să folosești, să modifici și să redistribui această aplicație, cu condiția păstrării notei privind drepturile de autor.</string>
+    <string name="about_license_read">Citește textul complet al licenței</string>
+    <string name="about_contributors">Contribuitori</string>
+    <string name="about_contributors_desc">Dezvoltat de toți cei care au contribuit la proiect pe GitHub.</string>
+    <string name="about_contributors_all">Vezi toți contribuitorii</string>
+    <string name="about_contributors_all_desc">Deschide graficul contribuitorilor pe GitHub</string>
+    <string name="about_libraries">Biblioteci open-source</string>
+    <string name="about_libraries_count">Licențe pentru cele %1$d biblioteci utilizate</string>
+    <string name="about_libraries_desc">Această aplicație este construită pe baza următoarelor biblioteci open-source.</string>
+</resources>
