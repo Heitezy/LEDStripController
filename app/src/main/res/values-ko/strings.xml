@@ -1,0 +1,125 @@
+<resources>
+    <string name="app_name">LED Strip Controller</string>
+
+    <!-- Permissions -->
+    <string name="perm_rationale">LED Strip Controller가 LED 스트립을 검색하고 음악 동기화를 활성화하려면 블루투스 및 마이크 권한이 필요합니다.</string>
+    <string name="btn_grant_permissions">권한 허용</string>
+    <string name="bt_disabled_msg">블루투스가 비활성화되어 있습니다. LED 스트립에 연결하려면 블루투스를 활성화하세요.</string>
+    <string name="btn_enable_bluetooth">블루투스 활성화</string>
+
+    <!-- Notifications & Services -->
+    <string name="channel_media_capture_name">미디어 캡처</string>
+    <string name="channel_media_capture_desc">LED 동기화를 위해 휴대전화 오디오 또는 화면 콘텐츠를 캡처하는 동안 활성화됨</string>
+    <string name="notif_screen_capture">화면 동기화를 위해 화면 콘텐츠 캡처 중</string>
+    <string name="notif_phone_audio_capture">음악 동기화를 위해 휴대전화 오디오 캡처 중</string>
+    <string name="channel_music_sync_mic_name">음악 동기화 (마이크)</string>
+    <string name="channel_music_sync_mic_desc">음악 동기화가 마이크를 통해 수신하는 동안 활성화됨</string>
+    <string name="notif_mic_listening">음악 동기화가 마이크를 통해 수신 중</string>
+
+    <!-- General UI -->
+    <string name="btn_scan">기기 검색</string>
+    <string name="btn_stop">중지</string>
+    <string name="status_scanning">검색 중…</string>
+    <string name="status_looking_ble">BLE 기기 검색 중…</string>
+    <string name="status_connecting">연결 중…</string>
+    <string name="status_connected">연결됨</string>
+    <string name="status_disconnected">연결 해제됨</string>
+    <string name="btn_disconnect">연결 해제</string>
+    <string name="msg_connection_failed">연결에 실패했습니다. 다시 시도해 주세요.</string>
+    <string name="msg_ready_to_illuminate">조명을 켤 준비가 되셨나요?</string>
+    <string name="label_color">색상</string>
+    <string name="label_brightness_tv">밝기</string>
+    <string name="label_brightness">밝기: %1$d%%</string>
+    <string name="label_music_sync">음악 동기화</string>
+    <string name="label_microphone">마이크</string>
+    <string name="label_phone_audio">휴대전화 오디오</string>
+    <string name="label_tv_audio">TV 오디오</string>
+    <string name="msg_android_10_required">Android 10 이상 필요</string>
+    <string name="desc_phone_audio">스피커나 헤드폰을 통해 재생되는 소리를 캡처합니다.\n참고: DRM 보호 앱(Spotify, Netflix 등)은 캡처가 차단됩니다.</string>
+    <string name="desc_microphone">마이크가 실내 소리를 수신합니다 — 모든 음원에서 작동합니다.</string>
+    <string name="desc_band_colors">대역별 색상  ·  견본을 탭하여 지정  ·  ✕를 탭하여 음소거</string>
+    <string name="label_bass">저음</string>
+    <string name="label_mids">중음</string>
+    <string name="label_highs">고음</string>
+    <string name="label_screen_sync">화면 동기화</string>
+    <string name="label_screen_tv">화면</string>
+    <string name="desc_screen_sync">화면의 주요 색상을 실시간으로 LED에 미러링합니다 (20 fps 채도 가중치). 밝고 화려한 콘텐츠에서 가장 잘 작동합니다.</string>
+    <string name="label_dominant_color">주요 색상</string>
+    <string name="label_beat">비트</string>
+    <string name="label_ambilight_smooth">부드러운 엠비라이트</string>
+    <string name="desc_ambilight_smooth">색상 변화를 부드럽게 전환하여 동기화 모드 사용 시 눈의 피로를 줄여줍니다.</string>
+
+    <!-- TV Specific UI -->
+    <string name="label_bluetooth">블루투스</string>
+    <string name="label_patterns">패턴</string>
+    <string name="label_settings">설정</string>
+    <string name="msg_connect_first">먼저 기기에 연결하세요</string>
+    <string name="msg_go_to_bt_section">블루투스 섹션으로 이동하여 검색 및 페어링하세요.</string>
+    <string name="btn_turn_on">켜기</string>
+    <string name="btn_turn_off">끄기</string>
+    <string name="desc_nav_buttons">방향키 왼쪽 / 오른쪽으로 버튼 사이를 이동하고 OK를 눌러 적용하세요</string>
+    <string name="label_hue">색상(Hue)</string>
+    <string name="label_saturation">채도</string>
+    <string name="desc_nav_rows">방향키 위 / 아래로 행을 이동하고, 왼쪽 / 오른쪽으로 버튼을 이동하여 OK를 눌러 적용하세요</string>
+    <string name="label_animation_speed">애니메이션 속도</string>
+    <string name="label_delay_ms">지연 (ms)</string>
+    <string name="label_delay_range">10 – 5000</string>
+    <string name="label_delay_range_ms">10 – 5000 ms</string>
+    <string name="label_pattern">패턴</string>
+    <string name="label_enabled">활성화됨</string>
+    <string name="label_band_colors">대역별 색상</string>
+
+    <!-- Patterns -->
+    <string name="pattern_solid">단색</string>
+    <string name="pattern_jump_rgb">RGB 점프</string>
+    <string name="pattern_jump_all">전체 점프</string>
+    <string name="pattern_fade_rgb">RGB 페이드</string>
+    <string name="pattern_fade_all">전체 페이드</string>
+    <string name="pattern_crossfade_red">크로스페이드 레드</string>
+    <string name="pattern_crossfade_green_blue">크로스페이드 그린 블루</string>
+    <string name="pattern_crossfade_blue_orange">크로스페이드 블루 오렌지</string>
+    <string name="pattern_crossfade_blue">크로스페이드 블루</string>
+    <string name="pattern_crossfade_white">크로스페이드 화이트</string>
+    <string name="pattern_flash_rgb">RGB 플래시</string>
+    <string name="pattern_flash_all">전체 플래시</string>
+    <string name="pattern_strobe_white">화이트 스트로브</string>
+
+    <!-- Accessibility & Misc -->
+    <string name="cd_toggle_power">전원 토글</string>
+    <string name="led_tile_label">LED 전원</string>
+    <string name="cd_open_color_picker">색상 선택기 열기</string>
+    <string name="msg_pick_color">색상 선택</string>
+    <!-- Sync Colors -->
+    <string name="color_off">끄기</string>
+    <string name="color_red">빨간색</string>
+    <string name="color_orange">주황색</string>
+    <string name="color_yellow">노란색</string>
+    <string name="color_green">초록색</string>
+    <string name="color_cyan">청록색</string>
+    <string name="color_blue">파란색</string>
+    <string name="color_violet">보라색</string>
+    <string name="color_magenta">마젠타</string>
+    <string name="color_pink">분홍색</string>
+    <string name="color_white">흰색</string>
+
+    <!-- About -->
+    <string name="label_about">정보</string>
+    <string name="cd_open_about">이 앱 정보</string>
+    <string name="cd_back">뒤로</string>
+    <string name="about_version">버전 %1$s</string>
+    <string name="about_tagline">ELK-BLEDOM 및 BJ_LED 블루투스 LE LED 스트립 제어를 위한 완벽한 네이티브 Android 앱.</string>
+    <string name="about_source">소스 코드</string>
+    <string name="about_source_desc">이 앱은 오픈 소스입니다. 코드를 읽거나 이슈를 제출하고 풀 리퀘스트를 보내세요.</string>
+    <string name="about_repository">저장소</string>
+    <string name="about_license">라이선스</string>
+    <string name="about_license_mit">MIT 라이선스</string>
+    <string name="about_license_body">MIT 라이선스에 따라 배포됩니다. 저작권 고지를 유지하는 한 자유롭게 앱을 사용, 수정 및 재배포할 수 있습니다.</string>
+    <string name="about_license_read">라이선스 전문 읽기</string>
+    <string name="about_contributors">기여자</string>
+    <string name="about_contributors_desc">GitHub에서 이 프로젝트에 기여한 모든 분들이 제작했습니다.</string>
+    <string name="about_contributors_all">모든 기여자 보기</string>
+    <string name="about_contributors_all_desc">GitHub에서 기여자 그래프를 엽니다</string>
+    <string name="about_libraries">오픈 소스 라이브러리</string>
+    <string name="about_libraries_count">사용된 %1$d개 라이브러리의 라이선스</string>
+    <string name="about_libraries_desc">이 앱은 다음 오픈 소스 라이브러리를 기반으로 제작되었습니다.</string>
+</resources>
