@@ -1,0 +1,125 @@
+<resources>
+    <string name="app_name">LED Strip Controller</string>
+
+    <!-- Permissions -->
+    <string name="perm_rationale">O LED Strip Controller precisa de permissões de Bluetooth e Microfone para procurar sua fita LED e ativar a sincronização com música.</string>
+    <string name="btn_grant_permissions">Conceder permissões</string>
+    <string name="bt_disabled_msg">O Bluetooth está desativado. Ative-o para se conectar à sua fita LED.</string>
+    <string name="btn_enable_bluetooth">Ativar Bluetooth</string>
+
+    <!-- Notifications & Services -->
+    <string name="channel_media_capture_name">Captura de mídia</string>
+    <string name="channel_media_capture_desc">Ativo enquanto captura o áudio do celular ou o conteúdo da tela para sincronização com os LEDs</string>
+    <string name="notif_screen_capture">Capturando o conteúdo da tela para Sincronização de tela</string>
+    <string name="notif_phone_audio_capture">Capturando o áudio do celular para Sincronização de música</string>
+    <string name="channel_music_sync_mic_name">Sincronização de música (Microfone)</string>
+    <string name="channel_music_sync_mic_desc">Ativo enquanto a Sincronização de música está ouvindo o microfone</string>
+    <string name="notif_mic_listening">Sincronização de música ouvindo o microfone</string>
+
+    <!-- General UI -->
+    <string name="btn_scan">Procurar dispositivos</string>
+    <string name="btn_stop">Parar</string>
+    <string name="status_scanning">Procurando…</string>
+    <string name="status_looking_ble">Procurando dispositivos BLE…</string>
+    <string name="status_connecting">Conectando…</string>
+    <string name="status_connected">Conectado</string>
+    <string name="status_disconnected">Desconectado</string>
+    <string name="btn_disconnect">Desconectar</string>
+    <string name="msg_connection_failed">A conexão falhou. Tente novamente.</string>
+    <string name="msg_ready_to_illuminate">Pronto para iluminar?</string>
+    <string name="label_color">Cor</string>
+    <string name="label_brightness_tv">Brilho</string>
+    <string name="label_brightness">Brilho: %1$d%%</string>
+    <string name="label_music_sync">Sincronização de música</string>
+    <string name="label_microphone">Microfone</string>
+    <string name="label_phone_audio">Áudio do celular</string>
+    <string name="label_tv_audio">Áudio da TV</string>
+    <string name="msg_android_10_required">Requer Android 10+</string>
+    <string name="desc_phone_audio">Captura o que é reproduzido nos seus alto-falantes ou fones de ouvido.\nNota: Aplicativos protegidos por DRM (Spotify, Netflix) bloqueiam a captura.</string>
+    <string name="desc_microphone">O microfone capta o som do ambiente — funciona com qualquer fonte.</string>
+    <string name="desc_band_colors">Cores das frequências  ·  toque em uma cor para atribuir  ·  toque em ✕ para silenciar</string>
+    <string name="label_bass">Graves</string>
+    <string name="label_mids">Médios</string>
+    <string name="label_highs">Agudos</string>
+    <string name="label_screen_sync">Sincronização de tela</string>
+    <string name="label_screen_tv">Tela</string>
+    <string name="desc_screen_sync">Espelha a cor dominante da sua tela nos LEDs em tempo real — ponderado por saturação a 20 fps. Conteúdos brilhantes e coloridos funcionam melhor.</string>
+    <string name="label_dominant_color">Cor dominante</string>
+    <string name="label_beat">Batida</string>
+    <string name="label_ambilight_smooth">Ambilight suave</string>
+    <string name="desc_ambilight_smooth">Suaviza as mudanças de cor gradualmente — mais confortável para os olhos durante os modos de sincronização.</string>
+
+    <!-- TV Specific UI -->
+    <string name="label_bluetooth">Bluetooth</string>
+    <string name="label_patterns">Padrões</string>
+    <string name="label_settings">Configurações</string>
+    <string name="msg_connect_first">Conecte-se a um dispositivo primeiro</string>
+    <string name="msg_go_to_bt_section">Vá para a seção de Bluetooth para procurar e parear.</string>
+    <string name="btn_turn_on">Ligar</string>
+    <string name="btn_turn_off">Desligar</string>
+    <string name="desc_nav_buttons">Navegue entre os botões com o D-pad Esquerda / Direita, pressione OK para aplicar</string>
+    <string name="label_hue">Matiz</string>
+    <string name="label_saturation">Saturação</string>
+    <string name="desc_nav_rows">Navegue pelas linhas com o D-pad Cima / Baixo, botões com Esquerda / Direita, pressione OK para aplicar</string>
+    <string name="label_animation_speed">Velocidade da animação</string>
+    <string name="label_delay_ms">Atraso (ms)</string>
+    <string name="label_delay_range">10 – 5000</string>
+    <string name="label_delay_range_ms">10 – 5000 ms</string>
+    <string name="label_pattern">Padrão</string>
+    <string name="label_enabled">Ativado</string>
+    <string name="label_band_colors">Cores das frequências</string>
+
+    <!-- Patterns -->
+    <string name="pattern_solid">Cor fixa</string>
+    <string name="pattern_jump_rgb">Salto RGB</string>
+    <string name="pattern_jump_all">Salto de todas as cores</string>
+    <string name="pattern_fade_rgb">Esmaecimento RGB</string>
+    <string name="pattern_fade_all">Esmaecimento total</string>
+    <string name="pattern_crossfade_red">Transição Vermelho</string>
+    <string name="pattern_crossfade_green_blue">Transição Verde Azul</string>
+    <string name="pattern_crossfade_blue_orange">Transição Azul Laranja</string>
+    <string name="pattern_crossfade_blue">Transição Azul</string>
+    <string name="pattern_crossfade_white">Transição Branco</string>
+    <string name="pattern_flash_rgb">Flash RGB</string>
+    <string name="pattern_flash_all">Flash total</string>
+    <string name="pattern_strobe_white">Estroboscópio Branco</string>
+
+    <!-- Accessibility & Misc -->
+    <string name="cd_toggle_power">Alternar energia</string>
+    <string name="led_tile_label">Alimentação dos LEDs</string>
+    <string name="cd_open_color_picker">Abrir seletor de cores</string>
+    <string name="msg_pick_color">Escolha uma cor</string>
+    <!-- Sync Colors -->
+    <string name="color_off">Desligado</string>
+    <string name="color_red">Vermelho</string>
+    <string name="color_orange">Laranja</string>
+    <string name="color_yellow">Amarelo</string>
+    <string name="color_green">Verde</string>
+    <string name="color_cyan">Ciano</string>
+    <string name="color_blue">Azul</string>
+    <string name="color_violet">Violeta</string>
+    <string name="color_magenta">Magenta</string>
+    <string name="color_pink">Rosa</string>
+    <string name="color_white">Branco</string>
+
+    <!-- About -->
+    <string name="label_about">Sobre</string>
+    <string name="cd_open_about">Sobre este aplicativo</string>
+    <string name="cd_back">Voltar</string>
+    <string name="about_version">Versão %1$s</string>
+    <string name="about_tagline">Um aplicativo Android totalmente nativo para controlar fitas LED Bluetooth LE ELK-BLEDOM e BJ_LED.</string>
+    <string name="about_source">Código-fonte</string>
+    <string name="about_source_desc">Este aplicativo é de código aberto. Leia o código, abra uma issue ou envie um pull request.</string>
+    <string name="about_repository">Repositório</string>
+    <string name="about_license">Licença</string>
+    <string name="about_license_mit">Licença MIT</string>
+    <string name="about_license_body">Lançado sob a Licença MIT. Você é livre para usar, modificar e redistribuir este aplicativo, desde que o aviso de direitos autorais seja mantido.</string>
+    <string name="about_license_read">Ler o texto completo da licença</string>
+    <string name="about_contributors">Colaboradores</string>
+    <string name="about_contributors_desc">Desenvolvido por todos que contribuíram para o projeto no GitHub.</string>
+    <string name="about_contributors_all">Ver todos os colaboradores</string>
+    <string name="about_contributors_all_desc">Abre o gráfico de colaboradores no GitHub</string>
+    <string name="about_libraries">Bibliotecas de código aberto</string>
+    <string name="about_libraries_count">Licenças para as %1$d bibliotecas usadas</string>
+    <string name="about_libraries_desc">Este aplicativo foi desenvolvido utilizando as seguintes bibliotecas de código aberto.</string>
+</resources>
