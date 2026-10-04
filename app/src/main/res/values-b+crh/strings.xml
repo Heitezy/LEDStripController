@@ -1,0 +1,125 @@
+<resources>
+    <string name="app_name">LED Strip Controller</string>
+
+    <!-- Permissions -->
+    <string name="perm_rationale">LED Strip Controller LED şeritiñizni qıdırmaq ve muzıka sinxronlaşdırmasını açmaq içün Bluetooth ve Mikrofon izinlerini talap ete.</string>
+    <string name="btn_grant_permissions">İzinler ber</string>
+    <string name="bt_disabled_msg">Bluetooth qapatılğan. LED şeritiñizge bağlanmaq içün lütfen anı açıñız.</string>
+    <string name="btn_enable_bluetooth">Bluetooth-nı aç</string>
+
+    <!-- Notifications & Services -->
+    <string name="channel_media_capture_name">Media tutuv</string>
+    <string name="channel_media_capture_desc">LED sinxronlaşdırması içün telefon sesini ya da ekran mündericesini tutqanda faal</string>
+    <string name="notif_screen_capture">Ekran sinxronlaşdırması içün ekran mündericesi tutula</string>
+    <string name="notif_phone_audio_capture">Muzıka sinxronlaşdırması içün telefon sesi tutula</string>
+    <string name="channel_music_sync_mic_name">Muzıka sinxronlaşdırması (Mikrofon)</string>
+    <string name="channel_music_sync_mic_desc">Muzıka sinxronlaşdırması mikrofonnı diñlegende faal</string>
+    <string name="notif_mic_listening">Muzıka sinxronlaşdırması mikrofonnı diñley</string>
+
+    <!-- General UI -->
+    <string name="btn_scan">Cihazlarnı qıdır</string>
+    <string name="btn_stop">Toqtat</string>
+    <string name="status_scanning">Qıdıruvdadır…</string>
+    <string name="status_looking_ble">BLE cihazları qıdırala…</string>
+    <string name="status_connecting">Bağlanmaqta…</string>
+    <string name="status_connected">Bağlandı</string>
+    <string name="status_disconnected">Bağlantı kesildi</string>
+    <string name="btn_disconnect">Bağlantını kes</string>
+    <string name="msg_connection_failed">Bağlantı muvaffaqiyetsiz oldı. Təkrar deñeñiz.</string>
+    <string name="msg_ready_to_illuminate">Yaqmağa hazırsıñızmı?</string>
+    <string name="label_color">Renk</string>
+    <string name="label_brightness_tv">Yarıqlıq</string>
+    <string name="label_brightness">Yarıqlıq: %1$d%%</string>
+    <string name="label_music_sync">Muzıka sinxronlaşdırması</string>
+    <string name="label_microphone">Mikrofon</string>
+    <string name="label_phone_audio">Telefon sesi</string>
+    <string name="label_tv_audio">TV sesi</string>
+    <string name="msg_android_10_required">Android 10+ kerek</string>
+    <string name="desc_phone_audio">Hoparlörleriñizden ya da qulqlıqlarıñızdan yañğırağan sesni tuta.\nQayd: DRM ile qoralğan uyğulamalar (Spotify, Netflix) tutuvnı bloklay.</string>
+    <string name="desc_microphone">Mikrofon odadaki sesni tuta — her bir menba ile çalışa.</string>
+    <string name="desc_band_colors">Freqvensiya renkleri  ·  belgilemek içün renkke basıñız  ·  qapatmaq içün ✕ basıñız</string>
+    <string name="label_bass">Bas</string>
+    <string name="label_mids">Orta sesler</string>
+    <string name="label_highs">Yüksek sesler</string>
+    <string name="label_screen_sync">Ekran sinxronlaşdırması</string>
+    <string name="label_screen_tv">Ekran</string>
+    <string name="desc_screen_sync">Ekranda üstün olğan renknı LED-lerge kerçek vaqıtta aksettire — 20 fps tezliginde doyğunlıq ağırlıqlı. Yarıq ve renkli münderice eñ yahşı çalışa.</string>
+    <string name="label_dominant_color">Üstün renk</string>
+    <string name="label_beat">Ritm</string>
+    <string name="label_ambilight_smooth">Yumşaq Ambilight</string>
+    <string name="desc_ambilight_smooth">Renk deñişmelerini yavaş-yavaş qarıştıra — sinxronlaşdırma rejimlerinde közler içün rahatlı.</string>
+
+    <!-- TV Specific UI -->
+    <string name="label_bluetooth">Bluetooth</string>
+    <string name="label_patterns">Örnekler</string>
+    <string name="label_settings">Sazlamalar</string>
+    <string name="msg_connect_first">Evelâ cihazğa bağlanıñız</string>
+    <string name="msg_go_to_bt_section">Qıdırmaq ve cüftleştirmek içün Bluetooth bölügine keçiñiz.</string>
+    <string name="btn_turn_on">Aç</string>
+    <string name="btn_turn_off">Qapat</string>
+    <string name="desc_nav_buttons">D-pad Sol / Sağ ile düvmeler arasında hareket etiñiz, tatbiq etmek içün OK basıñız</string>
+    <string name="label_hue">Tön</string>
+    <string name="label_saturation">Doyğunlıq</string>
+    <string name="desc_nav_rows">D-pad Yuqarı / Aşağı ile sıralar arasında, Sol / Sağ ile düvmeler arasında hareket etiñiz, tatbiq etmek içün OK basıñız</string>
+    <string name="label_animation_speed">Animatsiya tezligi</string>
+    <string name="label_delay_ms">Gecikme (ms)</string>
+    <string name="label_delay_range">10 – 5000</string>
+    <string name="label_delay_range_ms">10 – 5000 ms</string>
+    <string name="label_pattern">Örnek</string>
+    <string name="label_enabled">Faal</string>
+    <string name="label_band_colors">Freqvensiya renkleri</string>
+
+    <!-- Patterns -->
+    <string name="pattern_solid">Tek renk</string>
+    <string name="pattern_jump_rgb">Sıçrav RGB</string>
+    <string name="pattern_jump_all">Sıçrav Hepsi</string>
+    <string name="pattern_fade_rgb">Sönüv RGB</string>
+    <string name="pattern_fade_all">Sönüv Hepsi</string>
+    <string name="pattern_crossfade_red">Çapraz sönüv Qırmızı</string>
+    <string name="pattern_crossfade_green_blue">Çapraz sönüv Yeşil Mavi</string>
+    <string name="pattern_crossfade_blue_orange">Çapraz sönüv Mavi Turuncu</string>
+    <string name="pattern_crossfade_blue">Çapraz sönüv Mavi</string>
+    <string name="pattern_crossfade_white">Çapraz sönüv Beyaz</string>
+    <string name="pattern_flash_rgb">Yıltırav RGB</string>
+    <string name="pattern_flash_all">Yıltırav Hepsi</string>
+    <string name="pattern_strobe_white">Strob Beyaz</string>
+
+    <!-- Accessibility & Misc -->
+    <string name="cd_toggle_power">Ceryannı deñiştir</string>
+    <string name="led_tile_label">LED Ceryanı</string>
+    <string name="cd_open_color_picker">Renk saylayıcını aç</string>
+    <string name="msg_pick_color">Renk saylañız</string>
+    <!-- Sync Colors -->
+    <string name="color_off">Qapalı</string>
+    <string name="color_red">Qırmızı</string>
+    <string name="color_orange">Turuncu</string>
+    <string name="color_yellow">Sarı</string>
+    <string name="color_green">Yeşil</string>
+    <string name="color_cyan">Turkuaz</string>
+    <string name="color_blue">Mavi</string>
+    <string name="color_violet">Menevşe</string>
+    <string name="color_magenta">Macenta</string>
+    <string name="color_pink">Pembe</string>
+    <string name="color_white">Beyaz</string>
+
+    <!-- About -->
+    <string name="label_about">Haqqında</string>
+    <string name="cd_open_about">Bu uyğulama haqqında</string>
+    <string name="cd_back">Keri</string>
+    <string name="about_version">Versiya %1$s</string>
+    <string name="about_tagline">ELK-BLEDOM ve BJ_LED Bluetooth LE LED şeritlerini idare etmek içün yerli Android uyğulaması.</string>
+    <string name="about_source">Menba kodu</string>
+    <string name="about_source_desc">Bu uyğulama açıq menbalı. Kodunı oquñız, mesele bildiriñiz ya da pull request yollañız.</string>
+    <string name="about_repository">Depo</string>
+    <string name="about_license">Litsenziya</string>
+    <string name="about_license_mit">MIT Litsenziyası</string>
+    <string name="about_license_body">MIT Litsenziyası çerçivesinde neşir etildi. Telif aqları bildirişi saqlanğan taqdirde, bu uyğulamanı serbest qullanabilesiñiz, deñiştirebilesiñiz ve daratabilesiñiz.</string>
+    <string name="about_license_read">Litsenziyanıñ tam metnini oquñız</string>
+    <string name="about_contributors">İştirakçiler</string>
+    <string name="about_contributors_desc">GitHub-ta proektke hisse qoşqan herkes tarafından yaratıldı.</string>
+    <string name="about_contributors_all">Bütün iştirakçilerni köster</string>
+    <string name="about_contributors_all_desc">GitHub-ta iştirakçiler grafigini aça</string>
+    <string name="about_libraries">Açıq menbalı kütüphaneler</string>
+    <string name="about_libraries_count">Qullanılğan %1$d kütüphane içün litsenziyalar</string>
+    <string name="about_libraries_desc">Bu uyğulama aşağıda gösterilgen açıq menbalı kütüphaneler esasında yaratıldı.</string>
+</resources>
