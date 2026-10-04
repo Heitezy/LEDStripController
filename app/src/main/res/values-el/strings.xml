@@ -1,0 +1,126 @@
+<resources>
+    <string name="app_name">LED Strip Controller</string>
+
+    <!-- Permissions -->
+    <string name="perm_rationale">Το LED Strip Controller χρειάζεται άδειες Bluetooth και Μικροφώνου για να εντοπίσει την ταινία LED και να ενεργοποιήσει το συγχρονισμό μουσικής.</string>
+    <string name="btn_grant_permissions">Παραχώρηση αδειών</string>
+    <string name="bt_disabled_msg">Το Bluetooth είναι απενεργοποιημένο. Παρακαλώ ενεργοποιήστε το για να συνδεθείτε στην ταινία LED.</string>
+    <string name="btn_enable_bluetooth">Ενεργοποίηση Bluetooth</string>
+
+    <!-- Notifications & Services -->
+    <string name="channel_media_capture_name">Καταγραφή πολυμέσων</string>
+    <string name="channel_media_capture_desc">Ενεργό κατά την καταγραφή ήχου τηλεφώνου ή περιεχομένου οθόνης για συγχρονισμό LED</string>
+    <string name="notif_screen_capture">Καταγραφή περιεχομένου οθόνης για Συγχρονισμό Οθόνης</string>
+    <string name="notif_phone_audio_capture">Καταγραφή ήχου τηλεφώνου για Συγχρονισμό Μουσικής</string>
+    <string name="channel_music_sync_mic_name">Συγχρονισμός Μουσικής (Μικρόφωνο)</string>
+    <string name="channel_music_sync_mic_desc">Ενεργό ενώ ο Συγχρονισμός Μουσικής ακούει από το μικρόφωνο</string>
+    <string name="notif_mic_listening">Ο Συγχρονισμός Μουσικής ακούει από το μικρόφωνο</string>
+
+    <!-- General UI -->
+    <string name="btn_scan">Σάρωση για συσκευές</string>
+    <string name="btn_stop">Διακοπή</string>
+    <string name="status_scanning">Σάρωση…</string>
+    <string name="status_looking_ble">Αναζήτηση συσκευών BLE…</string>
+    <string name="status_connecting">Σύνδεση…</string>
+    <string name="status_connected">Συνδέθηκε</string>
+    <string name="status_disconnected">Αποσυνδέθηκε</string>
+    <string name="btn_disconnect">Αποσύνδεση</string>
+    <string name="msg_connection_failed">Αποτυχία σύνδεσης. Δοκιμάστε ξανά.</string>
+    <string name="msg_ready_to_illuminate">Έτοιμοι για φωτισμό;</string>
+    <string name="label_color">Χρώμα</string>
+    <string name="label_brightness_tv">Φωτεινότητα</string>
+    <string name="label_brightness">Φωτεινότητα: %1$d%%</string>
+    <string name="label_music_sync">Συγχρονισμός Μουσικής</string>
+    <string name="label_microphone">Μικρόφωνο</string>
+    <string name="label_phone_audio">Ήχος Τηλεφώνου</string>
+    <string name="label_tv_audio">Ήχος Τηλεόρασης</string>
+    <string name="msg_android_10_required">Απαιτείται Android 10+</string>
+    <string name="desc_phone_audio">Καταγράφει ό,τι αναπαράγεται από τα ηχεία ή τα ακουστικά σας.\nΣημείωση: Εφαρμογές με προστασία DRM (Spotify, Netflix) μπλοκάρουν την καταγραφή.</string>
+    <string name="desc_microphone">Το μικρόφωνο λαμβάνει ήχο από το δωμάτιο — λειτουργεί με οποιαδήποτε πηγή.</string>
+    <string name="desc_band_colors">Χρώματα ζωνών  ·  πατήστε ένα δείγμα για ορισμό  ·  πατήστε ✕ για σίγαση</string>
+    <string name="label_bass">Μπάσα</string>
+    <string name="label_mids">Μεσαία</string>
+    <string name="label_highs">Πρίμα</string>
+    <string name="label_screen_sync">Συγχρονισμός Οθόνης</string>
+    <string name="label_screen_tv">Οθόνη</string>
+    <string name="desc_screen_sync">Καθρεφτίζει το κυρίαρχο χρώμα της οθόνης σας στα LED σε πραγματικό χρόνο — σταθμισμένο σε κορεσμό στα 20 fps. Το φωτεινό, έγχρωμο περιεχόμενο λειτουργεί καλύτερα.</string>
+    <string name="label_dominant_color">Κυρίαρχο χρώμα</string>
+    <string name="label_beat">Ρυθμός</string>
+    <string name="label_ambilight_smooth">Ομαλό Ambilight</string>
+    <string name="desc_ambilight_smooth">Αναμιγνύει τις αλλαγές χρώματος σταδιακά — πιο ξεκούραστο για τα μάτια κατά τις λειτουργίες συγχρονισμού.</string>
+
+    <!-- TV Specific UI -->
+    <string name="label_bluetooth">Bluetooth</string>
+    <string name="label_patterns">Μοτίβα</string>
+    <string name="label_settings">Ρυθμίσεις</string>
+    <string name="msg_connect_first">Συνδεθείτε πρώτα σε μια συσκευή</string>
+    <string name="msg_go_to_bt_section">Μεταβείτε στην ενότητα Bluetooth για σάρωση και ζεύξη.</string>
+    <string name="btn_turn_on">Ενεργοποίηση</string>
+    <string name="btn_turn_off">Απενεργοποίηση</string>
+    <string name="desc_nav_buttons">Πλοηγηθείτε μεταξύ των κουμπιών με D-pad Αριστερά / Δεξιά, πιέστε OK για εφαρμογή</string>
+    <string name="label_hue">Απόχρωση</string>
+    <string name="label_saturation">Κορεσμός</string>
+    <string name="desc_nav_rows">Πλοηγηθείτε στις σειρές με D-pad Πάνω / Κάτω, κουμπιά με Αριστερά / Δεξιά, πιέστε OK για εφαρμογή</string>
+    <string name="label_animation_speed">Ταχύτητα κίνησης</string>
+    <string name="label_delay_ms">Καθυστέρηση (ms)</string>
+    <string name="label_delay_range">10 – 5000</string>
+    <string name="label_delay_range_ms">10 – 5000 ms</string>
+    <string name="label_pattern">Μοτίβο</string>
+    <string name="label_enabled">Ενεργοποιημένο</string>
+    <string name="label_band_colors">Χρώματα ζωνών</string>
+
+    <!-- Patterns -->
+    <string name="pattern_solid">Σταθερό</string>
+    <string name="pattern_jump_rgb">Άλμα RGB</string>
+    <string name="pattern_jump_all">Άλμα Όλα</string>
+    <string name="pattern_fade_rgb">Βαθμιαία αλλαγή RGB</string>
+    <string name="pattern_fade_all">Βαθμιαία αλλαγή Όλα</string>
+    <string name="pattern_crossfade_red">Διασταυρούμενη μετάβαση Κόκκινο</string>
+    <string name="pattern_crossfade_green_blue">Διασταυρούμενη μετάβαση Πράσινο Μπλε</string>
+    <string name="pattern_crossfade_blue_orange">Διασταυρούμενη μετάβαση Μπλε Πορτοκαλί</string>
+    <string name="pattern_crossfade_blue">Διασταυρούμενη μετάβαση Μπλε</string>
+    <string name="pattern_crossfade_white">Διασταυρούμενη μετάβαση Λευκό</string>
+    <string name="pattern_flash_rgb">Αναλαμπή RGB</string>
+    <string name="pattern_flash_all">Αναλαμπή Όλα</string>
+    <string name="pattern_strobe_white">Στροβοσκόπιο Λευκό</string>
+
+    <!-- Accessibility & Misc -->
+    <string name="cd_toggle_power">Εναλλαγή λειτουργίας</string>
+    <string name="led_tile_label">Τροφοδοσία LED</string>
+    <string name="cd_open_color_picker">Άνοιγμα επιλογέα χρώματος</string>
+    <string name="msg_pick_color">Επιλέξτε ένα χρώμα</string>
+
+    <!-- Sync Colors -->
+    <string name="color_off">Απενεργοποιημένο</string>
+    <string name="color_red">Κόκκινο</string>
+    <string name="color_orange">Πορτοκαλί</string>
+    <string name="color_yellow">Κίτρινο</string>
+    <string name="color_green">Πράσινο</string>
+    <string name="color_cyan">Κυανό</string>
+    <string name="color_blue">Μπλε</string>
+    <string name="color_violet">Ιώδες</string>
+    <string name="color_magenta">Ματζέντα</string>
+    <string name="color_pink">Ροζ</string>
+    <string name="color_white">Λευκό</string>
+
+    <!-- About -->
+    <string name="label_about">Σχετικά</string>
+    <string name="cd_open_about">Σχετικά με αυτήν την εφαρμογή</string>
+    <string name="cd_back">Πίσω</string>
+    <string name="about_version">Έκδοση %1$s</string>
+    <string name="about_tagline">Μια πλήρως native εφαρμογή Android για τον έλεγχο ταινιών LED Bluetooth LE ELK-BLEDOM και BJ_LED.</string>
+    <string name="about_source">Πηγαίος κώδικας</string>
+    <string name="about_source_desc">Αυτή η εφαρμογή είναι ανοιχτού κώδικα. Διαβάστε τον κώδικα, υποβάλετε ένα ζήτημα ή στείλτε ένα pull request.</string>
+    <string name="about_repository">Αποθετήριο</string>
+    <string name="about_license">Άδεια χρήσης</string>
+    <string name="about_license_mit">Άδεια MIT</string>
+    <string name="about_license_body">Κυκλοφορεί υπό την άδεια MIT. Είστε ελεύθεροι να χρησιμοποιήσετε, να τροποποιήσετε και να αναδιανείμετε αυτήν την εφαρμογή, υπό τον όρο ότι διατηρείται η σημείωση πνευματικών δικαιωμάτων.</string>
+    <string name="about_license_read">Διαβάστε το πλήρες κείμενο της άδειας</string>
+    <string name="about_contributors">Συντελεστές</string>
+    <string name="about_contributors_desc">Δημιουργήθηκε από όλους όσους έχουν συνεισφέρει στο έργο στο GitHub.</string>
+    <string name="about_contributors_all">Προβολή όλων των συντελεστών</string>
+    <string name="about_contributors_all_desc">Ανοίγει το γράφημα συντελεστών στο GitHub</string>
+    <string name="about_libraries">Βιβλιοθήκες ανοιχτού κώδικα</string>
+    <string name="about_libraries_count">Άδειες χρήσης για τις %1$d βιβλιοθήκες που χρησιμοποιούνται</string>
+    <string name="about_libraries_desc">Αυτή η εφαρμογή βασίζεται στις ακόλουθες βιβλιοθήκες ανοιχτού κώδικα.</string>
+</resources>
