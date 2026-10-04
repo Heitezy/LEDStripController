@@ -1,0 +1,125 @@
+<resources>
+    <string name="app_name">LED Strip Controller</string>
+
+    <!-- Permissions -->
+    <string name="perm_rationale">LED Strip Controller memerlukan izin Bluetooth dan Mikrofon untuk memindai strip LED Anda dan mengaktifkan sinkronisasi musik.</string>
+    <string name="btn_grant_permissions">Berikan Izin</string>
+    <string name="bt_disabled_msg">Bluetooth dinonaktifkan. Silakan aktifkan untuk terhubung ke strip LED Anda.</string>
+    <string name="btn_enable_bluetooth">Aktifkan Bluetooth</string>
+
+    <!-- Notifications & Services -->
+    <string name="channel_media_capture_name">Perekaman Media</string>
+    <string name="channel_media_capture_desc">Aktif saat merekam audio atau konten layar ponsel untuk sinkronisasi LED</string>
+    <string name="notif_screen_capture">Merekam konten layar untuk Sinkronisasi Layar</string>
+    <string name="notif_phone_audio_capture">Merekam audio ponsel untuk Sinkronisasi Musik</string>
+    <string name="channel_music_sync_mic_name">Sinkronisasi Musik (Mikrofon)</string>
+    <string name="channel_music_sync_mic_desc">Aktif saat Sinkronisasi Musik mendengarkan mikrofon</string>
+    <string name="notif_mic_listening">Sinkronisasi Musik mendengarkan mikrofon</string>
+
+    <!-- General UI -->
+    <string name="btn_scan">Pindai perangkat</string>
+    <string name="btn_stop">Berhenti</string>
+    <string name="status_scanning">Memindai…</string>
+    <string name="status_looking_ble">Mencari perangkat BLE…</string>
+    <string name="status_connecting">Menghubungkan…</string>
+    <string name="status_connected">Terhubung</string>
+    <string name="status_disconnected">Terputus</string>
+    <string name="btn_disconnect">Putuskan</string>
+    <string name="msg_connection_failed">Gagal terhubung. Coba lagi.</string>
+    <string name="msg_ready_to_illuminate">Siap menerangi?</string>
+    <string name="label_color">Warna</string>
+    <string name="label_brightness_tv">Kecerahan</string>
+    <string name="label_brightness">Kecerahan: %1$d%%</string>
+    <string name="label_music_sync">Sinkronisasi Musik</string>
+    <string name="label_microphone">Mikrofon</string>
+    <string name="label_phone_audio">Audio Ponsel</string>
+    <string name="label_tv_audio">Audio TV</string>
+    <string name="msg_android_10_required">Memerlukan Android 10+</string>
+    <string name="desc_phone_audio">Merekam suara yang diputar melalui speaker atau headphone Anda.\nCatatan: Aplikasi berhak cipta (DRM) seperti Spotify dan Netflix memblokir perekaman.</string>
+    <string name="desc_microphone">Mikrofon menangkap suara dari ruangan — berfungsi dengan sumber apa pun.</string>
+    <string name="desc_band_colors">Warna Frekuensi  ·  ketuk swatch untuk menetapkan  ·  ketuk ✕ untuk membisukan</string>
+    <string name="label_bass">Bass</string>
+    <string name="label_mids">Mids</string>
+    <string name="label_highs">Highs</string>
+    <string name="label_screen_sync">Sinkronisasi Layar</string>
+    <string name="label_screen_tv">Layar</string>
+    <string name="desc_screen_sync">Mencerminkan warna dominan di layar Anda ke LED secara real-time — disesuaikan dengan saturasi pada 20 fps. Konten yang cerah dan berwarna-warni berfungsi paling baik.</string>
+    <string name="label_dominant_color">Warna dominan</string>
+    <string name="label_beat">Ritme</string>
+    <string name="label_ambilight_smooth">Ambilight halus</string>
+    <string name="desc_ambilight_smooth">Mencampur perubahan warna secara bertahap — lebih nyaman di mata selama mode sinkronisasi.</string>
+
+    <!-- TV Specific UI -->
+    <string name="label_bluetooth">Bluetooth</string>
+    <string name="label_patterns">Pola</string>
+    <string name="label_settings">Pengaturan</string>
+    <string name="msg_connect_first">Hubungkan ke perangkat terlebih dahulu</string>
+    <string name="msg_go_to_bt_section">Buka bagian Bluetooth untuk memindai dan menyandingkan.</string>
+    <string name="btn_turn_on">Nyalakan</string>
+    <string name="btn_turn_off">Matikan</string>
+    <string name="desc_nav_buttons">Navigasi antar tombol dengan D-pad Kiri / Kanan, tekan OK untuk menerapkan</string>
+    <string name="label_hue">Rona</string>
+    <string name="label_saturation">Saturasi</string>
+    <string name="desc_nav_rows">Navigasi baris dengan D-pad Atas / Bawah, tombol dengan Kiri / Kanan, tekan OK untuk menerapkan</string>
+    <string name="label_animation_speed">Kecepatan Animasi</string>
+    <string name="label_delay_ms">Jeda (ms)</string>
+    <string name="label_delay_range">10 – 5000</string>
+    <string name="label_delay_range_ms">10 – 5000 ms</string>
+    <string name="label_pattern">Pola</string>
+    <string name="label_enabled">Diaktifkan</string>
+    <string name="label_band_colors">Warna Frekuensi</string>
+
+    <!-- Patterns -->
+    <string name="pattern_solid">Penuh</string>
+    <string name="pattern_jump_rgb">Lompat RGB</string>
+    <string name="pattern_jump_all">Lompat Semua</string>
+    <string name="pattern_fade_rgb">Pudar RGB</string>
+    <string name="pattern_fade_all">Pudar Semua</string>
+    <string name="pattern_crossfade_red">Pudar Silang Merah</string>
+    <string name="pattern_crossfade_green_blue">Pudar Silang Hijau Biru</string>
+    <string name="pattern_crossfade_blue_orange">Pudar Silang Biru Oranye</string>
+    <string name="pattern_crossfade_blue">Pudar Silang Biru</string>
+    <string name="pattern_crossfade_white">Pudar Silang Putih</string>
+    <string name="pattern_flash_rgb">Kedip RGB</string>
+    <string name="pattern_flash_all">Kedip Semua</string>
+    <string name="pattern_strobe_white">Strobo Putih</string>
+
+    <!-- Accessibility & Misc -->
+    <string name="cd_toggle_power">Beralih daya</string>
+    <string name="led_tile_label">Daya LED</string>
+    <string name="cd_open_color_picker">Buka pemilih warna</string>
+    <string name="msg_pick_color">Pilih warna</string>
+    <!-- Sync Colors -->
+    <string name="color_off">Mati</string>
+    <string name="color_red">Merah</string>
+    <string name="color_orange">Oranye</string>
+    <string name="color_yellow">Kuning</string>
+    <string name="color_green">Hijau</string>
+    <string name="color_cyan">Sian</string>
+    <string name="color_blue">Biru</string>
+    <string name="color_violet">Violet</string>
+    <string name="color_magenta">Magenta</string>
+    <string name="color_pink">Merah Muda</string>
+    <string name="color_white">Putih</string>
+
+    <!-- About -->
+    <string name="label_about">Tentang</string>
+    <string name="cd_open_about">Tentang aplikasi ini</string>
+    <string name="cd_back">Kembali</string>
+    <string name="about_version">Versi %1$s</string>
+    <string name="about_tagline">Aplikasi Android sepenuhnya native untuk mengontrol strip LED Bluetooth LE ELK-BLEDOM dan BJ_LED.</string>
+    <string name="about_source">Kode sumber</string>
+    <string name="about_source_desc">Aplikasi ini adalah sumber terbuka. Baca kode, kirim laporan masalah, atau kirim pull request.</string>
+    <string name="about_repository">Repositori</string>
+    <string name="about_license">Lisensi</string>
+    <string name="about_license_mit">Lisensi MIT</string>
+    <string name="about_license_body">Dirilis di bawah Lisensi MIT. Anda bebas menggunakan, mengubah, dan mendistribusikan ulang aplikasi ini, selama pemberitahuan hak cipta tetap dicantumkan.</string>
+    <string name="about_license_read">Baca teks lisensi lengkap</string>
+    <string name="about_contributors">Kontributor</string>
+    <string name="about_contributors_desc">Dibuat oleh semua orang yang telah berkontribusi pada proyek ini di GitHub.</string>
+    <string name="about_contributors_all">Lihat semua kontributor</string>
+    <string name="about_contributors_all_desc">Membuka grafik kontributor di GitHub</string>
+    <string name="about_libraries">Pustaka sumber terbuka</string>
+    <string name="about_libraries_count">Lisensi untuk %1$d pustaka yang digunakan</string>
+    <string name="about_libraries_desc">Aplikasi ini dibangun menggunakan pustaka sumber terbuka berikut.</string>
+</resources>
