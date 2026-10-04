@@ -1,0 +1,125 @@
+<resources>
+    <string name="app_name">LED Strip Controller</string>
+
+    <!-- Permissions -->
+    <string name="perm_rationale">يحتاج تطبيق LED Strip Controller إلى إذنَي البلوتوث والميكروفون للبحث عن شريط LED وتفعيل المزامنة مع الموسيقى.</string>
+    <string name="btn_grant_permissions">منح الأذونات</string>
+    <string name="bt_disabled_msg">البلوتوث معطّل. يُرجى تفعيله للاتصال بشريط LED الخاص بك.</string>
+    <string name="btn_enable_bluetooth">تفعيل البلوتوث</string>
+
+    <!-- Notifications & Services -->
+    <string name="channel_media_capture_name">التقاط الوسائط</string>
+    <string name="channel_media_capture_desc">نشط أثناء التقاط صوت الهاتف أو محتوى الشاشة لمزامنة شريط LED</string>
+    <string name="notif_screen_capture">جاري التقاط محتوى الشاشة لمزامنة الشاشة</string>
+    <string name="notif_phone_audio_capture">جاري التقاط صوت الهاتف لمزامنة الموسيقى</string>
+    <string name="channel_music_sync_mic_name">مزامنة الموسيقى (الميكروفون)</string>
+    <string name="channel_music_sync_mic_desc">نشط أثناء استماع مزامنة الموسيقى للميكروفون</string>
+    <string name="notif_mic_listening">مزامنة الموسيقى تستمع للميكروفون</string>
+
+    <!-- General UI -->
+    <string name="btn_scan">البحث عن أجهزة</string>
+    <string name="btn_stop">إيقاف</string>
+    <string name="status_scanning">جاري البحث…</string>
+    <string name="status_looking_ble">جاري البحث عن أجهزة BLE…</string>
+    <string name="status_connecting">جاري الاتصال…</string>
+    <string name="status_connected">متصل</string>
+    <string name="status_disconnected">غير متصل</string>
+    <string name="btn_disconnect">قطع الاتصال</string>
+    <string name="msg_connection_failed">فشل الاتصال. حاول مرة أخرى.</string>
+    <string name="msg_ready_to_illuminate">جاهز للإضاءة؟</string>
+    <string name="label_color">اللون</string>
+    <string name="label_brightness_tv">السطوع</string>
+    <string name="label_brightness">السطوع: %1$d%%</string>
+    <string name="label_music_sync">مزامنة الموسيقى</string>
+    <string name="label_microphone">الميكروفون</string>
+    <string name="label_phone_audio">صوت الهاتف</string>
+    <string name="label_tv_audio">صوت التلفزيون</string>
+    <string name="msg_android_10_required">يتطلب Android 10 أو أحدث</string>
+    <string name="desc_phone_audio">يلتقط الصوت الذي يتم تشغيله عبر مكبرات الصوت أو سماعات الرأس.\nملاحظة: التطبيقات المحمية بنظام إدارة الحقوق الرقمية (DRM) مثل Spotify وNetflix تحظر التقاط الصوت.</string>
+    <string name="desc_microphone">يلتقط الميكروفون الصوت من الغرفة — يعمل مع أي مصدر.</string>
+    <string name="desc_band_colors">ألوان النطاقات  ·  انقر على عينة للتعيين  ·  انقر على ✕ للتكتم</string>
+    <string name="label_bass">الجهير (Bass)</string>
+    <string name="label_mids">الأصوات المتوسطة</string>
+    <string name="label_highs">الترددات العالية</string>
+    <string name="label_screen_sync">مزامنة الشاشة</string>
+    <string name="label_screen_tv">الشاشة</string>
+    <string name="desc_screen_sync">يعكس اللون السائد على شاشتك إلى مصابيح LED في الوقت الفعلي — مرجّح بالتشبع بمعدل 20 إطارًا في الثانية. المحتوى الساطع والملون يعمل بشكل أفضل.</string>
+    <string name="label_dominant_color">اللون السائد</string>
+    <string name="label_beat">الإيقاع</string>
+    <string name="label_ambilight_smooth">Ambilight سلس</string>
+    <string name="desc_ambilight_smooth">يدمج تغييرات الألوان تدريجيًا — مريح للعينين أثناء أوضاع المزامنة.</string>
+
+    <!-- TV Specific UI -->
+    <string name="label_bluetooth">البلوتوث</string>
+    <string name="label_patterns">الأنماط</string>
+    <string name="label_settings">الإعدادات</string>
+    <string name="msg_connect_first">اتصل بجهاز أولاً</string>
+    <string name="msg_go_to_bt_section">انتقل إلى قسم البلوتوث للبحث والاقتران.</string>
+    <string name="btn_turn_on">تشغيل</string>
+    <string name="btn_turn_off">إيقاف</string>
+    <string name="desc_nav_buttons">التنقل بين الأزرار باستخدام اليسار / اليمين في لوحة الاتجاهات، واضغط على OK للتطبيق</string>
+    <string name="label_hue">درجة اللون</string>
+    <string name="label_saturation">التشبع</string>
+    <string name="desc_nav_rows">التنقل بين الصفوف باستخدام الأعلى / الأسفل، والأزرار باستخدام اليسار / اليمين، واضغط على OK للتطبيق</string>
+    <string name="label_animation_speed">سرعة الحركة</string>
+    <string name="label_delay_ms">التأخير (مللي ثانية)</string>
+    <string name="label_delay_range">10 – 5000</string>
+    <string name="label_delay_range_ms">10 – 5000 مللي ثانية</string>
+    <string name="label_pattern">النمط</string>
+    <string name="label_enabled">مفعّل</string>
+    <string name="label_band_colors">ألوان النطاقات</string>
+
+    <!-- Patterns -->
+    <string name="pattern_solid">ثابت</string>
+    <string name="pattern_jump_rgb">قفز RGB</string>
+    <string name="pattern_jump_all">قفز الكل</string>
+    <string name="pattern_fade_rgb">تلاشي RGB</string>
+    <string name="pattern_fade_all">تلاشي الكل</string>
+    <string name="pattern_crossfade_red">تلاشي متداخل أحمر</string>
+    <string name="pattern_crossfade_green_blue">تلاشي متداخل أخضر أزرق</string>
+    <string name="pattern_crossfade_blue_orange">تلاشي متداخل أزرق برتقالي</string>
+    <string name="pattern_crossfade_blue">تلاشي متداخل أزرق</string>
+    <string name="pattern_crossfade_white">تلاشي متداخل أبيض</string>
+    <string name="pattern_flash_rgb">وميض RGB</string>
+    <string name="pattern_flash_all">وميض الكل</string>
+    <string name="pattern_strobe_white">وميض خاطف أبيض</string>
+
+    <!-- Accessibility & Misc -->
+    <string name="cd_toggle_power">تبديل التشغيل</string>
+    <string name="led_tile_label">طاقة LED</string>
+    <string name="cd_open_color_picker">فتح أداة اختيار الألوان</string>
+    <string name="msg_pick_color">اختر لونًا</string>
+    <!-- Sync Colors -->
+    <string name="color_off">مغلق</string>
+    <string name="color_red">أحمر</string>
+    <string name="color_orange">برتقالي</string>
+    <string name="color_yellow">أصفر</string>
+    <string name="color_green">أخضر</string>
+    <string name="color_cyan">سمائي</string>
+    <string name="color_blue">أزرق</string>
+    <string name="color_violet">بنفسجي</string>
+    <string name="color_magenta">أرجواني</string>
+    <string name="color_pink">وردي</string>
+    <string name="color_white">أبيض</string>
+
+    <!-- About -->
+    <string name="label_about">حول</string>
+    <string name="cd_open_about">حول هذا التطبيق</string>
+    <string name="cd_back">رجوع</string>
+    <string name="about_version">الإصدار %1$s</string>
+    <string name="about_tagline">تطبيق أندرويد أصلي بالكامل للتحكم بشرائط LED من نوع ELK-BLEDOM وBJ_LED عبر البلوتوث منخفض الطاقة.</string>
+    <string name="about_source">الكود المصدري</string>
+    <string name="about_source_desc">هذا التطبيق مفتوح المصدر. يمكنك قراءة الكود، أو إرسال بلاغ عن مشكلة، أو تقديم طلب سحب.</string>
+    <string name="about_repository">المستودع</string>
+    <string name="about_license">الترخيص</string>
+    <string name="about_license_mit">ترخيص MIT</string>
+    <string name="about_license_body">تم الإصدار بموجب ترخيص MIT. أنت حر في استخدام هذا التطبيق وتعديله وإعادة توزيعه، بشرط الاحتفاظ بإشعار حقوق النشر.</string>
+    <string name="about_license_read">قراءة نص الترخيص الكامل</string>
+    <string name="about_contributors">المساهمون</string>
+    <string name="about_contributors_desc">تم بناؤه بواسطة كل من ساهم في المشروع على GitHub.</string>
+    <string name="about_contributors_all">عرض جميع المساهمين</string>
+    <string name="about_contributors_all_desc">يفتح الرسم البياني للمساهمين على GitHub</string>
+    <string name="about_libraries">المكتبات مفتوحة المصدر</string>
+    <string name="about_libraries_count">تراخيص للمكتبات الـ %1$d المستخدمة</string>
+    <string name="about_libraries_desc">تم بناء هذا التطبيق باستخدام المكتبات مفتوحة المصدر التالية.</string>
+</resources>
