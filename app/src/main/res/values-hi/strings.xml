@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LED Strip Controller</string>
+
+    <!-- Permissions -->
+    <string name="perm_rationale">LED Strip Controller को आपकी LED स्ट्रिप खोजने और म्यूज़िक सिंक सक्षम करने के लिए ब्लूटूथ और माइक्रोफ़ोन अनुमतियों की आवश्यकता है।</string>
+    <string name="btn_grant_permissions">अनुमतियाँ दें</string>
+    <string name="bt_disabled_msg">ब्लूटूथ अक्षम है। अपनी LED स्ट्रिप से कनेक्ट करने के लिए कृपया इसे सक्षम करें।</string>
+    <string name="btn_enable_bluetooth">ब्लूटूथ सक्षम करें</string>
+
+    <!-- Notifications & Services -->
+    <string name="channel_media_capture_name">मीडिया कैप्चर</string>
+    <string name="channel_media_capture_desc">LED सिंक के लिए फ़ोन ऑडियो या स्क्रीन सामग्री कैप्चर करते समय सक्रिय</string>
+    <string name="notif_screen_capture">स्क्रीन सिंक के लिए स्क्रीन सामग्री कैप्चर की जा रही है</string>
+    <string name="notif_phone_audio_capture">म्यूज़िक सिंक के लिए फ़ोन ऑडियो कैप्चर किया जा रहा है</string>
+    <string name="channel_music_sync_mic_name">म्यूज़िक सिंक (माइक्रोफ़ोन)</string>
+    <string name="channel_music_sync_mic_desc">जब म्यूज़िक सिंक माइक्रोफ़ोन से सुन रहा हो तब सक्रिय</string>
+    <string name="notif_mic_listening">म्यूज़िक सिंक माइक्रोफ़ोन से सुन रहा है</string>
+
+    <!-- General UI -->
+    <string name="btn_scan">डिवाइस स्कैन करें</string>
+    <string name="btn_stop">रोकें</string>
+    <string name="status_scanning">स्कैन किया जा रहा है…</string>
+    <string name="status_looking_ble">BLE डिवाइस ढूंढे जा रहे हैं…</string>
+    <string name="status_connecting">कनेक्ट किया जा रहा है…</string>
+    <string name="status_connected">कनेक्टेड</string>
+    <string name="status_disconnected">डिस्कनेक्टेड</string>
+    <string name="btn_disconnect">डिस्कनेक्ट करें</string>
+    <string name="msg_connection_failed">कनेक्शन विफल रहा। पुन: प्रयास करें।</string>
+    <string name="msg_ready_to_illuminate">रोशन करने के लिए तैयार हैं?</string>
+    <string name="label_color">रंग</string>
+    <string name="label_brightness_tv">चमक</string>
+    <string name="label_brightness">चमक: %1$d%%</string>
+    <string name="label_music_sync">म्यूज़िक सिंक</string>
+    <string name="label_microphone">माइक्रोफ़ोन</string>
+    <string name="label_phone_audio">फ़ोन ऑडियो</string>
+    <string name="label_tv_audio">टीवी ऑडियो</string>
+    <string name="msg_android_10_required">Android 10+ आवश्यक है</string>
+    <string name="desc_phone_audio">आपके स्पीकर या हेडफ़ोन के ज़रिए बजने वाले ऑडियो को कैप्चर करता है।\nनोट: DRM-सुरक्षित ऐप्स (Spotify, Netflix) कैप्चर को ब्लॉक करते हैं।</string>
+    <string name="desc_microphone">माइक्रोफ़ोन कमरे से ध्वनि लेता है — किसी भी स्रोत के साथ काम करता है।</string>
+    <string name="desc_band_colors">बैंड के रंग  ·  असाइन करने के लिए रंग पर टैप करें  ·  म्यूट करने के लिए ✕ पर टैप करें</string>
+    <string name="label_bass">बास</string>
+    <string name="label_mids">मिड्स</string>
+    <string name="label_highs">हाईज़</string>
+    <string name="label_screen_sync">स्क्रीन सिंक</string>
+    <string name="label_screen_tv">स्क्रीन</string>
+    <string name="desc_screen_sync">20 fps पर आपकी स्क्रीन के प्रमुख रंग को LED पर वास्तविक समय में सिंक करता है। चमकीली और रंगीन सामग्री सबसे अच्छा काम करती है।</string>
+    <string name="label_dominant_color">प्रमुख रंग</string>
+    <string name="label_beat">बीट</string>
+    <string name="label_ambilight_smooth">एम्बीलाइट स्मूथ</string>
+    <string name="desc_ambilight_smooth">रंगों के बदलाव को धीरे-धीरे मिलाता है — सिंक मोड के दौरान आंखों के लिए आसान रहता है।</string>
+
+    <!-- TV Specific UI -->
+    <string name="label_bluetooth">ब्लूटूथ</string>
+    <string name="label_patterns">पैटर्न</string>
+    <string name="label_settings">सेटिंग्स</string>
+    <string name="msg_connect_first">पहले किसी डिवाइस से कनेक्ट करें</string>
+    <string name="msg_go_to_bt_section">स्कैन और पेयर करने के लिए ब्लूटूथ अनुभाग पर जाएं।</string>
+    <string name="btn_turn_on">चालू करें</string>
+    <string name="btn_turn_off">बंद करें</string>
+    <string name="desc_nav_buttons">D-पैड बाएँ / दाएँ से बटन के बीच नेविगेट करें, लागू करने के लिए OK दबाएं</string>
+    <string name="label_hue">ह्यू</string>
+    <string name="label_saturation">सैटुरेशन</string>
+    <string name="desc_nav_rows">D-पैड ऊपर / नीचे से पंक्तियों में नेविगेट करें, बाएँ / दाएँ से बटन चुनें, लागू करने के लिए OK दबाएं</string>
+    <string name="label_animation_speed">एनिमेशन गति</string>
+    <string name="label_delay_ms">विलंब (ms)</string>
+    <string name="label_delay_range">10 – 5000</string>
+    <string name="label_delay_range_ms">10 – 5000 ms</string>
+    <string name="label_pattern">पैटर्न</string>
+    <string name="label_enabled">सक्षम</string>
+    <string name="label_band_colors">बैंड के रंग</string>
+
+    <!-- Patterns -->
+    <string name="pattern_solid">सॉलिड</string>
+    <string name="pattern_jump_rgb">जंप RGB</string>
+    <string name="pattern_jump_all">जंप ऑल</string>
+    <string name="pattern_fade_rgb">फ़ेड RGB</string>
+    <string name="pattern_fade_all">फ़ेड ऑल</string>
+    <string name="pattern_crossfade_red">क्रॉसफ़ेड रेड</string>
+    <string name="pattern_crossfade_green_blue">क्रॉसफ़ेड ग्रीन ब्लू</string>
+    <string name="pattern_crossfade_blue_orange">क्रॉसफ़ेड ब्लू ऑरेंज</string>
+    <string name="pattern_crossfade_blue">क्रॉसफ़ेड ब्लू</string>
+    <string name="pattern_crossfade_white">क्रॉसफ़ेड वाइट</string>
+    <string name="pattern_flash_rgb">फ्लैश RGB</string>
+    <string name="pattern_flash_all">फ्लैश ऑल</string>
+    <string name="pattern_strobe_white">स्ट्रोब वाइट</string>
+
+    <!-- Accessibility & Misc -->
+    <string name="cd_toggle_power">पावर बदलें</string>
+    <string name="led_tile_label">LED पावर</string>
+    <string name="cd_open_color_picker">रंग पिकर खोलें</string>
+    <string name="msg_pick_color">एक रंग चुनें</string>
+
+    <!-- Sync Colors -->
+    <string name="color_off">बंद</string>
+    <string name="color_red">लाल</string>
+    <string name="color_orange">नारंगी</string>
+    <string name="color_yellow">पीला</string>
+    <string name="color_green">हरा</string>
+    <string name="color_cyan">सयान</string>
+    <string name="color_blue">नीला</string>
+    <string name="color_violet">बैंगनी</string>
+    <string name="color_magenta">मैजेंटा</string>
+    <string name="color_pink">गुलाबी</string>
+    <string name="color_white">सफ़ेद</string>
+
+    <!-- About -->
+    <string name="label_about">ऐप के बारे में</string>
+    <string name="cd_open_about">इस ऐप के बारे में</string>
+    <string name="cd_back">पीछे</string>
+    <string name="about_version">संस्करण %1$s</string>
+    <string name="about_tagline">ELK-BLEDOM और BJ_LED ब्लूटूथ LE LED स्ट्रिप्स को नियंत्रित करने के लिए एक पूरी तरह से नेटिव Android ऐप।</string>
+    <string name="about_source">सोर्स कोड</string>
+    <string name="about_source_desc">यह ऐप ओपन सोर्स है। कोड पढ़ें, समस्या दर्ज करें, या पुल रिक्वेस्ट भेजें।</string>
+    <string name="about_repository">रिपोजिटरी</string>
+    <string name="about_license">लाइसेंस</string>
+    <string name="about_license_mit">MIT लाइसेंस</string>
+    <string name="about_license_body">MIT लाइसेंस के तहत जारी किया गया। जब तक कॉपीराइट नोटिस बनाए रखा जाता है, आप इस ऐप का उपयोग, संशोधन और पुनर्वितरण करने के लिए स्वतंत्र हैं।</string>
+    <string name="about_license_read">पूरा लाइसेंस पाठ पढ़ें</string>
+    <string name="about_contributors">योगदानकर्ता</string>
+    <string name="about_contributors_desc">GitHub पर इस प्रोजेक्ट में योगदान देने वाले सभी लोगों द्वारा निर्मित।</string>
+    <string name="about_contributors_all">सभी योगदानकर्ता देखें</string>
+    <string name="about_contributors_all_desc">GitHub पर योगदानकर्ता ग्राफ खोलता है</string>
+    <string name="about_libraries">ओपन-सोर्स लाइब्रेरीज़</string>
+    <string name="about_libraries_count">उपयोग की गई %1$d लाइब्रेरीज़ के लाइसेंस</string>
+    <string name="about_libraries_desc">यह ऐप निम्नलिखित ओपन-सोर्स लाइब्रेरीज़ पर बना है।</string>
+</resources>
