@@ -6,6 +6,10 @@
     <string name="btn_grant_permissions">権限を許可</string>
     <string name="bt_disabled_msg">Bluetoothが無効になっています。LEDテープライトに接続するには有効にしてください。</string>
     <string name="btn_enable_bluetooth">Bluetoothを有効にする</string>
+    <string name="ble_unsupported_msg">このデバイスはBluetooth Low Energyに対応していません。LED Strip ControllerがLEDテープライトと通信するにはこの機能が必要なため、ここではアプリを使用できません。\n\nGoogle Playでアプリを購入した場合は、Play ストアの注文履歴から払い戻しをリクエストできます。</string>
+    <string name="ble_unverified_msg">このデバイスはBluetooth Low Energyへの対応を報告していないため、LED Strip ControllerがLEDテープライトで動作するかどうかは保証できません。\n\nそれでも試すことはできます。テープライトが見つからない、または接続できない場合は、Play ストアの注文履歴から払い戻しをリクエストできます。</string>
+    <string name="btn_continue_anyway">それでも試す</string>
+    <string name="btn_close_app">閉じる</string>
 
     <!-- Notifications & Services -->
     <string name="channel_media_capture_name">メディアキャプチャ</string>

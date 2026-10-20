@@ -7,6 +7,10 @@
     <string name="btn_grant_permissions">อนุญาตสิทธิ์</string>
     <string name="bt_disabled_msg">ปิดใช้งานบลูทูธอยู่ กรุณาเปิดบลูทูธเพื่อเชื่อมต่อกับไฟเส้น LED ของคุณ</string>
     <string name="btn_enable_bluetooth">เปิดใช้งานบลูทูธ</string>
+    <string name="ble_unsupported_msg">อุปกรณ์นี้ไม่รองรับ Bluetooth Low Energy ซึ่ง LED Strip Controller ต้องใช้ในการสื่อสารกับไฟเส้น LED ของคุณ จึงไม่สามารถใช้งานแอปบนอุปกรณ์นี้ได้\n\nหากคุณซื้อแอปจาก Google Play คุณสามารถขอคืนเงินได้จากประวัติการสั่งซื้อใน Play Store</string>
+    <string name="ble_unverified_msg">อุปกรณ์นี้ไม่ได้แจ้งว่ารองรับ Bluetooth Low Energy เราจึงไม่สามารถรับประกันได้ว่า LED Strip Controller จะใช้งานกับไฟเส้น LED ของคุณได้\n\nคุณยังสามารถลองใช้งานได้ หากแอปไม่พบหรือเชื่อมต่อกับไฟเส้นของคุณไม่ได้ คุณสามารถขอคืนเงินได้จากประวัติการสั่งซื้อใน Play Store</string>
+    <string name="btn_continue_anyway">ลองใช้งานต่อ</string>
+    <string name="btn_close_app">ปิด</string>
 
     <!-- Notifications & Services -->
     <string name="channel_media_capture_name">การจับภาพมีเดีย</string>

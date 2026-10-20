@@ -7,6 +7,7 @@ import android.bluetooth.BluetoothManager
 import android.content.ComponentName
 import android.content.Intent
 import android.content.ServiceConnection
+import android.content.pm.PackageManager
 import android.content.res.Configuration
 import android.media.projection.MediaProjectionManager
 import android.os.Build
@@ -26,6 +27,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.getValue
@@ -56,6 +58,23 @@ class MainActivity : ComponentActivity() {
         (getSystemService(UI_MODE_SERVICE) as UiModeManager).currentModeType ==
             Configuration.UI_MODE_TYPE_TELEVISION
     }
+
+    /** How well this device can talk to a BLE LED strip. */
+    private enum class BleSupport { OK, UNVERIFIED, NONE }
+
+    private val bleSupport: BleSupport by lazy {
+        val hasAdapter = bluetoothAdapter() != null
+        val hasFeature = packageManager.hasSystemFeature(PackageManager.FEATURE_BLUETOOTH_LE)
+        when {
+            !hasAdapter -> BleSupport.NONE          // no Bluetooth hardware at all
+            !hasFeature -> BleSupport.UNVERIFIED    // adapter exists, BLE not declared
+            else        -> BleSupport.OK
+        }
+    }
+
+    private val prefs by lazy { getSharedPreferences("ble_support", MODE_PRIVATE) }
+
+    private var unverifiedAccepted by mutableStateOf(false)
 
     private var permissionsGranted by mutableStateOf(false)
     private var bluetoothEnabled by mutableStateOf(false)
@@ -139,12 +158,30 @@ class MainActivity : ComponentActivity() {
 
     override fun onResume() {
         super.onResume()
-        viewModel.reconnectIfNeeded()
+        if (bleSupport != BleSupport.NONE) viewModel.reconnectIfNeeded()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
+
+        // No Bluetooth hardware: show an explanation and never touch the BLE stack.
+        if (bleSupport == BleSupport.NONE) {
+            setContent {
+                LedStripController {
+                    Surface(color = MaterialTheme.colorScheme.background) {
+                        BleSupportGate(
+                            message = stringResource(R.string.ble_unsupported_msg),
+                            onContinue = null,
+                            onClose = ::finish,
+                        )
+                    }
+                }
+            }
+            return
+        }
+
+        unverifiedAccepted = prefs.getBoolean("unverified_accepted", false)
 
         // Keep the shared MediaProjectionService's notification accurate, and stop
         // it (releasing the MediaProjection) once neither feature needs it anymore.
@@ -192,6 +229,16 @@ class MainActivity : ComponentActivity() {
             LedStripController {
                 Surface(color = MaterialTheme.colorScheme.background) {
                     when {
+                        bleSupport == BleSupport.UNVERIFIED && !unverifiedAccepted ->
+                            BleSupportGate(
+                                message = stringResource(R.string.ble_unverified_msg),
+                                onContinue = {
+                                    prefs.edit().putBoolean("unverified_accepted", true).apply()
+                                    unverifiedAccepted = true
+                                    requestPermissions()
+                                },
+                                onClose = ::finish,
+                            )
                         !permissionsGranted -> PermissionGate(onRequest = ::requestPermissions)
                         !bluetoothEnabled   -> BluetoothGate(onEnable = ::requestBluetooth)
                         else -> if (isTV) {
@@ -210,7 +257,7 @@ class MainActivity : ComponentActivity() {
             }
         }
 
-        requestPermissions()
+        if (bleSupport == BleSupport.OK || unverifiedAccepted) requestPermissions()
     }
 
     private fun requestPermissions() {
@@ -278,5 +325,28 @@ private fun BluetoothGate(onEnable: () -> Unit) {
         )
         Spacer(Modifier.height(24.dp))
         Button(onClick = onEnable) { Text(stringResource(R.string.btn_enable_bluetooth)) }
+    }
+}
+
+@androidx.compose.runtime.Composable
+private fun BleSupportGate(message: String, onContinue: (() -> Unit)?, onClose: () -> Unit) {
+    Column(
+        modifier = Modifier.fillMaxSize().padding(32.dp),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        Text(
+            message,
+            textAlign = TextAlign.Center,
+            style = MaterialTheme.typography.bodyLarge,
+        )
+        Spacer(Modifier.height(24.dp))
+        if (onContinue != null) {
+            Button(onClick = onContinue) { Text(stringResource(R.string.btn_continue_anyway)) }
+            Spacer(Modifier.height(12.dp))
+            OutlinedButton(onClick = onClose) { Text(stringResource(R.string.btn_close_app)) }
+        } else {
+            Button(onClick = onClose) { Text(stringResource(R.string.btn_close_app)) }
+        }
     }
 }

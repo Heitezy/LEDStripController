@@ -6,6 +6,10 @@
     <string name="btn_grant_permissions">Accorder les autorisations</string>
     <string name="bt_disabled_msg">Le Bluetooth est désactivé. Veuillez l\'activer pour vous connecter à votre ruban LED.</string>
     <string name="btn_enable_bluetooth">Activer le Bluetooth</string>
+    <string name="ble_unsupported_msg">Cet appareil ne prend pas en charge le Bluetooth Low Energy, dont LED Strip Controller a besoin pour communiquer avec votre ruban LED. L\'application ne peut donc pas fonctionner ici.\n\nSi vous avez acheté l\'application sur Google Play, vous pouvez demander un remboursement depuis l\'historique de vos commandes du Play Store.</string>
+    <string name="ble_unverified_msg">Cet appareil n\'indique pas prendre en charge le Bluetooth Low Energy ; nous ne pouvons donc pas garantir que LED Strip Controller fonctionnera avec votre ruban LED.\n\nVous pouvez quand même essayer. Si l\'application ne trouve pas votre ruban ou ne parvient pas à s\'y connecter, vous pouvez demander un remboursement depuis l\'historique de vos commandes du Play Store.</string>
+    <string name="btn_continue_anyway">Essayer quand même</string>
+    <string name="btn_close_app">Fermer</string>
 
     <!-- Notifications & Services -->
     <string name="channel_media_capture_name">Capture média</string>

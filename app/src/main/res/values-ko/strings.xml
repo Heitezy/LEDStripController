@@ -6,6 +6,10 @@
     <string name="btn_grant_permissions">권한 허용</string>
     <string name="bt_disabled_msg">블루투스가 비활성화되어 있습니다. LED 스트립에 연결하려면 블루투스를 활성화하세요.</string>
     <string name="btn_enable_bluetooth">블루투스 활성화</string>
+    <string name="ble_unsupported_msg">이 기기는 Bluetooth Low Energy를 지원하지 않습니다. LED Strip Controller가 LED 스트립과 통신하려면 이 기능이 필요하므로 여기서는 앱이 작동하지 않습니다.\n\nGoogle Play에서 앱을 구매하셨다면 Play 스토어 주문 내역에서 환불을 요청할 수 있습니다.</string>
+    <string name="ble_unverified_msg">이 기기는 Bluetooth Low Energy 지원 여부를 알려주지 않아, LED Strip Controller가 LED 스트립과 작동한다고 보장할 수 없습니다.\n\n그래도 사용해 볼 수 있습니다. 스트립을 찾지 못하거나 연결할 수 없다면 Play 스토어 주문 내역에서 환불을 요청할 수 있습니다.</string>
+    <string name="btn_continue_anyway">그래도 시도</string>
+    <string name="btn_close_app">닫기</string>
 
     <!-- Notifications & Services -->
     <string name="channel_media_capture_name">미디어 캡처</string>
