@@ -6,10 +6,6 @@
     <string name="btn_grant_permissions">Acordă permisiunile</string>
     <string name="bt_disabled_msg">Bluetooth este dezactivat. Activează-l pentru a te conecta la banda LED.</string>
     <string name="btn_enable_bluetooth">Activează Bluetooth</string>
-    <string name="ble_unsupported_msg">Acest dispozitiv nu acceptă Bluetooth Low Energy, de care LED Strip Controller are nevoie pentru a comunica cu banda ta LED, deci aplicația nu poate funcționa aici.\n\nDacă ai cumpărat aplicația din Google Play, poți solicita o rambursare din istoricul comenzilor din Play Store.</string>
-    <string name="ble_unverified_msg">Acest dispozitiv nu raportează suport pentru Bluetooth Low Energy, deci nu putem garanta că LED Strip Controller va funcționa cu banda ta LED.\n\nPoți încerca oricum. Dacă aplicația nu găsește banda sau nu se poate conecta la ea, poți solicita o rambursare din istoricul comenzilor din Play Store.</string>
-    <string name="btn_continue_anyway">Încearcă oricum</string>
-    <string name="btn_close_app">Închide</string>
 
     <!-- Notifications & Services -->
     <string name="channel_media_capture_name">Captură media</string>

@@ -6,10 +6,6 @@
     <string name="btn_grant_permissions">Conceder permissões</string>
     <string name="bt_disabled_msg">O Bluetooth está desativado. Por favor, ative-o para se ligar à sua fita LED.</string>
     <string name="btn_enable_bluetooth">Ativar Bluetooth</string>
-    <string name="ble_unsupported_msg">Este dispositivo não suporta Bluetooth Low Energy, de que o LED Strip Controller precisa para comunicar com a sua fita LED, pelo que a aplicação não pode funcionar aqui.\n\nSe comprou a aplicação na Google Play, pode pedir um reembolso no histórico de encomendas da Play Store.</string>
-    <string name="ble_unverified_msg">Este dispositivo não indica suporte para Bluetooth Low Energy, pelo que não podemos garantir que o LED Strip Controller funcione com a sua fita LED.\n\nPode tentar mesmo assim. Se a aplicação não encontrar ou não conseguir ligar-se à sua fita, pode pedir um reembolso no histórico de encomendas da Play Store.</string>
-    <string name="btn_continue_anyway">Tentar mesmo assim</string>
-    <string name="btn_close_app">Fechar</string>
 
     <!-- Notifications & Services -->
     <string name="channel_media_capture_name">Captura de multimédia</string>

@@ -6,10 +6,6 @@
     <string name="btn_grant_permissions">Machtigingen verlenen</string>
     <string name="bt_disabled_msg">Bluetooth is uitgeschakeld. Schakel bluetooth in om te verbinden met je LED-strip.</string>
     <string name="btn_enable_bluetooth">Bluetooth inschakelen</string>
-    <string name="ble_unsupported_msg">Dit apparaat ondersteunt geen Bluetooth Low Energy, dat LED Strip Controller nodig heeft om met je LED-strip te communiceren. De app kan hier dus niet werken.\n\nAls je de app via Google Play hebt gekocht, kun je een terugbetaling aanvragen via je bestelgeschiedenis in de Play Store.</string>
-    <string name="ble_unverified_msg">Dit apparaat meldt geen ondersteuning voor Bluetooth Low Energy, dus we kunnen niet garanderen dat LED Strip Controller met je LED-strip werkt.\n\nJe kunt het toch proberen. Als de app je strip niet kan vinden of er geen verbinding mee kan maken, kun je een terugbetaling aanvragen via je bestelgeschiedenis in de Play Store.</string>
-    <string name="btn_continue_anyway">Toch proberen</string>
-    <string name="btn_close_app">Sluiten</string>
 
     <!-- Notifications & Services -->
     <string name="channel_media_capture_name">Media-opname</string>

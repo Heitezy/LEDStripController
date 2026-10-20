@@ -6,10 +6,6 @@
     <string name="btn_grant_permissions">منح الأذونات</string>
     <string name="bt_disabled_msg">البلوتوث معطّل. يُرجى تفعيله للاتصال بشريط LED الخاص بك.</string>
     <string name="btn_enable_bluetooth">تفعيل البلوتوث</string>
-    <string name="ble_unsupported_msg">هذا الجهاز لا يدعم تقنية Bluetooth Low Energy التي يحتاجها LED Strip Controller للتواصل مع شريط LED الخاص بك، لذا لا يمكن للتطبيق العمل هنا.\n\nإذا اشتريت التطبيق من Google Play، يمكنك طلب استرداد المبلغ من سجل طلباتك في متجر Play.</string>
-    <string name="ble_unverified_msg">هذا الجهاز لا يُبلغ عن دعم Bluetooth Low Energy، لذا لا يمكننا ضمان عمل LED Strip Controller مع شريط LED الخاص بك.\n\nيمكنك تجربته على أي حال. إذا لم يتمكن من العثور على الشريط أو الاتصال به، يمكنك طلب استرداد المبلغ من سجل طلباتك في متجر Play.</string>
-    <string name="btn_continue_anyway">جرّب على أي حال</string>
-    <string name="btn_close_app">إغلاق</string>
 
     <!-- Notifications & Services -->
     <string name="channel_media_capture_name">التقاط الوسائط</string>

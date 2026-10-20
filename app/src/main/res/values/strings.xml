@@ -6,10 +6,6 @@
     <string name="btn_grant_permissions">Grant Permissions</string>
     <string name="bt_disabled_msg">Bluetooth is disabled. Please enable it to connect to your LED strip.</string>
     <string name="btn_enable_bluetooth">Enable Bluetooth</string>
-    <string name="ble_unsupported_msg">This device does not support Bluetooth Low Energy, which LED Strip Controller needs to talk to your LED strip, so the app cannot work here.\n\nIf you purchased the app on Google Play, you can request a refund from your Play Store order history.</string>
-    <string name="ble_unverified_msg">This device does not report Bluetooth Low Energy support, so we cannot guarantee that LED Strip Controller will work with your LED strip.\n\nYou can try it anyway. If it cannot find or connect to your strip, you can request a refund from your Play Store order history.</string>
-    <string name="btn_continue_anyway">Try anyway</string>
-    <string name="btn_close_app">Close</string>
 
     <!-- Notifications & Services -->
     <string name="channel_media_capture_name">Media Capture</string>

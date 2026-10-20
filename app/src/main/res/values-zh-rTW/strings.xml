@@ -7,10 +7,6 @@
     <string name="btn_grant_permissions">授予權限</string>
     <string name="bt_disabled_msg">藍牙已關閉。請開啟藍牙以連接您的 LED 燈條。</string>
     <string name="btn_enable_bluetooth">開啟藍牙</string>
-    <string name="ble_unsupported_msg">此裝置不支援低功耗藍牙（Bluetooth Low Energy），而 LED Strip Controller 需要它來與您的 LED 燈條通訊，因此應用程式無法在此裝置上運作。\n\n如果您是在 Google Play 上購買的應用程式，可以在 Play 商店的訂單記錄中申請退款。</string>
-    <string name="ble_unverified_msg">此裝置未宣告支援低功耗藍牙（Bluetooth Low Energy），因此我們無法保證 LED Strip Controller 能與您的 LED 燈條搭配使用。\n\n您仍可以嘗試使用。如果應用程式無法找到或連線至您的燈條，可以在 Play 商店的訂單記錄中申請退款。</string>
-    <string name="btn_continue_anyway">仍要嘗試</string>
-    <string name="btn_close_app">關閉</string>
 
     <!-- Notifications & Services -->
     <string name="channel_media_capture_name">媒體擷取</string>

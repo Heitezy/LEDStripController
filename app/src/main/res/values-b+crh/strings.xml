@@ -6,10 +6,6 @@
     <string name="btn_grant_permissions">İzinler ber</string>
     <string name="bt_disabled_msg">Bluetooth qapatılğan. LED şeritiñizge bağlanmaq içün lütfen anı açıñız.</string>
     <string name="btn_enable_bluetooth">Bluetooth-nı aç</string>
-    <string name="ble_unsupported_msg">Bu cihaz Bluetooth Low Energy teknologiyasını desteklemey. LED Strip Controller LED şeritiñiz ile añlaşmaq içün oña muhtaç, onıñ içün ilova bu yerde çalışamaz.\n\nİlovanı Google Play üzerinden satın alğan olsañız, Play Store sipariş tarihçesinden pulnıñ qaytarılmasını isteyebilesiñiz.</string>
-    <string name="ble_unverified_msg">Bu cihaz Bluetooth Low Energy teknologiyasını desteklegenini bildirmey, şuña köre LED Strip Controller ilovasınıñ LED şeritiñiz ile çalışacağına kefillik bere almaymız.\n\nYine de sınap baqabilesiñiz. İlova şeritiñizni tapa yaki oña bağlana almasa, Play Store sipariş tarihçesinden pulnıñ qaytarılmasını isteyebilesiñiz.</string>
-    <string name="btn_continue_anyway">Yine de sına</string>
-    <string name="btn_close_app">Qapat</string>
 
     <!-- Notifications & Services -->
     <string name="channel_media_capture_name">Media tutuv</string>

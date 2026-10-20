@@ -31,11 +31,7 @@
     <!-- Needed to actually display the persistent Music Sync notification (API 33+) -->
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
-    <!-- BLE is essential, but some devices (e.g. certain Xiaomi TVs) have working
-         Bluetooth hardware without declaring this feature flag, and Google Play
-         would hide the app from them if this were required="true". Support is
-         verified at runtime in MainActivity instead (see BleSupport). -->
-    <uses-feature android:name="android.hardware.bluetooth_le" android:required="false" />
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true" />
 
     <!-- TV: touchscreen is optional so the app appears in the TV launcher -->
     <uses-feature android:name="android.software.leanback"       android:required="false" />
