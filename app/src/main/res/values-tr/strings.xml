@@ -6,6 +6,10 @@
     <string name="btn_grant_permissions">İzinleri Ver</string>
     <string name="bt_disabled_msg">Bluetooth kapalı. LED şeridinize bağlanmak için lütfen Bluetooth\'u etkinleştirin.</string>
     <string name="btn_enable_bluetooth">Bluetooth\'u Etkinleştir</string>
+    <string name="ble_unsupported_msg">Bu cihaz, LED Strip Controller\'ın LED şeridinizle iletişim kurmak için ihtiyaç duyduğu Bluetooth Low Energy özelliğini desteklemiyor; bu nedenle uygulama burada çalışamaz.\n\nUygulamayı Google Play\'den satın aldıysanız, Play Store sipariş geçmişinizden iade talep edebilirsiniz.</string>
+    <string name="ble_unverified_msg">Bu cihaz Bluetooth Low Energy desteği bildirmiyor; bu nedenle LED Strip Controller\'ın LED şeridinizle çalışacağını garanti edemeyiz.\n\nYine de deneyebilirsiniz. Uygulama şeridinizi bulamaz veya ona bağlanamazsa Play Store sipariş geçmişinizden iade talep edebilirsiniz.</string>
+    <string name="btn_continue_anyway">Yine de dene</string>
+    <string name="btn_close_app">Kapat</string>
 
     <!-- Notifications & Services -->
     <string name="channel_media_capture_name">Medya Yakalama</string>

@@ -7,6 +7,10 @@
     <string name="btn_grant_permissions">अनुमतियाँ दें</string>
     <string name="bt_disabled_msg">ब्लूटूथ अक्षम है। अपनी LED स्ट्रिप से कनेक्ट करने के लिए कृपया इसे सक्षम करें।</string>
     <string name="btn_enable_bluetooth">ब्लूटूथ सक्षम करें</string>
+    <string name="ble_unsupported_msg">यह डिवाइस Bluetooth Low Energy को सपोर्ट नहीं करता, जिसकी LED Strip Controller को आपकी LED स्ट्रिप से संवाद करने के लिए ज़रूरत होती है, इसलिए ऐप यहाँ काम नहीं कर सकता।\n\nयदि आपने ऐप Google Play से खरीदा है, तो आप अपने Play Store ऑर्डर इतिहास से रिफ़ंड का अनुरोध कर सकते हैं।</string>
+    <string name="ble_unverified_msg">यह डिवाइस Bluetooth Low Energy सपोर्ट की जानकारी नहीं देता, इसलिए हम गारंटी नहीं दे सकते कि LED Strip Controller आपकी LED स्ट्रिप के साथ काम करेगा।\n\nआप फिर भी इसे आज़मा सकते हैं। यदि यह आपकी स्ट्रिप को ढूँढ़ या उससे कनेक्ट नहीं कर पाता, तो आप अपने Play Store ऑर्डर इतिहास से रिफ़ंड का अनुरोध कर सकते हैं।</string>
+    <string name="btn_continue_anyway">फिर भी आज़माएँ</string>
+    <string name="btn_close_app">बंद करें</string>
 
     <!-- Notifications & Services -->
     <string name="channel_media_capture_name">मीडिया कैप्चर</string>

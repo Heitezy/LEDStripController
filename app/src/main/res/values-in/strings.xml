@@ -6,6 +6,10 @@
     <string name="btn_grant_permissions">Berikan Izin</string>
     <string name="bt_disabled_msg">Bluetooth dinonaktifkan. Silakan aktifkan untuk terhubung ke strip LED Anda.</string>
     <string name="btn_enable_bluetooth">Aktifkan Bluetooth</string>
+    <string name="ble_unsupported_msg">Perangkat ini tidak mendukung Bluetooth Low Energy, yang dibutuhkan LED Strip Controller untuk berkomunikasi dengan strip LED Anda, sehingga aplikasi tidak dapat berfungsi di sini.\n\nJika Anda membeli aplikasi ini di Google Play, Anda dapat meminta pengembalian dana dari riwayat pesanan Play Store Anda.</string>
+    <string name="ble_unverified_msg">Perangkat ini tidak melaporkan dukungan Bluetooth Low Energy, sehingga kami tidak dapat menjamin LED Strip Controller akan berfungsi dengan strip LED Anda.\n\nAnda tetap dapat mencobanya. Jika aplikasi tidak dapat menemukan atau terhubung ke strip Anda, Anda dapat meminta pengembalian dana dari riwayat pesanan Play Store Anda.</string>
+    <string name="btn_continue_anyway">Tetap coba</string>
+    <string name="btn_close_app">Tutup</string>
 
     <!-- Notifications & Services -->
     <string name="channel_media_capture_name">Perekaman Media</string>

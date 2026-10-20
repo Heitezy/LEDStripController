@@ -6,6 +6,10 @@
     <string name="btn_grant_permissions">Concedi permessi</string>
     <string name="bt_disabled_msg">Il Bluetooth è disattivato. Abilitalo per connetterti alla striscia LED.</string>
     <string name="btn_enable_bluetooth">Attiva Bluetooth</string>
+    <string name="ble_unsupported_msg">Questo dispositivo non supporta il Bluetooth Low Energy, di cui LED Strip Controller ha bisogno per comunicare con la tua striscia LED, quindi l\'app non può funzionare qui.\n\nSe hai acquistato l\'app su Google Play, puoi richiedere un rimborso dalla cronologia degli ordini del Play Store.</string>
+    <string name="ble_unverified_msg">Questo dispositivo non dichiara il supporto al Bluetooth Low Energy, quindi non possiamo garantire che LED Strip Controller funzioni con la tua striscia LED.\n\nPuoi provare comunque. Se l\'app non riesce a trovare la striscia o a connettersi, puoi richiedere un rimborso dalla cronologia degli ordini del Play Store.</string>
+    <string name="btn_continue_anyway">Prova comunque</string>
+    <string name="btn_close_app">Chiudi</string>
 
     <!-- Notifications & Services -->
     <string name="channel_media_capture_name">Cattura multimediale</string>

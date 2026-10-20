@@ -6,6 +6,10 @@
     <string name="btn_grant_permissions">Przyznaj uprawnienia</string>
     <string name="bt_disabled_msg">Bluetooth jest wyłączony. Włącz go, aby połączyć się z taśmą LED.</string>
     <string name="btn_enable_bluetooth">Włącz Bluetooth</string>
+    <string name="ble_unsupported_msg">To urządzenie nie obsługuje Bluetooth Low Energy, którego LED Strip Controller potrzebuje do komunikacji z taśmą LED, więc aplikacja nie może tu działać.\n\nJeśli aplikacja została kupiona w Google Play, możesz poprosić o zwrot pieniędzy w historii zamówień w Sklepie Play.</string>
+    <string name="ble_unverified_msg">To urządzenie nie zgłasza obsługi Bluetooth Low Energy, więc nie możemy zagwarantować, że LED Strip Controller będzie działać z Twoją taśmą LED.\n\nMożesz mimo to spróbować. Jeśli aplikacja nie znajdzie taśmy lub nie połączy się z nią, możesz poprosić o zwrot pieniędzy w historii zamówień w Sklepie Play.</string>
+    <string name="btn_continue_anyway">Spróbuj mimo to</string>
+    <string name="btn_close_app">Zamknij</string>
 
     <!-- Notifications & Services -->
     <string name="channel_media_capture_name">Rejestrowanie multimediów</string>

@@ -6,6 +6,10 @@
     <string name="btn_grant_permissions">Надати дозволи</string>
     <string name="bt_disabled_msg">Bluetooth вимкнено. Будь ласка, увімкніть його, щоб підключитися до вашої LED-стрічки.</string>
     <string name="btn_enable_bluetooth">Увімкнути Bluetooth</string>
+    <string name="ble_unsupported_msg">Цей пристрій не підтримує Bluetooth Low Energy, який потрібен LED Strip Controller для обміну даними з вашою LED-стрічкою, тому застосунок тут не може працювати.\n\nЯкщо ви придбали застосунок у Google Play, ви можете надіслати запит на повернення коштів в історії замовлень Play Маркету.</string>
+    <string name="ble_unverified_msg">Цей пристрій не повідомляє про підтримку Bluetooth Low Energy, тому ми не можемо гарантувати, що LED Strip Controller працюватиме з вашою LED-стрічкою.\n\nВи все одно можете спробувати. Якщо застосунок не зможе знайти стрічку або підключитися до неї, ви можете надіслати запит на повернення коштів в історії замовлень Play Маркету.</string>
+    <string name="btn_continue_anyway">Все одно спробувати</string>
+    <string name="btn_close_app">Закрити</string>
 
     <!-- Notifications & Services -->
     <string name="channel_media_capture_name">Захоплення медіа</string>

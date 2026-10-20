@@ -6,6 +6,10 @@
     <string name="btn_grant_permissions">Παραχώρηση αδειών</string>
     <string name="bt_disabled_msg">Το Bluetooth είναι απενεργοποιημένο. Παρακαλώ ενεργοποιήστε το για να συνδεθείτε στην ταινία LED.</string>
     <string name="btn_enable_bluetooth">Ενεργοποίηση Bluetooth</string>
+    <string name="ble_unsupported_msg">Αυτή η συσκευή δεν υποστηρίζει Bluetooth Low Energy, το οποίο χρειάζεται το LED Strip Controller για να επικοινωνεί με την ταινία LED σας, επομένως η εφαρμογή δεν μπορεί να λειτουργήσει εδώ.\n\nΑν αγοράσατε την εφαρμογή από το Google Play, μπορείτε να ζητήσετε επιστροφή χρημάτων από το ιστορικό παραγγελιών σας στο Play Store.</string>
+    <string name="ble_unverified_msg">Αυτή η συσκευή δεν δηλώνει υποστήριξη Bluetooth Low Energy, επομένως δεν μπορούμε να εγγυηθούμε ότι το LED Strip Controller θα λειτουργήσει με την ταινία LED σας.\n\nΜπορείτε να το δοκιμάσετε έτσι κι αλλιώς. Αν δεν μπορεί να βρει την ταινία ή να συνδεθεί με αυτήν, μπορείτε να ζητήσετε επιστροφή χρημάτων από το ιστορικό παραγγελιών σας στο Play Store.</string>
+    <string name="btn_continue_anyway">Δοκιμή παρ’ όλα αυτά</string>
+    <string name="btn_close_app">Κλείσιμο</string>
 
     <!-- Notifications & Services -->
     <string name="channel_media_capture_name">Καταγραφή πολυμέσων</string>
