@@ -73,6 +73,8 @@
     <string name="label_delay_range_ms">10 – 5000 ms</string>
     <string name="label_pattern">Örnek</string>
     <string name="label_enabled">Faal</string>
+    <string name="desc_tv_audio_routing">İhtar: TV ses yönlendirmesi TV ses muzıqayı tındırma vazifesini tamamen qapatabilir.</string>
+    <string name="desc_tv_mic_mode">İhtar: Mikrofon rejiminde sadece iç ve tış mikrofonlar sayıla — qulaqçılıq mikrofonları ya da pult mikrofonları çalışmaz.</string>
     <string name="label_band_colors">Freqvensiya renkleri</string>
 
     <!-- Patterns -->

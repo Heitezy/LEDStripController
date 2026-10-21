@@ -73,6 +73,8 @@
     <string name="label_delay_range_ms">10 – 5000 ms</string>
     <string name="label_pattern">パターン</string>
     <string name="label_enabled">有効</string>
+    <string name="desc_tv_audio_routing">注意: TVオーディオのルーティングにより、TVオーディオミュージックシンク機能が全く動作しなくなる場合があります。</string>
+    <string name="desc_tv_mic_mode">注意: マイクモードの場合、内蔵マイクまたは外部マイクのみがマイクとして認識されます。ヘッドホンマイクやリモコンのマイクは機能しません。</string>
     <string name="label_band_colors">帯域カラー</string>
 
     <!-- Patterns -->

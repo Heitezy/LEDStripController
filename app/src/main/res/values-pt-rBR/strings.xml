@@ -73,6 +73,8 @@
     <string name="label_delay_range_ms">10 – 5000 ms</string>
     <string name="label_pattern">Padrão</string>
     <string name="label_enabled">Ativado</string>
+    <string name="desc_tv_audio_routing">Nota: O roteamento de áudio da TV pode bloquear totalmente a sincronização de música de áudio da TV.</string>
+    <string name="desc_tv_mic_mode">Nota: Para o modo de microfone, apenas microfones internos e externos contam — microfones de fone de ouvido ou de controle remoto não funcionarão.</string>
     <string name="label_band_colors">Cores das frequências</string>
 
     <!-- Patterns -->

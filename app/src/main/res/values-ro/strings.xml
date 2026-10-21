@@ -73,6 +73,8 @@
     <string name="label_delay_range_ms">10 – 5000 ms</string>
     <string name="label_pattern">Model</string>
     <string name="label_enabled">Activat</string>
+    <string name="desc_tv_audio_routing">Notă: Rutarea audio a televizorului poate bloca complet sincronizarea muzicii audio TV.</string>
+    <string name="desc_tv_mic_mode">Notă: Pentru modul microfon, doar microfoanele interne și externe sunt considerate microfoane — microfoanele căștilor sau ale telecomenzilor nu vor funcționa.</string>
     <string name="label_band_colors">Culori frecvențe</string>
 
     <!-- Patterns -->

@@ -73,6 +73,8 @@
     <string name="label_delay_range_ms">10 – 5000 ms</string>
     <string name="label_pattern">Pola</string>
     <string name="label_enabled">Diaktifkan</string>
+    <string name="desc_tv_audio_routing">Catatan: Perutean audio TV dapat memblokir sinkronisasi musik audio TV agar tidak berfungsi sama sekali.</string>
+    <string name="desc_tv_mic_mode">Catatan: Untuk mode mikrofon, hanya mikrofon internal dan eksternal yang dihitung sebagai mikrofon — mikrofon headphone atau remote tidak akan berfungsi.</string>
     <string name="label_band_colors">Warna Frekuensi</string>
 
     <!-- Patterns -->

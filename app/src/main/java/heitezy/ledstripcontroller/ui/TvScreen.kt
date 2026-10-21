@@ -787,6 +787,26 @@ private fun TvMusicSyncSection(ui: UiState, vm: MainViewModel, firstFocus: Focus
                     )
                 }
 
+                if (!ui.isPlaybackSupported) {
+                    Text(
+                        stringResource(R.string.msg_android_10_required),
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                } else if (ui.audioMode == AudioMode.PLAYBACK) {
+                    Text(
+                        stringResource(R.string.desc_tv_audio_routing),
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                } else {
+                    Text(
+                        stringResource(R.string.desc_tv_mic_mode),
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
+
                 Text(
                     stringResource(R.string.label_band_colors),
                     style = MaterialTheme.typography.titleSmall,

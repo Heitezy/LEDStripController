@@ -73,6 +73,8 @@
     <string name="label_delay_range_ms">10 – 5000 ms</string>
     <string name="label_pattern">Patrón</string>
     <string name="label_enabled">Habilitado</string>
+    <string name="desc_tv_audio_routing">Nota: El enrutamiento de audio del televisor puede bloquear por completo la sincronización de música con audio de TV.</string>
+    <string name="desc_tv_mic_mode">Nota: Para el modo de micrófono, solo cuentan los micrófonos internos y externos; los micrófonos de auriculares o controles remotos no funcionarán.</string>
     <string name="label_band_colors">Colores de bandas</string>
 
     <!-- Patterns -->

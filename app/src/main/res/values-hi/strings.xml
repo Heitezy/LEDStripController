@@ -74,6 +74,8 @@
     <string name="label_delay_range_ms">10 – 5000 ms</string>
     <string name="label_pattern">पैटर्न</string>
     <string name="label_enabled">सक्षम</string>
+    <string name="desc_tv_audio_routing">नोट: टीवी ऑडियो रूटिंग टीवी ऑडियो म्यूजिक सिंक को पूरी तरह से काम करने से रोक सकती है।</string>
+    <string name="desc_tv_mic_mode">नोट: माइक्रोफ़ोन मोड के लिए, केवल आंतरिक और बाहरी माइक ही माइक के रूप में गिने जाते हैं — हेडफ़ोन माइक या रिमोट के माइक काम नहीं करेंगे।</string>
     <string name="label_band_colors">बैंड के रंग</string>
 
     <!-- Patterns -->

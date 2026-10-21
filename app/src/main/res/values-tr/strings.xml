@@ -73,6 +73,8 @@
     <string name="label_delay_range_ms">10 – 5000 ms</string>
     <string name="label_pattern">Desen</string>
     <string name="label_enabled">Etkin</string>
+    <string name="desc_tv_audio_routing">Not: TV ses yönlendirmesi, TV ses müzik senkronizasyonunun çalışmasını tamamen engelleyebilir.</string>
+    <string name="desc_tv_mic_mode">Not: Mikrofon modu için yalnızca dahili ve harici mikrofonlar sayılır — kulaklık mikrofonları veya uzaktan kumanda mikrofonları çalışmaz.</string>
     <string name="label_band_colors">Frekans Renkleri</string>
 
     <!-- Patterns -->

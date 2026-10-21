@@ -73,6 +73,8 @@
     <string name="label_delay_range_ms">10 – 5000 ms</string>
     <string name="label_pattern">תבנית</string>
     <string name="label_enabled">מופעל</string>
+    <string name="desc_tv_audio_routing">הערה: ניתוב אודיו בטלויזיה עשוי לחלוטין לחסום את סנכרון המוזיקה של אודיו הטלוויזיה.</string>
+    <string name="desc_tv_mic_mode">הערה: במצב מיקרופון, רק מיקרופונים פנימיים וחיצוניים נחשבים למיקרופונים — מיקרופונים של אוזניות או של שלט רחוק לא יעבדו.</string>
     <string name="label_band_colors">צבעי פסי תדרים</string>
 
     <!-- Patterns -->

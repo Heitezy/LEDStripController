@@ -73,6 +73,8 @@
     <string name="label_delay_range_ms">10 – 5000 مللي ثانية</string>
     <string name="label_pattern">النمط</string>
     <string name="label_enabled">مفعّل</string>
+    <string name="desc_tv_audio_routing">ملاحظة: قد يؤدي توجيه صوت التلفزيون إلى حظر مزامنة موسيقا صوت التلفزيون تماماً.</string>
+    <string name="desc_tv_mic_mode">ملاحظة: بالنسبة لوضع الميكروفون، تُحتسب فقط الميكروفونات الداخلية والخارجية — ميكروفونات سماعات الرأس أو أجهزة التحكم عن بعد لن تعمل.</string>
     <string name="label_band_colors">ألوان النطاقات</string>
 
     <!-- Patterns -->

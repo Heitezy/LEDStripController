@@ -73,6 +73,8 @@
     <string name="label_delay_range_ms">10 – 5000 ms</string>
     <string name="label_pattern">Μοτίβο</string>
     <string name="label_enabled">Ενεργοποιημένο</string>
+    <string name="desc_tv_audio_routing">Σημείωση: Η δρομολόγηση ήχου της τηλεόρασης ενδέχεται να εμποδίσει τελείως τη λειτουργία συγχρονισμού μουσικής ήχου TV.</string>
+    <string name="desc_tv_mic_mode">Σημείωση: Για τη λειτουργία μικροφώνου, μετρούν μόνο τα εσωτερικά και εξωτερικά μικρόφωνα — τα μικρόφωνα ακουστικών ή τηλεχειριστηρίου δεν θα λειτουργήσουν.</string>
     <string name="label_band_colors">Χρώματα ζωνών</string>
 
     <!-- Patterns -->

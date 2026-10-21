@@ -73,6 +73,8 @@
     <string name="label_delay_range_ms">10 – 5000 ms</string>
     <string name="label_pattern">Wzór</string>
     <string name="label_enabled">Włączone</string>
+    <string name="desc_tv_audio_routing">Uwaga: Routing audio telewizora może całkowicie zablokować synchronizację muzyki z audio TV.</string>
+    <string name="desc_tv_mic_mode">Uwaga: W trybie mikrofonu liczą się tylko wbudowane i zewnętrzne mikrofony — mikrofony słuchawek lub pilotów nie będą działać.</string>
     <string name="label_band_colors">Kolory pasm</string>
 
     <!-- Patterns -->

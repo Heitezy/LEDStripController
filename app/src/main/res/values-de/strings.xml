@@ -73,6 +73,8 @@
     <string name="label_delay_range_ms">10 – 5000 ms</string>
     <string name="label_pattern">Muster</string>
     <string name="label_enabled">Aktiviert</string>
+    <string name="desc_tv_audio_routing">Hinweis: Die TV-Audio-Routing kann die TV-Audio-Musik-Synchronisierung vollständig blockieren.</string>
+    <string name="desc_tv_mic_mode">Hinweis: Im Mikrofonmodus zählen nur interne und externe Mikrofone — Kopfhörermikrofone oder Fernbedienungsmikrofone funktionieren nicht.</string>
     <string name="label_band_colors">Bandfarben</string>
 
     <!-- Patterns -->

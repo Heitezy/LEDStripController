@@ -74,6 +74,8 @@
     <string name="label_delay_range_ms">10 – 5000 มิลลิวินาที</string>
     <string name="label_pattern">รูปแบบ</string>
     <string name="label_enabled">เปิดใช้งาน</string>
+    <string name="desc_tv_audio_routing">หมายเหตุ: การกำหนดเส้นทางเสียงของทีวีอาจบล็อกฟังก์ชันซิงค์เพลงเสียงของทีวีไม่ให้ทำงานเลย</string>
+    <string name="desc_tv_mic_mode">หมายเหตุ: สำหรับโหมดไมโครโฟน เฉพาะไมโครโฟนภายในและภายนอกเท่านั้นที่นับเป็นไมโครโฟน — ไมโครโฟนหูฟังหรือไมโครโฟนรีโมทจะไม่ทำงาน</string>
     <string name="label_band_colors">สีของย่านความถี่</string>
 
     <!-- Patterns -->

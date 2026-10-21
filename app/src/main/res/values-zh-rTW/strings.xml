@@ -74,6 +74,8 @@
     <string name="label_delay_range_ms">10 – 5000 毫秒</string>
     <string name="label_pattern">燈效模式</string>
     <string name="label_enabled">已啟用</string>
+    <string name="desc_tv_audio_routing">注意：電視音訊路由可能會完全阻止電視音訊音樂同步功能正常工作。</string>
+    <string name="desc_tv_mic_mode">注意：對於麥克風模式，只有內建和外接麥克風才算作麥克風——耳機麥克風或遙控器麥克風將無法使用。</string>
     <string name="label_band_colors">頻段顏色</string>
 
     <!-- Patterns -->

@@ -73,6 +73,8 @@
     <string name="label_delay_range_ms">10 – 5000 ms</string>
     <string name="label_pattern">Pattern</string>
     <string name="label_enabled">Enabled</string>
+    <string name="desc_tv_audio_routing">Note: TV audio routing may block TV audio music sync from working at all.</string>
+    <string name="desc_tv_mic_mode">Note: For microphone mode, only internal and external mics count as microphones — headphone mics or remotes with mics will not work.</string>
     <string name="label_band_colors">Band Colors</string>
 
     <!-- Patterns -->

@@ -73,6 +73,8 @@
     <string name="label_delay_range_ms">10 – 5000 ms</string>
     <string name="label_pattern">Patroon</string>
     <string name="label_enabled">Ingeschakeld</string>
+    <string name="desc_tv_audio_routing">Opmerking: TV-audiorouting kan de TV-audiomuzieksynchronisatie volledig blokkeren.</string>
+    <string name="desc_tv_mic_mode">Opmerking: Voor de microfoonmodus tellen alleen interne en externe microfoons — koptelefoonmicrofoons of afstandsbedieningsmicrofoons werken niet.</string>
     <string name="label_band_colors">Bandkleuren</string>
 
     <!-- Patterns -->

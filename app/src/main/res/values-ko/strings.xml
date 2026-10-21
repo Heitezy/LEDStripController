@@ -73,6 +73,8 @@
     <string name="label_delay_range_ms">10 – 5000 ms</string>
     <string name="label_pattern">패턴</string>
     <string name="label_enabled">활성화됨</string>
+    <string name="desc_tv_audio_routing">참고: TV 오디오 라우팅으로 인해 TV 오디오 음악 동기화 기능이 전혀 작동하지 않을 수 있습니다.</string>
+    <string name="desc_tv_mic_mode">참고: 마이크 모드의 경우 내장 및 외장 마이크만 마이크로 인식되며, 헤드폰 마이크나 리모컨 마이크는 작동하지 않습니다.</string>
     <string name="label_band_colors">대역별 색상</string>
 
     <!-- Patterns -->

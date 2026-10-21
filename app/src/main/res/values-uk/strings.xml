@@ -73,6 +73,8 @@
     <string name="label_delay_range_ms">10 – 5000 мс</string>
     <string name="label_pattern">Патерн</string>
     <string name="label_enabled">Увімкнено</string>
+    <string name="desc_tv_audio_routing">Примітка. Маршрутизація аудіо телевізора може повністю заблокувати синхронізацію музики з аудіо телевізора.</string>
+    <string name="desc_tv_mic_mode">Примітка. Для режиму мікрофона враховуються лише внутрішні та зовнішні мікрофони — мікрофони навушників або пультів не працюватимуть.</string>
     <string name="label_band_colors">Кольори смуг</string>
 
     <!-- Patterns -->

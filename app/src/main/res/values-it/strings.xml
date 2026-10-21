@@ -73,6 +73,8 @@
     <string name="label_delay_range_ms">10 – 5000 ms</string>
     <string name="label_pattern">Motivo</string>
     <string name="label_enabled">Abilitato</string>
+    <string name="desc_tv_audio_routing">Nota: Il routing audio della TV potrebbe bloccare completamente la sincronizzazione della musica audio TV.</string>
+    <string name="desc_tv_mic_mode">Nota: Per la modalità microfono, contano solo i microfoni interni ed esterni — i microfoni delle cuffie o dei telecomandi non funzioneranno.</string>
     <string name="label_band_colors">Colori bande</string>
 
     <!-- Patterns -->
