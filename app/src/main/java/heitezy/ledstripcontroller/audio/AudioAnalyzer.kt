@@ -1,15 +1,20 @@
 package heitezy.ledstripcontroller.audio
 
+import android.content.Context
 import android.media.AudioAttributes
 import android.media.AudioFormat
+import android.media.AudioManager
 import android.media.AudioPlaybackCaptureConfiguration
 import android.media.AudioRecord
 import android.media.MediaRecorder
 import android.media.projection.MediaProjection
 import android.os.Build
+import android.os.Handler
+import android.os.HandlerThread
 import androidx.annotation.RequiresApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.currentCoroutineContext
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
@@ -19,6 +24,7 @@ import kotlin.math.cos
 import kotlin.math.max
 import kotlin.math.sin
 import kotlin.math.sqrt
+import kotlin.time.Duration.Companion.milliseconds
 
 data class FrequencyData(
     val bass: Float,        // 0–1  (60–250 Hz)   → red
@@ -29,66 +35,104 @@ data class FrequencyData(
 
 object AudioAnalyzer {
 
-    private const val SAMPLE_RATE = 44100
+    private const val DEFAULT_SAMPLE_RATE = 44100
     private const val FFT_SIZE = 4096
 
-    private val BASS_LOW_BIN  = hzToBin(60)
-    private val BASS_HIGH_BIN = hzToBin(250)
-    private val MID_LOW_BIN   = hzToBin(250)
-    private val MID_HIGH_BIN  = hzToBin(4000)
-    private val HIGH_LOW_BIN  = hzToBin(4000)
-    private val HIGH_HIGH_BIN = hzToBin(16000)
-
-    private fun hzToBin(hz: Int) =
-        (hz.toLong() * FFT_SIZE / SAMPLE_RATE).toInt().coerceIn(1, FFT_SIZE / 2 - 1)
+    private fun hzToBin(hz: Int, sampleRate: Int) =
+        (hz.toLong() * FFT_SIZE / sampleRate).toInt().coerceIn(1, FFT_SIZE / 2 - 1)
 
     // ── Mic stream ────────────────────────────────────────────────────────────
 
+    @androidx.annotation.RequiresPermission(android.Manifest.permission.RECORD_AUDIO)
     fun streamMic(): Flow<FrequencyData> = flow {
         val minBuf = AudioRecord.getMinBufferSize(
-            SAMPLE_RATE, AudioFormat.CHANNEL_IN_MONO, AudioFormat.ENCODING_PCM_16BIT,
+            DEFAULT_SAMPLE_RATE, AudioFormat.CHANNEL_IN_MONO, AudioFormat.ENCODING_PCM_16BIT,
         )
         if (minBuf <= 0) return@flow
-        val audioRecord = AudioRecord(
-            MediaRecorder.AudioSource.MIC,
-            SAMPLE_RATE,
-            AudioFormat.CHANNEL_IN_MONO,
-            AudioFormat.ENCODING_PCM_16BIT,
-            maxOf(minBuf, FFT_SIZE * 2),
-        )
+        val audioRecord = try {
+            AudioRecord(
+                MediaRecorder.AudioSource.MIC,
+                DEFAULT_SAMPLE_RATE,
+                AudioFormat.CHANNEL_IN_MONO,
+                AudioFormat.ENCODING_PCM_16BIT,
+                maxOf(minBuf, FFT_SIZE * 2),
+            )
+        } catch (_: SecurityException) {
+            return@flow
+        }
         if (audioRecord.state != AudioRecord.STATE_INITIALIZED) {
             audioRecord.release()
             return@flow  // no microphone available on this device
         }
-        processAudioRecord(audioRecord, stereo = false) { emit(it) }
+        processAudioRecord(audioRecord, stereo = false, sampleRate = DEFAULT_SAMPLE_RATE) { emit(it) }
     }.flowOn(Dispatchers.Default)
 
     // ── Internal audio / playback capture (Android 10+) ──────────────────────
 
     @RequiresApi(Build.VERSION_CODES.Q)
-    fun streamPlayback(mediaProjection: MediaProjection): Flow<FrequencyData> = flow {
+    @androidx.annotation.RequiresPermission(android.Manifest.permission.RECORD_AUDIO)
+    fun streamPlayback(mediaProjection: MediaProjection, context: Context): Flow<FrequencyData> = flow {
+        val audioManager = context.getSystemService(Context.AUDIO_SERVICE) as? AudioManager
+        val nativeRate = audioManager?.getProperty(AudioManager.PROPERTY_OUTPUT_SAMPLE_RATE)?.toIntOrNull() ?: 48000
+        val candidateRates = listOfNotNull(nativeRate, 48000, 44100, 16000).distinct()
+
         val config = AudioPlaybackCaptureConfiguration.Builder(mediaProjection)
             .addMatchingUsage(AudioAttributes.USAGE_MEDIA)
             .addMatchingUsage(AudioAttributes.USAGE_GAME)
             .addMatchingUsage(AudioAttributes.USAGE_UNKNOWN)
             .build()
 
-        val format = AudioFormat.Builder()
-            .setEncoding(AudioFormat.ENCODING_PCM_16BIT)
-            .setSampleRate(SAMPLE_RATE)
-            .setChannelMask(AudioFormat.CHANNEL_IN_STEREO)   // playback capture is always stereo
-            .build()
+        var audioRecord: AudioRecord? = null
+        var chosenSampleRate = 48000
 
-        val minBuf = AudioRecord.getMinBufferSize(
-            SAMPLE_RATE, AudioFormat.CHANNEL_IN_STEREO, AudioFormat.ENCODING_PCM_16BIT,
-        )
-        val audioRecord = AudioRecord.Builder()
-            .setAudioPlaybackCaptureConfig(config)
-            .setAudioFormat(format)
-            .setBufferSizeInBytes(maxOf(minBuf, FFT_SIZE * 4))
-            .build()
+        for (rate in candidateRates) {
+            val minBuf = AudioRecord.getMinBufferSize(
+                rate, AudioFormat.CHANNEL_IN_STEREO, AudioFormat.ENCODING_PCM_16BIT,
+            )
+            val bufSize = if (minBuf > 0) maxOf(minBuf, FFT_SIZE * 4) else FFT_SIZE * 4
+            val format = AudioFormat.Builder()
+                .setEncoding(AudioFormat.ENCODING_PCM_16BIT)
+                .setSampleRate(rate)
+                .setChannelMask(AudioFormat.CHANNEL_IN_STEREO)
+                .build()
 
-        processAudioRecord(audioRecord, stereo = true) { emit(it) }
+            try {
+                val rec = AudioRecord.Builder()
+                    .setAudioPlaybackCaptureConfig(config)
+                    .setAudioFormat(format)
+                    .setBufferSizeInBytes(bufSize)
+                    .build()
+                if (rec.state == AudioRecord.STATE_INITIALIZED) {
+                    audioRecord = rec
+                    chosenSampleRate = rate
+                    break
+                } else {
+                    rec.release()
+                }
+            } catch (_: Exception) {
+                // Try next rate
+            }
+        }
+
+        if (audioRecord == null) {
+            return@flow
+        }
+
+        val handlerThread = HandlerThread("elk-audio-capture").also { it.start() }
+        val handler = Handler(handlerThread.looper)
+        val callback = object : MediaProjection.Callback() {
+            override fun onStop() {
+                // MediaProjection stopped by user or OS
+            }
+        }
+        mediaProjection.registerCallback(callback, handler)
+
+        try {
+            processAudioRecord(audioRecord, stereo = true, sampleRate = chosenSampleRate) { emit(it) }
+        } finally {
+            try { mediaProjection.unregisterCallback(callback) } catch (_: Exception) {}
+            handlerThread.quitSafely()
+        }
     }.flowOn(Dispatchers.Default)
 
     // ── Shared processing core ────────────────────────────────────────────────
@@ -96,8 +140,14 @@ object AudioAnalyzer {
     private suspend fun processAudioRecord(
         audioRecord: AudioRecord,
         stereo: Boolean,
+        sampleRate: Int,
         emit: suspend (FrequencyData) -> Unit,
     ) {
+        if (audioRecord.state != AudioRecord.STATE_INITIALIZED) {
+            try { audioRecord.release() } catch (_: Exception) {}
+            return
+        }
+
         val channelCount = if (stereo) 2 else 1
         val pcm = ShortArray(FFT_SIZE * channelCount)
         val mono = ShortArray(FFT_SIZE)
@@ -107,11 +157,28 @@ object AudioAnalyzer {
         // [peakBass, peakMid, peakHigh] — dynamic normalization per band
         val peaks = floatArrayOf(0.001f, 0.001f, 0.001f)
 
+        val bassLowBin  = hzToBin(60, sampleRate)
+        val bassHighBin = hzToBin(250, sampleRate)
+        val midLowBin   = hzToBin(250, sampleRate)
+        val midHighBin  = hzToBin(4000, sampleRate)
+        val highLowBin  = hzToBin(4000, sampleRate)
+        val highHighBin = hzToBin(16000, sampleRate)
+
+        var consecutiveErrors = 0
+
         try {
             audioRecord.startRecording()
             while (currentCoroutineContext().isActive) {
                 val read = audioRecord.read(pcm, 0, FFT_SIZE * channelCount)
-                if (read <= 0) continue
+                if (read <= 0) {
+                    consecutiveErrors++
+                    if (consecutiveErrors > 50) {
+                        break
+                    }
+                    delay(10.milliseconds)
+                    continue
+                }
+                consecutiveErrors = 0
 
                 val frames = if (stereo) read / 2 else read
 
@@ -123,11 +190,24 @@ object AudioAnalyzer {
                     pcm.copyInto(mono, endIndex = frames)
                 }
 
-                emit(processMonoBuffer(mono, frames, real, imag, energyHistory, peaks))
+                emit(processMonoBuffer(
+                    buffer = mono,
+                    size = frames,
+                    real = real,
+                    imag = imag,
+                    energyHistory = energyHistory,
+                    peaks = peaks,
+                    bassLow = bassLowBin,
+                    bassHigh = bassHighBin,
+                    midLow = midLowBin,
+                    midHigh = midHighBin,
+                    highLow = highLowBin,
+                    highHigh = highHighBin,
+                ))
             }
         } finally {
-            audioRecord.stop()
-            audioRecord.release()
+            try { audioRecord.stop() } catch (_: Exception) {}
+            try { audioRecord.release() } catch (_: Exception) {}
         }
     }
 
@@ -138,6 +218,12 @@ object AudioAnalyzer {
         imag: FloatArray,
         energyHistory: ArrayDeque<Float>,
         peaks: FloatArray,
+        bassLow: Int,
+        bassHigh: Int,
+        midLow: Int,
+        midHigh: Int,
+        highLow: Int,
+        highHigh: Int,
     ): FrequencyData {
         // Hann window + normalise to [-1, 1]
         for (i in 0 until size) {
@@ -151,9 +237,9 @@ object AudioAnalyzer {
 
         val mag = FloatArray(FFT_SIZE / 2) { i -> sqrt(real[i] * real[i] + imag[i] * imag[i]) }
 
-        val bassRaw = bandAvg(mag, BASS_LOW_BIN, BASS_HIGH_BIN)
-        val midRaw  = bandAvg(mag, MID_LOW_BIN,  MID_HIGH_BIN)
-        val highRaw = bandAvg(mag, HIGH_LOW_BIN,  HIGH_HIGH_BIN)
+        val bassRaw = bandAvg(mag, bassLow, bassHigh)
+        val midRaw  = bandAvg(mag, midLow,  midHigh)
+        val highRaw = bandAvg(mag, highLow, highHigh)
 
         // Beat: bass-weighted energy vs rolling 4-second average
         val beatEnergy = bassRaw * 3f + midRaw * 0.5f

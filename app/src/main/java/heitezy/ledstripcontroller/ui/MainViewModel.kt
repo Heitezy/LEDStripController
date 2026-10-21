@@ -417,7 +417,7 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
 
         musicSyncJob = viewModelScope.launch {
             val flow = if (!usingMic) {
-                AudioAnalyzer.streamPlayback(mediaProjection!!)
+                AudioAnalyzer.streamPlayback(mediaProjection!!, getApplication())
             } else {
                 AudioAnalyzer.streamMic()
             }
