@@ -215,7 +215,7 @@ fun TvScreen(vm: MainViewModel, onRequestMediaProjection: () -> Unit = {}) {
                 TvSection.PATTERNS    -> TvPatternsSection(ui, vm, contentFocus)
                 TvSection.MUSIC_SYNC  -> TvMusicSyncSection(ui, vm, contentFocus)
                 TvSection.SCREEN_SYNC -> TvScreenSyncSection(ui, vm, contentFocus)
-                TvSection.SETTINGS    -> TvSettingsSection(ui, vm)
+                TvSection.SETTINGS    -> TvSettingsSection(ui, vm, contentFocus)
                 TvSection.ABOUT       -> TvAboutSection(contentFocus)
             }
         }
@@ -922,9 +922,16 @@ private fun TvScreenSyncSection(ui: UiState, vm: MainViewModel, firstFocus: Focu
 // ── SETTINGS section ──────────────────────────────────────────────────────────
 
 @Composable
-private fun TvSettingsSection(ui: UiState, vm: MainViewModel) {
+private fun TvSettingsSection(ui: UiState, vm: MainViewModel, firstFocus: FocusRequester) {
     Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
         TvSectionTitle(stringResource(R.string.label_settings), Icons.Default.Settings)
+        TvCheckboxRow(
+            label = stringResource(R.string.label_dark_mode),
+            description = stringResource(R.string.desc_dark_mode),
+            checked = ui.isTvDarkMode,
+            focusRequester = firstFocus,
+            onCheckedChange = { vm.setTvDarkMode(it) },
+        )
         TvCheckboxRow(
             label = stringResource(R.string.label_ambilight_smooth),
             description = stringResource(R.string.desc_ambilight_smooth),
@@ -966,6 +973,7 @@ private fun TvCheckboxRow(
     label: String,
     description: String,
     checked: Boolean,
+    focusRequester: FocusRequester? = null,
     onCheckedChange: (Boolean) -> Unit,
 ) {
     var focused by remember { mutableStateOf(false) }
@@ -975,6 +983,7 @@ private fun TvCheckboxRow(
             .clip(RoundedCornerShape(10.dp))
             .clickable { onCheckedChange(!checked) }
             .then(if (focused) Modifier.border(2.dp, MaterialTheme.colorScheme.primary, RoundedCornerShape(10.dp)) else Modifier)
+            .then(if (focusRequester != null) Modifier.focusRequester(focusRequester) else Modifier)
             .padding(horizontal = 4.dp, vertical = 6.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {

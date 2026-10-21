@@ -52,6 +52,8 @@
     <string name="label_beat">Ρυθμός</string>
     <string name="label_ambilight_smooth">Ομαλό Ambilight</string>
     <string name="desc_ambilight_smooth">Αναμιγνύει τις αλλαγές χρώματος σταδιακά — πιο ξεκούραστο για τα μάτια κατά τις λειτουργίες συγχρονισμού.</string>
+    <string name="label_dark_mode">Σκούρα λειτουργία</string>
+    <string name="desc_dark_mode">Ενεργοποίηση σκούρου θέματος UI για Android TV.</string>
 
     <!-- TV Specific UI -->
     <string name="label_bluetooth">Bluetooth</string>

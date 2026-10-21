@@ -2,6 +2,7 @@ package heitezy.ledstripcontroller.ui
 
 import android.app.Application
 import android.bluetooth.BluetoothDevice
+import android.content.Context
 import android.content.Intent
 import android.media.projection.MediaProjection
 import android.os.Build
@@ -70,14 +71,22 @@ data class UiState(
     val screenB: Int = 0,
     val hasProjection: Boolean = false,
     val isAmbilightSmooth: Boolean = false,
+    val isTvDarkMode: Boolean = true,
 )
 
 class MainViewModel(app: Application) : AndroidViewModel(app) {
 
     private val repository = LedRepository.getInstance(app)
     val bleManager = repository.bleManager
+    private val prefs = app.getSharedPreferences("ledstripcontroller_prefs", Context.MODE_PRIVATE)
 
-    private val _ui = MutableStateFlow(UiState(isPoweredOn = repository.isPoweredOn.value))
+    private val _ui = MutableStateFlow(
+        UiState(
+            isPoweredOn = repository.isPoweredOn.value,
+            isTvDarkMode = prefs.getBoolean("tv_dark_mode", true),
+            isAmbilightSmooth = prefs.getBoolean("ambilight_smooth", false),
+        )
+    )
     val ui: StateFlow<UiState> = _ui.asStateFlow()
 
     private val _projectionRequest = MutableSharedFlow<Unit>(extraBufferCapacity = 1)
@@ -373,10 +382,19 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
         }
     }
 
-    fun setBassColor(color: SyncColor)       = _ui.update { it.copy(bassColor = color) }
-    fun setMidColor(color: SyncColor)        = _ui.update { it.copy(midColor  = color) }
-    fun setHighColor(color: SyncColor)       = _ui.update { it.copy(highColor = color) }
-    fun setAmbilightSmooth(enabled: Boolean) = _ui.update { it.copy(isAmbilightSmooth = enabled) }
+    fun setBassColor(color: SyncColor) = _ui.update { it.copy(bassColor = color) }
+    fun setMidColor(color: SyncColor)  = _ui.update { it.copy(midColor  = color) }
+    fun setHighColor(color: SyncColor) = _ui.update { it.copy(highColor = color) }
+
+    fun setAmbilightSmooth(enabled: Boolean) {
+        _ui.update { it.copy(isAmbilightSmooth = enabled) }
+        prefs.edit().putBoolean("ambilight_smooth", enabled).apply()
+    }
+
+    fun setTvDarkMode(enabled: Boolean) {
+        _ui.update { it.copy(isTvDarkMode = enabled) }
+        prefs.edit().putBoolean("tv_dark_mode", enabled).apply()
+    }
 
     fun onMediaProjection(mp: MediaProjection?, cancelled: Boolean = false) {
         mediaProjection?.stop()

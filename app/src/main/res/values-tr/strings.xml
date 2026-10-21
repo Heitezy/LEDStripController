@@ -52,6 +52,8 @@
     <string name="label_beat">Ritim</string>
     <string name="label_ambilight_smooth">Yumuşak Ambilight</string>
     <string name="desc_ambilight_smooth">Renk değişikliklerini kademeli olarak harmanlar — senkronizasyon modlarında gözü daha az yorar.</string>
+    <string name="label_dark_mode">Karanlık mod</string>
+    <string name="desc_dark_mode">Android TV için karanlık kullanıcı arayüzü temasını etkinleştir.</string>
 
     <!-- TV Specific UI -->
     <string name="label_bluetooth">Bluetooth</string>

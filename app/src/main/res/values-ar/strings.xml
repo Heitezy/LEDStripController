@@ -52,6 +52,8 @@
     <string name="label_beat">الإيقاع</string>
     <string name="label_ambilight_smooth">Ambilight سلس</string>
     <string name="desc_ambilight_smooth">يدمج تغييرات الألوان تدريجيًا — مريح للعينين أثناء أوضاع المزامنة.</string>
+    <string name="label_dark_mode">الوضع الداكن</string>
+    <string name="desc_dark_mode">تفعيل المظهر الداكن لواجهة المستخدم لـ Android TV.</string>
 
     <!-- TV Specific UI -->
     <string name="label_bluetooth">البلوتوث</string>

@@ -52,6 +52,8 @@
     <string name="label_beat">Ritm</string>
     <string name="label_ambilight_smooth">Yumşaq Ambilight</string>
     <string name="desc_ambilight_smooth">Renk deñişmelerini yavaş-yavaş qarıştıra — sinxronlaşdırma rejimlerinde közler içün rahatlı.</string>
+    <string name="label_dark_mode">Qaranlıq rejim</string>
+    <string name="desc_dark_mode">Android TV içün qaranlıq UI mevzusını faalleştirüv.</string>
 
     <!-- TV Specific UI -->
     <string name="label_bluetooth">Bluetooth</string>

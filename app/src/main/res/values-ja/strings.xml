@@ -52,6 +52,8 @@
     <string name="label_beat">ビート</string>
     <string name="label_ambilight_smooth">滑らかなアンビライト</string>
     <string name="desc_ambilight_smooth">色の変化を滑らかに移行させます — 同期モード時の目に優しい表示です。</string>
+    <string name="label_dark_mode">ダークモード</string>
+    <string name="desc_dark_mode">Android TV 用のダーク UI テーマを有効にします。</string>
 
     <!-- TV Specific UI -->
     <string name="label_bluetooth">Bluetooth</string>

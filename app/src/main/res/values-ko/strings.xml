@@ -52,6 +52,8 @@
     <string name="label_beat">비트</string>
     <string name="label_ambilight_smooth">부드러운 엠비라이트</string>
     <string name="desc_ambilight_smooth">색상 변화를 부드럽게 전환하여 동기화 모드 사용 시 눈의 피로를 줄여줍니다.</string>
+    <string name="label_dark_mode">다크 모드</string>
+    <string name="desc_dark_mode">Android TV용 다크 UI 테마를 활성화합니다.</string>
 
     <!-- TV Specific UI -->
     <string name="label_bluetooth">블루투스</string>

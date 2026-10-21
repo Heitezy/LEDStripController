@@ -52,6 +52,8 @@
     <string name="label_beat">Beat</string>
     <string name="label_ambilight_smooth">Sanftes Ambilight</string>
     <string name="desc_ambilight_smooth">Blendet Farbwechsel sanft über — schont die Augen in Synchronisierungsmodi.</string>
+    <string name="label_dark_mode">Dunkler Modus</string>
+    <string name="desc_dark_mode">Dunkles UI-Design für Android TV aktivieren.</string>
 
     <!-- TV Specific UI -->
     <string name="label_bluetooth">Bluetooth</string>

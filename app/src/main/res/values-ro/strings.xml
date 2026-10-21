@@ -52,6 +52,8 @@
     <string name="label_beat">Ritm</string>
     <string name="label_ambilight_smooth">Ambilight lin</string>
     <string name="desc_ambilight_smooth">Tranziții line între culori — mai confortabil pentru ochi în modurile de sincronizare.</string>
+    <string name="label_dark_mode">Mod întunecat</string>
+    <string name="desc_dark_mode">Activează tema întunecată UI pentru Android TV.</string>
 
     <!-- TV Specific UI -->
     <string name="label_bluetooth">Bluetooth</string>

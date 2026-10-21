@@ -53,6 +53,8 @@
     <string name="label_beat">बीट</string>
     <string name="label_ambilight_smooth">एम्बीलाइट स्मूथ</string>
     <string name="desc_ambilight_smooth">रंगों के बदलाव को धीरे-धीरे मिलाता है — सिंक मोड के दौरान आंखों के लिए आसान रहता है।</string>
+    <string name="label_dark_mode">डार्क मोड</string>
+    <string name="desc_dark_mode">Android TV के लिए डार्क UI थीम सक्षम करें।</string>
 
     <!-- TV Specific UI -->
     <string name="label_bluetooth">ब्लूटूथ</string>

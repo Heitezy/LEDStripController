@@ -52,6 +52,8 @@
     <string name="label_beat">Ritme</string>
     <string name="label_ambilight_smooth">Ambilight halus</string>
     <string name="desc_ambilight_smooth">Mencampur perubahan warna secara bertahap — lebih nyaman di mata selama mode sinkronisasi.</string>
+    <string name="label_dark_mode">Mode gelap</string>
+    <string name="desc_dark_mode">Aktifkan tema UI gelap untuk Android TV.</string>
 
     <!-- TV Specific UI -->
     <string name="label_bluetooth">Bluetooth</string>

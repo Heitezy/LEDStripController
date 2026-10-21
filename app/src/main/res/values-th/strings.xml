@@ -53,6 +53,8 @@
     <string name="label_beat">จังหวะ</string>
     <string name="label_ambilight_smooth">แสงไฟนุ่มนวล</string>
     <string name="desc_ambilight_smooth">ผสมผสานการเปลี่ยนแปลงของสีอย่างค่อยเป็นค่อยไป — ถนอมสายตาขณะอยู่ในโหมดซิงค์</string>
+    <string name="label_dark_mode">โหมดมืด</string>
+    <string name="desc_dark_mode">เปิดใช้งานธีม UI มืดสำหรับ Android TV</string>
 
     <!-- TV Specific UI -->
     <string name="label_bluetooth">บลูทูธ</string>

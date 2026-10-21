@@ -52,6 +52,8 @@
     <string name="label_beat">Ritmo</string>
     <string name="label_ambilight_smooth">Ambilight suave</string>
     <string name="desc_ambilight_smooth">Transiciona los cambios de color gradualmente — más suave para los ojos durante los modos de sincronización.</string>
+    <string name="label_dark_mode">Modo oscuro</string>
+    <string name="desc_dark_mode">Activar tema UI oscuro para Android TV.</string>
 
     <!-- TV Specific UI -->
     <string name="label_bluetooth">Bluetooth</string>

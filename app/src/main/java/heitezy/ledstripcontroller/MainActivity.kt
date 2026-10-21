@@ -19,6 +19,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -30,6 +31,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -168,7 +170,9 @@ class MainActivity : ComponentActivity() {
         // No Bluetooth hardware: show an explanation and never touch the BLE stack.
         if (bleSupport == BleSupport.NONE) {
             setContent {
-                LedStripController {
+                val uiState by viewModel.ui.collectAsState()
+                val darkTheme = if (isTV) uiState.isTvDarkMode else isSystemInDarkTheme()
+                LedStripController(darkTheme = darkTheme) {
                     Surface(color = MaterialTheme.colorScheme.background) {
                         BleSupportGate(
                             message = stringResource(R.string.ble_unsupported_msg),
@@ -226,7 +230,10 @@ class MainActivity : ComponentActivity() {
         }
 
         setContent {
-            LedStripController {
+            val uiState by viewModel.ui.collectAsState()
+            val darkTheme = if (isTV) uiState.isTvDarkMode else isSystemInDarkTheme()
+
+            LedStripController(darkTheme = darkTheme) {
                 Surface(color = MaterialTheme.colorScheme.background) {
                     when {
                         bleSupport == BleSupport.UNVERIFIED && !unverifiedAccepted ->
