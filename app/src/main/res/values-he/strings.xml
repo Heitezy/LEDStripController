@@ -1,0 +1,131 @@
+<resources>
+    <string name="app_name">LED Strip Controller</string>
+
+    <!-- Permissions -->
+    <string name="perm_rationale">LED Strip Controller זקוק להרשאות Bluetooth ומיקרופון כדי לסרוק אחר רצועת ה-LED שלך ולאפשר סנכרון מוזיקה.</string>
+    <string name="btn_grant_permissions">מתן הרשאות</string>
+    <string name="bt_disabled_msg">Bluetooth כבוי. יש להפעיל אותו כדי להתחבר לרצועת ה-LED שלך.</string>
+    <string name="btn_enable_bluetooth">הפעלת Bluetooth</string>
+    <string name="ble_unsupported_msg">מכשיר זה אינו תומך ב-Bluetooth Low Energy, שבו LED Strip Controller משתמש כדי לתקשר עם רצועת ה-LED שלך, ולכן האפליקציה לא יכולה לפעול כאן.\n\nאם רכשת את האפליקציה ב-Google Play, ניתן לבקש החזר כספי מהיסטוריית ההזמנות שלך ב-Play Store.</string>
+    <string name="ble_unverified_msg">מכשיר זה אינו מדווח על תמיכה ב-Bluetooth Low Energy, ולכן איננו יכולים להבטיח ש-LED Strip Controller יעבוד עם רצועת ה-LED שלך.\n\nניתן לנסות בכל זאת. אם האפליקציה לא מצליחה למצוא את הרצועה או להתחבר אליה, ניתן לבקש החזר כספי מהיסטוריית ההזמנות שלך ב-Play Store.</string>
+    <string name="btn_continue_anyway">לנסות בכל זאת</string>
+    <string name="btn_close_app">סגירה</string>
+
+    <!-- Notifications & Services -->
+    <string name="channel_media_capture_name">לכידת מדיה</string>
+    <string name="channel_media_capture_desc">פעיל בזמן לכידת האודיו של הטלפון או תוכן המסך לצורך סנכרון LED</string>
+    <string name="notif_screen_capture">לוכד את תוכן המסך עבור סנכרון מסך</string>
+    <string name="notif_phone_audio_capture">לוכד את האודיו של הטלפון עבור סנכרון מוזיקה</string>
+    <string name="channel_music_sync_mic_name">סנכרון מוזיקה (מיקרופון)</string>
+    <string name="channel_music_sync_mic_desc">פעיל בזמן שסנכרון המוזיקה מאזין למיקרופון</string>
+    <string name="notif_mic_listening">סנכרון המוזיקה מאזין למיקרופון</string>
+
+    <!-- General UI -->
+    <string name="btn_scan">סריקת מכשירים</string>
+    <string name="btn_stop">עצירה</string>
+    <string name="status_scanning">סורק…</string>
+    <string name="status_looking_ble">מחפש מכשירי BLE…</string>
+    <string name="status_connecting">מתחבר…</string>
+    <string name="status_connected">מחובר</string>
+    <string name="status_disconnected">מנותק</string>
+    <string name="btn_disconnect">ניתוק</string>
+    <string name="msg_connection_failed">החיבור נכשל. יש לנסות שוב.</string>
+    <string name="msg_ready_to_illuminate">מוכנים להאיר?</string>
+    <string name="label_color">צבע</string>
+    <string name="label_brightness_tv">בהירות</string>
+    <string name="label_brightness">בהירות: %1$d%%</string>
+    <string name="label_music_sync">סנכרון מוזיקה</string>
+    <string name="label_microphone">מיקרופון</string>
+    <string name="label_phone_audio">אודיו הטלפון</string>
+    <string name="label_tv_audio">אודיו הטלוויזיה</string>
+    <string name="msg_android_10_required">נדרש Android 10 ומעלה</string>
+    <string name="desc_phone_audio">לוכד את מה שמושמע דרך הרמקולים או האוזניות שלך.\nהערה: אפליקציות המוגנות ב-DRM (Spotify, Netflix) חוסמות לכידה.</string>
+    <string name="desc_microphone">המיקרופון קולט צליל מהחדר — עובד עם כל מקור.</string>
+    <string name="desc_band_colors">צבעי פסי תדרים  ·  הקשה על דוגמית להקצאה  ·  הקשה על ✕ להשתקה</string>
+    <string name="label_bass">בס</string>
+    <string name="label_mids">אמצעיים</string>
+    <string name="label_highs">גבוהים</string>
+    <string name="label_screen_sync">סנכרון מסך</string>
+    <string name="label_screen_tv">מסך</string>
+    <string name="desc_screen_sync">משקף בזמן אמת את הצבע הדומיננטי במסך שלך אל ה-LED — בהתחשב ברוויה, ב-20 פריימים לשנייה. תוכן בהיר וצבעוני עובד הכי טוב.</string>
+    <string name="label_dominant_color">צבע דומיננטי</string>
+    <string name="label_beat">פעימה</string>
+    <string name="label_ambilight_smooth">החלקת Ambilight</string>
+    <string name="desc_ambilight_smooth">משלב שינויי צבע בהדרגה — נעים יותר לעיניים במצבי סנכרון.</string>
+    <string name="label_dark_mode">מצב כהה</string>
+    <string name="desc_dark_mode">הפעלת ערכת נושא כהה עבור Android TV.</string>
+
+    <!-- TV Specific UI -->
+    <string name="label_bluetooth">Bluetooth</string>
+    <string name="label_patterns">תבניות</string>
+    <string name="label_settings">הגדרות</string>
+    <string name="msg_connect_first">יש להתחבר תחילה למכשיר</string>
+    <string name="msg_go_to_bt_section">יש לעבור לקטע Bluetooth כדי לסרוק ולהתאים.</string>
+    <string name="btn_turn_on">הפעלה</string>
+    <string name="btn_turn_off">כיבוי</string>
+    <string name="desc_nav_buttons">ניווט בין הכפתורים באמצעות החצים שמאלה / ימינה בשלט, ולחיצה על OK להפעלה</string>
+    <string name="label_hue">גוון</string>
+    <string name="label_saturation">רוויה</string>
+    <string name="desc_nav_rows">ניווט בין השורות באמצעות החצים למעלה / למטה, בין הכפתורים באמצעות שמאלה / ימינה, ולחיצה על OK להפעלה</string>
+    <string name="label_animation_speed">מהירות אנימציה</string>
+    <string name="label_delay_ms">השהיה (ms)</string>
+    <string name="label_delay_range">10 – 5000</string>
+    <string name="label_delay_range_ms">10 – 5000 ms</string>
+    <string name="label_pattern">תבנית</string>
+    <string name="label_enabled">מופעל</string>
+    <string name="label_band_colors">צבעי פסי תדרים</string>
+
+    <!-- Patterns -->
+    <string name="pattern_solid">אחיד</string>
+    <string name="pattern_jump_rgb">קפיצה RGB</string>
+    <string name="pattern_jump_all">קפיצה בכל הצבעים</string>
+    <string name="pattern_fade_rgb">דהייה RGB</string>
+    <string name="pattern_fade_all">דהייה בכל הצבעים</string>
+    <string name="pattern_crossfade_red">מעבר הדרגתי: אדום</string>
+    <string name="pattern_crossfade_green_blue">מעבר הדרגתי: ירוק-כחול</string>
+    <string name="pattern_crossfade_blue_orange">מעבר הדרגתי: כחול-כתום</string>
+    <string name="pattern_crossfade_blue">מעבר הדרגתי: כחול</string>
+    <string name="pattern_crossfade_white">מעבר הדרגתי: לבן</string>
+    <string name="pattern_flash_rgb">הבהוב RGB</string>
+    <string name="pattern_flash_all">הבהוב בכל הצבעים</string>
+    <string name="pattern_strobe_white">סטרובו לבן</string>
+
+    <!-- Accessibility & Misc -->
+    <string name="cd_toggle_power">החלפת מצב הפעלה</string>
+    <string name="led_tile_label">הפעלת LED</string>
+    <string name="cd_open_color_picker">פתיחת בורר הצבעים</string>
+    <string name="msg_pick_color">בחירת צבע</string>
+    <!-- Sync Colors -->
+    <string name="color_off">כבוי</string>
+    <string name="color_red">אדום</string>
+    <string name="color_orange">כתום</string>
+    <string name="color_yellow">צהוב</string>
+    <string name="color_green">ירוק</string>
+    <string name="color_cyan">ציאן</string>
+    <string name="color_blue">כחול</string>
+    <string name="color_violet">סגול</string>
+    <string name="color_magenta">מג׳נטה</string>
+    <string name="color_pink">ורוד</string>
+    <string name="color_white">לבן</string>
+
+    <!-- About -->
+    <string name="label_about">אודות</string>
+    <string name="cd_open_about">אודות האפליקציה</string>
+    <string name="cd_back">חזרה</string>
+    <string name="about_version">גרסה %1$s</string>
+    <string name="about_tagline">אפליקציית Android מקורית לחלוטין לשליטה ברצועות LED מסוג ELK-BLEDOM ו-BJ_LED עם Bluetooth LE.</string>
+    <string name="about_source">קוד מקור</string>
+    <string name="about_source_desc">האפליקציה היא קוד פתוח. ניתן לקרוא את הקוד, לפתוח Issue או לשלוח Pull Request.</string>
+    <string name="about_repository">מאגר</string>
+    <string name="about_license">רישיון</string>
+    <string name="about_license_mit">רישיון MIT</string>
+    <string name="about_license_body">מופצת תחת רישיון MIT. מותר להשתמש באפליקציה, לשנות אותה ולהפיץ אותה מחדש, בכפוף לשמירת הודעת זכויות היוצרים.</string>
+    <string name="about_license_read">קריאת נוסח הרישיון המלא</string>
+    <string name="about_contributors">תורמים</string>
+    <string name="about_contributors_desc">נבנתה בידי כל מי שתרם לפרויקט ב-GitHub.</string>
+    <string name="about_contributors_all">הצגת כל התורמים</string>
+    <string name="about_contributors_all_desc">פותח את גרף התורמים ב-GitHub</string>
+    <string name="about_libraries">ספריות קוד פתוח</string>
+    <string name="about_libraries_count">רישיונות עבור %1$d הספריות שבשימוש</string>
+    <string name="about_libraries_desc">האפליקציה בנויה על ספריות הקוד הפתוח הבאות.</string>
+</resources>
